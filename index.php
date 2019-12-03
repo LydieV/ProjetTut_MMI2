@@ -22,6 +22,9 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 
         <!-- Chargement des feuilles de style nécessaires -->
         <link href="./css/style.css" rel="stylesheet">
+        <!-- Chargement des polices -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
         <!-- Chargement de JQuery -->
         <script src="js/jquery-3.2.1.min.js"></script>
     </head>
@@ -34,25 +37,34 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                 <strong>Information : </strong> " . $_SESSION['info'] . "</div>";
             unset($_SESSION['info']);
         }
+
+        if (isset($_SESSION['id'])){ 
+            echo '<header>
+            <a href="index.php"><h3>Parlons harcèlement</h3></a>
+                <div class="items">
+                    <a href="index.php?action=temoignages"><p>Témoignages</p></a>
+                    <a href="index.php?action=idees"><p>Changer ses idées</p></a>
+                    <a href="index.php?action=ressources"><p>Ressources</p></a>
+                    <a href="index.php?action=contact"><p>Contact</p></a>
+                    <a href="index.php?action=connexion"><p>Se connecter</p></a>
+                    <a href="index.php?action=inscription"><p>S\'inscrire</p></a>
+                </div>
+            </header>';
+        }else{
+            echo '<header>
+            <a href="index.php"><h3>Parlons harcèlement</h3></a>
+                <div class="items">
+                    <a href="index.php?action=temoignages"><p>Témoignages</p></a>
+                    <a href="index.php?action=idees"><p>Changer ses idées</p></a>
+                    <a href="index.php?action=ressources"><p>Ressources</p></a>
+                    <a href="index.php?action=contact"><p>Contact</p></a>
+                    <a href="index.php?action=mapage"><p>Ma page</p></a>
+                </div>
+            </header>';
+        }
+
+        
         ?>
-
-
-        <header>
-            <h3>Header</h3>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.php?action=temoignages">Page témoignages</a></li>
-
-                <?php
-                if (isset($_SESSION['id'])) {
-                    echo "<li>Bonjour " . $_SESSION['login'] . " <a href='index.php?action=deconnexion'>Deconnexion</a></li>";
-                } else {
-                    echo "<li><a href='index.php?action=login'>Login</a></li>";
-                }
-                ?>
-            </ul>
-        </nav>
 
                     <?php
                     // Quelle est l'action à faire ?
@@ -73,6 +85,6 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     ?>
 
 
-        <footer>Footer</footer>
+        <footer></footer>
     </body>
 </html>
