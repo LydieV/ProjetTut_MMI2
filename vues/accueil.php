@@ -10,21 +10,21 @@
         <div class="carte">
             <a href="#">
                 <div class="masque">
-                    <p>Vers la gallerie de ressources</p>
+                    <p>Vers la galerie de ressources</p>
                 </div>
             </a>
         </div>
         <div class="carte">
             <a href="#">
                 <div class="masque">
-                    <p>Vers la gallerie de ressources</p>
+                    <p>Vers la galerie de ressources</p>
                 </div>
             </a>
         </div>
         <div class="carte">
             <a href="#">
                 <div class="masque">
-                    <p>Vers la gallerie de ressources</p>
+                    <p>Vers la galerie de ressources</p>
                 </div>
             </a>
         </div>
