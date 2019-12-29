@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    max-width:1200px;
+    max-width:1400px;
     margin:auto;
 }
 /* Définition de variables pour les différentes couleurs utilisées */
@@ -79,6 +79,7 @@ header a{
     margin:auto;
     font-size:4rem;
     padding-top:20px;
+    margin-bottom:40px;
 }
 .contenuaccueil > h1:after{
     content: "";
@@ -89,4 +90,88 @@ header a{
     left:-1%;
     border-bottom: 7px solid var(--orange2);
     z-index:-2;
+}
+.cartes{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+.carte{
+    position:relative;
+    width:25%;
+    height:200px;
+    background-color:red;
+    background-image:url("https://resize.prod.docfr.doc-media.fr/img/var/doctissimo/storage/images/media/images/harcelement-moral-travail-wd-510/4646522-1-fre-FR/harcelement-moral-travail-wd-510.jpg");
+    background-size:cover;
+}
+.carte:hover > a > .masque{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: var(--violet);
+    opacity: 0.8;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.carte > a > .masque > p{
+    display:none;
+    color:white;
+    font-size:1.5rem;
+}
+.carte:hover > a > .masque > p{
+    display:block;
+}
+.but{
+    padding-top:50px;
+}
+.but > h1,.agir > h1{
+    color:var(--orange);
+    text-transform: uppercase;
+    padding-bottom:30px;
+}
+.but > p{
+    text-indent: 50px;
+    text-align: justify;
+    padding-bottom:30px;
+    line-height: 1.5;
+}
+.but > p > span{
+    position:relative;
+}
+.but > p > span:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -2px;
+    left:0;
+    border-bottom: 5px solid var(--orange2);
+    z-index:-2;
+}
+.agir{
+    padding-bottom:250px;
+}
+.descagir{
+    display:flex;
+}
+.descagir > p{
+    width:60%;
+    padding-right:80px;
+    text-align: justify;
+    text-indent: 50px;
+    border-right:4px solid black;
+}
+.agircontact{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.agircontact > h3, .agircontact > div{
+    width:50%;
+}
+.agircontact > h3{
+    padding-bottom:30px;
+    text-transform: uppercase;
 }
