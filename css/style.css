@@ -113,6 +113,7 @@ header a{
     display:flex;
     align-items: center;
     justify-content: center;
+    transition: all 500ms ease;
 }
 .carte > a > .masque > p{
     display:none;
@@ -135,6 +136,8 @@ header a{
     text-align: justify;
     padding-bottom:30px;
     line-height: 1.5;
+    padding-left:20px;
+    padding-right:20px;
 }
 .but > p > span{
     position:relative;
@@ -156,6 +159,7 @@ header a{
 }
 .descagir > p{
     width:60%;
+    padding-left:20px;
     padding-right:80px;
     text-align: justify;
     text-indent: 50px;
@@ -168,10 +172,12 @@ header a{
     align-items: center;
     justify-content: center;
 }
-.agircontact > h3, .agircontact > div{
-    width:50%;
+.agircontact > a{
+    text-decoration: none;
+    width:40%;
 }
 .agircontact > h3{
     padding-bottom:30px;
     text-transform: uppercase;
+    width:50%;
 }

@@ -1,9 +1,10 @@
 <div class="contenuaccueil">
     <div class="banniereaccueil">
+        <a href="#">
         <div class="bouton voirplus">
             <p>En voir plus</p>
         </div>
-
+        </a>
     </div>
     <h1>Plus fort, ensemble !</h1>
     <div class="cartes">
@@ -41,9 +42,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ex illum minus non quas quo repellendus vel voluptate. Accusamus aliquam animi assumenda, beatae deleniti doloremque eius, esse est fuga illo illum minima, mollitia necessitatibus officia quaerat quisquam tenetur veritatis. Aperiam architecto blanditiis debitis dolor enim eveniet fugit, nesciunt nihil, nulla placeat quibusdam sed ullam unde vero, voluptas? Amet aspernatur at autem blanditiis corporis dolorem fugiat impedit laudantium maxime nesciunt nostrum quaerat qui, quod quos rem similique tenetur. Aut consequuntur deleniti doloremque earum eum hic illo magni nobis quasi suscipit. Aliquam consectetur deleniti, dolorem facere ipsam non omnis quas quis suscipit?</p>
             <div class="agircontact">
                 <h3>Ou contactez-nous directement</h3>
-                <div class="bouton">
-                    Nous contacter
-                </div>
+                <a href="index.php?action=contact">
+                    <div class="bouton">Nous contacter</div>
+                </a>
             </div>
         </div>
     </section>
