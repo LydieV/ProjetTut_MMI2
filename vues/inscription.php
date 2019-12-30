@@ -6,23 +6,36 @@
             <div class="ligne1">
                 <div class="identifiant">
                     <label for="identifiant">Identifiant</label>
-                    <input type="text" name="identifiant">
-                    <a href="#">Générer un identifiant au hasard ?</a>
+                    <input type="text" name="identifiant" id="identifiant">
+                    <a onclick="idaleatoire()">Générer un identifiant au hasard ?</a>
                 </div>
                 <div class="datenaissance">
                     <label for="naissance">Date de naissance</label>
                     <div class="choixnaissance">
-                        <input list="jour" name="jour" placeholder="0">
+                        <input list="jour" name="jour" placeholder="1">
                         <datalist id="jour">
-                            <option value="0"></option>
+                            <?php
+                                for($i=1;$i<32;$i++){
+                                    echo "<option value='$i'></option>";
+                                }
+                            ?>
                         </datalist>
                         <input list="mois" name="mois" placeholder="Jan.">
                         <datalist id="mois">
-                            <option value="Jan."></option>
+                            <?php
+                                $tabmois=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sept.','Oct.','Nov','Déc.'];
+                                foreach($tabmois as $mois){
+                                    echo "<option value='$mois'></option>";
+                                }
+                            ?>
                         </datalist>
-                        <input list="annee" name="annee" placeholder="1990">
+                        <input list="annee" name="annee" placeholder="1900">
                         <datalist id="annee">
-                            <option value="1990"></option>
+                            <?php
+                                for($i=1900;$i<2020;$i++){
+                                    echo "<option value='$i'></option>";
+                                }
+                            ?>
                         </datalist>
                     </div>
                 </div>
