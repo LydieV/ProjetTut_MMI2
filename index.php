@@ -23,6 +23,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <!-- Chargement des feuilles de style nécessaires -->
         <link href="./css/style.css" rel="stylesheet">
         <!-- Chargement des polices -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
         <!-- Chargement de JQuery -->
@@ -38,7 +39,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             unset($_SESSION['info']);
         }
 
-        if (isset($_SESSION['id'])){ 
+        if (!isset($_SESSION['id'])){
             echo '<header>
             <a href="index.php"><h3>Parlons harcèlement</h3></a>
                 <div class="items">
@@ -47,7 +48,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     <a href="index.php?action=ressources"><p>Ressources</p></a>
                     <a href="index.php?action=contact"><p>Contact</p></a>
                     <a href="index.php?action=connexion"><p>Se connecter</p></a>
-                    <a href="index.php?action=inscription"><p>S\'inscrire</p></a>
+                    <a onclick="ouvrirmodale()"><p>S\'inscrire</p></a>
                 </div>
             </header>';
         }else{
@@ -84,7 +85,8 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     ob_end_flush(); // Je ferme le buffer, je vide la mémoire et affiche tout ce qui doit l'être
                     ?>
 
-
+        <?php include("vues/inscription.php"); ?>
         <footer></footer>
     </body>
+<script src="js/script.js"></script>
 </html>
