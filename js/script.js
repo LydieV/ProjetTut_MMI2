@@ -14,3 +14,35 @@ function idaleatoire() {
     }
     document.getElementById("identifiant").value=resultat;
 }
+
+function inscription() {
+    document.getElementById('status').innerHTML = "Inscription en cours...";
+    formData = {
+        'identifiant'     : $('input[name=identifiant]').val(),
+        'email'  : $('input[name=email]').val(),
+        'mdp'  : $('input[name=mdp]').val(),
+        'mdp2'  : $('input[name=mdp2]').val(),
+    };
+
+
+    $.post({
+        url : "../traitement/inscription.php",
+        type: "POST",
+        async : false,
+        data : formData,
+        success: function(data, textStatus, jqXHR)
+        {
+            if (data != 'Succes'){
+                document.getElementById('status').innerHTML = data;
+            }else{
+                document.location.href='index.php';
+            }
+
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            document.getElementById('status').innerHTML = jqXHR;
+
+        }
+    });
+}

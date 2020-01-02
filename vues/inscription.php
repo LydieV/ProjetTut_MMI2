@@ -2,7 +2,7 @@
     <div class="modale">
         <i class="fas fa-times boutonfermer" onclick="fermermodale()"></i>
         <p>Pour éviter toute tentative qui se voudrait malveillante, il est obligatoire  de créer un compte.</p>
-        <form action="index.php?action=inscription">
+        <form  method="POST">
             <div class="ligne1">
                 <div class="identifiant">
                     <label for="identifiant">Identifiant</label>
@@ -43,26 +43,26 @@
             
             <div class="ligne2">
                 <label for="email">Email</label>
-                <input type="email">
+                <input type="email" name="email">
             </div>
 
             <div class="ligne3">
                 <div class="mdp">
                     <label for="mdp">Mot de passe</label>
-                    <input type="password">
+                    <input type="password" name="mdp">
                 </div>
                 <div class="mdp2">
                     <label for="mdp2">Confirmez le mot de passe</label>
-                    <input type="password">
+                    <input type="password" name="mdp2">
                 </div>
             </div>
 
             <div class="ligne4">
                 <div class="captcha">
-
+                    <p id="status"></p>
                 </div>
                 <div class="envoi">
-                    <input type="submit" value="S'inscrire">
+                    <div class="btn" onclick="inscription();">S'inscrire</div>
                 </div>
 
             </div>
