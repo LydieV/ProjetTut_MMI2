@@ -319,14 +319,19 @@ header a{
     padding-left:15px;
     padding-right:15px;
 }
-
-.ligne4 > div{
+.ligne4 > div {
+    width:50%;
+    display:flex;
+    flex-direction: column;
+}
+.ligne4 > div > div{
     width:50%;
     display:flex;
     flex-direction: column;
     transition:all 300ms ease-in-out;
+    text-align: center;
 }
-.ligne4 > div > input{
+.ligne4 > div > div{
     width:100%;
     border-radius:25px;
     border:0;
@@ -336,7 +341,7 @@ header a{
     cursor:pointer;
     color:white;
 }
-.ligne4 > div:hover {
+.ligne4 > div > div:hover {
 
     transform: scale(1.1);
 }
