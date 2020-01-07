@@ -31,7 +31,7 @@ $(function(){
             'mdp2' : $('input[name=mdp2]').val(),
         };
 
-        $.post( "../traitement/inscription.php", formData, function(data) {
+        $.post( "./traitement/inscription.php", formData, function(data) {
             if (data != 'Succes'){
                 document.getElementById('status').innerHTML = data;
             }else{
