@@ -28,11 +28,11 @@
         }
 
         if($ok==false){
-            echo 'Identifiant ou adresse mail déjà utilisé !';
+            echo 'Identifiant ou adresse mail déjà utilisé(e) !';
         }
 
     }else{
-        echo 'Erreur';
+        echo 'Merci de remplir tous les champs !';
 
     }
 ?>
