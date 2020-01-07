@@ -15,7 +15,20 @@
         $query->execute(array($identifiant));
         $count = $query->rowCount();
         if ($count == 1){
-            echo 'Cet identifiant est déjà utilisé !';
+            $ok=false;
+        }
+
+        //On regarde si l'email est déjà enregistré
+        $sql = "SELECT * FROM utilisateurs WHERE email=?";
+        $query = $pdo -> prepare($sql);
+        $query->execute(array($email));
+        $count = $query->rowCount();
+        if ($count == 1){
+            $ok=false;
+        }
+
+        if($ok==false){
+            echo 'Identifiant ou adresse mail déjà utilisé !';
         }
 
     }else{

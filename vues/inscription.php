@@ -2,7 +2,7 @@
     <div class="modale">
         <i class="fas fa-times boutonfermer" onclick="fermermodale()"></i>
         <p>Pour éviter toute tentative qui se voudrait malveillante, il est obligatoire  de créer un compte.</p>
-        <form  method="POST">
+        <form  method="POST" id="forminscription" action="#">
             <div class="ligne1">
                 <div class="identifiant">
                     <label for="identifiant">Identifiant</label>
@@ -62,7 +62,7 @@
                     <p id="status"></p>
                 </div>
                 <div class="envoi">
-                    <div class="btn" onclick="inscription();">S'inscrire</div>
+                    <input type="submit" value="S'inscrire"></input>
                 </div>
 
             </div>

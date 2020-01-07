@@ -16,33 +16,28 @@ function idaleatoire() {
 }
 
 function inscription() {
-    document.getElementById('status').innerHTML = "Inscription en cours...";
-    formData = {
-        'identifiant'     : $('input[name=identifiant]').val(),
-        'email'  : $('input[name=email]').val(),
-        'mdp'  : $('input[name=mdp]').val(),
-        'mdp2'  : $('input[name=mdp2]').val(),
-    };
 
+}
 
-    $.post({
-        url : "../traitement/inscription.php",
-        type: "POST",
-        async : false,
-        data : formData,
-        success: function(data, textStatus, jqXHR)
-        {
+$(function(){
+    $("#forminscription").submit(function(event){
+        event.preventDefault();
+        document.getElementById('status').innerHTML = "Inscription en cours...";
+
+        let formData = {
+            'identifiant' : $('input[name=identifiant]').val(),
+            'email' : $('input[name=email]').val(),
+            'mdp' : $('input[name=mdp]').val(),
+            'mdp2' : $('input[name=mdp2]').val(),
+        };
+
+        $.post( "../traitement/inscription.php", formData, function(data) {
             if (data != 'Succes'){
                 document.getElementById('status').innerHTML = data;
             }else{
                 document.location.href='index.php';
             }
-
-        },
-        error: function (jqXHR, textStatus, errorThrown)
-        {
-            document.getElementById('status').innerHTML = jqXHR;
-
-        }
+        });
     });
-}
+    return false;
+});
