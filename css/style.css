@@ -337,7 +337,7 @@ header a{
     cursor:pointer;
     color:white;
 }
-.ligne4 > div:hover {
+.ligne4 > div:nth-child(2):hover {
     transform: scale(1.1);
 }
 .envoi{
