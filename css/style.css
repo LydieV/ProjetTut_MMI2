@@ -198,7 +198,8 @@ header a{
 .modale{
     position:absolute;
     width:50%;
-    height:50%;
+    height:fit-content;
+    padding-bottom:20px;
     background-color: var(--orange2);
     top:50%;
     left:50%;
