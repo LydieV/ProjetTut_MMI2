@@ -1,26 +1,21 @@
+<head>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
 <div class="monprofil">
-    <div class='infoprofil'>
+    <div class='infosprofil'>
         <h2> émilie dumant </h2>
-        <div>
-            <div>
-                <p> Email : </p>
-                <p> exemple@gmail.com</p>
-            </div>
-            <p> Vous désirez changer d'adresse mail ?</p>
+        <div class="info">
+            <p> <span class="titreinfo"> Email : </span> exemple@gmail.com </p>
+            <p class="changementinfo"> Vous désirez changer d'adresse mail ?</p>
         </div>
 
-        <div>
-            <div>
-                <p> Mot de passe : </p>
-                <p> ********</p>
-            </div>
-            <p> Vous désirez changer de mot de passe ?</p>
+        <div class="info">
+            <p> <span class="titreinfo"> Mot de passe : </span> ******** </p>
+            <p class="changementinfo"> Vous désirez changer de mot de passe ?</p>
         </div>
-        <div>
-            <div>
-                <p> Date de naissance : </p>
-                <p> 30/03/1993 </p>
-            </div>
+        <div class="info">
+            <p> <span class="titreinfo"> Date de naissance : </span> 30/03/1993 </p>
         </div>
 
         <p> Supprimer mon compte </p>
