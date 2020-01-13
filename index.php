@@ -39,7 +39,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             unset($_SESSION['info']);
         }
 
-        if (!isset($_SESSION['id'])){
+        if (!isset($_SESSION['identifiant'])){
             echo '<header>
             <a href="index.php"><h3>Parlons harcèlement</h3></a>
                 <div class="items">

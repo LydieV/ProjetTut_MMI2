@@ -22,7 +22,7 @@ function inscription() {
 $(function(){
     $("#forminscription").submit(function(event){
         event.preventDefault();
-        document.getElementById('status').innerHTML = "Inscription en cours...";
+        //document.getElementById('status').innerHTML = "Inscription en cours...";
 
         let formData = {
             'identifiant' : $('input[name=identifiant]').val(),
