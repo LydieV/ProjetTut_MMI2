@@ -8,4 +8,5 @@ $listeDesActions = array(
     "mapage" => "vues/mapage.php",
     "ressources" => "vues/ressources.php",
     "contact" => "vues/contact.php",
+    "deconnexion" => "traitement/deconnexion.php",
 );
