@@ -183,8 +183,8 @@ header a{
     width:50%;
 }
 
-/* Popup inscription */
-.inscription{
+/* Popup inscription - connexion */
+.inscription, .connexion{
     position:fixed;
     background-color : rgba(0,0,0,0.90);
     top:0;
@@ -227,14 +227,20 @@ header a{
     margin:auto;
     padding-bottom:20px;
 }
-.identifiant{
+.identifiant, .mdpconnexion{
     display: flex;
     flex-direction: column;
     width:50%;
     padding-left:15px;
     padding-right:15px;
 }
-.identifiant > label, .datenaissance > label, .ligne2 > label, .ligne3 > div >label{
+.ligne1 > div > input{
+    width:100%;
+    border-radius:25px;
+    border:0;
+    padding:10px;
+}
+.ligne1 > div > label, .datenaissance > label, .ligne2 > label, .ligne3 > div >label{
     color:white;
     padding-bottom: 15px;
 }
