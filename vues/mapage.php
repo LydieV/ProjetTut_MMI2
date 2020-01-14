@@ -1,7 +1,3 @@
-<head>
-    <link href="../css/style.css" rel="stylesheet">
-</head>
-
 <div class="monprofil">
     <div class='infosprofil'>
         <h2> émilie dumant </h2>
