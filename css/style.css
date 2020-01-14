@@ -633,3 +633,10 @@ header a{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.infosprofil #supcompte{
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}

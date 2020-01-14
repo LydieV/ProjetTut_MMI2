@@ -17,8 +17,10 @@
         <div class="info">
             <p> <span class="titreinfo"> Date de naissance : </span> 30/03/1993 </p>
         </div>
-
-        <p> Supprimer mon compte </p>
+        
+        <form method="POST" action="#">
+            <input type="button" name="supprimercompte" value="Supprimer mon compte" id="supcompte"/>
+        </form>
     </div>
 
     <div class="activitesprofil">
