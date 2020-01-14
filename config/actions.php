@@ -9,4 +9,6 @@ $listeDesActions = array(
     "ressources" => "vues/ressources.php",
     "contact" => "vues/contact.php",
     "deconnexion" => "traitement/deconnexion.php",
+    "supcompte" => "traitement/suppressioncompte.php",
+    "erreur" => "vues/404.php"
 );
