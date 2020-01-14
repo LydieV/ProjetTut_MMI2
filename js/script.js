@@ -1,14 +1,14 @@
 function ouvrirmodaleinscription(){
-    document.getElementById('inscription').style.display="block";
+    $('#inscription').css("display", "block");
 }
 function fermermodaleinscription(){
-    document.getElementById('inscription').style.display="none";
+    $('#inscription').css("display", "none");
 }
 function ouvrirmodaleconnexion(){
-    document.getElementById('connexion').style.display="block";
+    $('#connexion').css("display", "block");
 }
 function fermermodaleconnexion(){
-    document.getElementById('connexion').style.display="none";
+    $('#connexion').css("display", "none");
 }
 
 function idaleatoire() {
@@ -18,14 +18,12 @@ function idaleatoire() {
     for (i = 0; i < size; i++) {
         resultat += liste[Math.floor(Math.random() * liste.length)];
     }
-    document.getElementById("identifiant").value=resultat;
+    $("#identifiant").val(resultat);
 }
 
-function inscription() {
-
-}
-
+//On attends le chargement de JQuery
 $(function(){
+    //Lors de l'envoi du formulaire d'inscription
     $("#forminscription").submit(function(event){
         event.preventDefault();
         //document.getElementById('status').innerHTML = "Inscription en cours...";
@@ -39,16 +37,14 @@ $(function(){
 
         $.post( "./traitement/inscription.php", formData, function(data) {
             if (data != 'Succes'){
-                document.getElementById('status').innerHTML = data;
+                $('#status').html(data);
             }else{
-                document.location.href='index.php';
+                $(location).attr('href',"index.php?");
             }
         });
     });
-    return false;
-});
 
-$(function(){
+    //Lors de l'envoi du formulaire de connexion
     $("#formconnexion").submit(function(event){
         event.preventDefault();
         //document.getElementById('status').innerHTML = "Inscription en cours...";
@@ -60,9 +56,9 @@ $(function(){
 
         $.post( "./traitement/connexion.php", formData, function(data) {
             if (data != 'Succes'){
-                document.getElementById('statusconnexion').innerHTML = data;
+                $('#statusconnexion').html(data);
             }else{
-                document.location.href='index.php?action=mapage';
+                $(location).attr('href',"index.php?action=mapage");
             }
         });
     });
