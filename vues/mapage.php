@@ -16,12 +16,16 @@ if(isset($_SESSION['id'])){
                 ?>
                 
                 <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>
-                <p class="changementinfo"> Vous désirez changer d'adresse mail ?</p>
+                <form method="POST" action="index.php?action=changeinfo">
+                    <input type="submit" class="changementinfo" name="changeemail" value="Vous désirez changer d'adresse mail ?"/>
+                </form>
             </div>
 
             <div class="info">
-                <p> <span class="titreinfo"> Mot de passe : </span> <?php echo $infoPsn['mdp'] ?> </p>
-                <p class="changementinfo"> Vous désirez changer de mot de passe ?</p>
+                <p> <span class="titreinfo"> Mot de passe : </span> ******* </p>
+                <form method="POST" action="index.php?action=changeinfo">
+                    <input type="submit" class="changementinfo" name="changemdp" value="Vous désirez changer de mot de passe ?"/>
+                </form>
             </div>
             <div class="info">
                 <p> <span class="titreinfo"> Date de naissance : </span> <?php echo $infoPsn['datenaissance'] ?> </p>
