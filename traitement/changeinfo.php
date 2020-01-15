@@ -8,7 +8,6 @@ if(isset($_POST['changeemail'])){
             <input type="submit" value="Changer adresse email"/>
         </form>
     <?php
-    
 } 
 if(isset($_POST['changemdp'])){
     ?>
@@ -26,14 +25,16 @@ if(isset($_POST['email']) && isset($_POST['emailverif']) && $_POST['email'] != n
     if($_POST['email'] == $_POST['emailverif']){
         $sql = "UPDATE utilisateurs SET email=? WHERE id=?";
         $query = $pdo->prepare($sql);
-        $query->execute($_POST['email'],array($_SESSION['id']));
-        $result = $query->fetch();
+        $query->execute(array($_POST['email'], $_SESSION['id']));
+        
         header("Location:index.php?action=mapage");
     } else{
-        echo "pas pareil";
+        echo 'Adresse pas pareil';
+
     }
         
 }
+
 
 
 ?>
