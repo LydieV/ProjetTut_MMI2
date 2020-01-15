@@ -26,13 +26,24 @@ if(isset($_POST['email']) && isset($_POST['emailverif']) && $_POST['email'] != n
         $sql = "UPDATE utilisateurs SET email=? WHERE id=?";
         $query = $pdo->prepare($sql);
         $query->execute(array($_POST['email'], $_SESSION['id']));
-        
         header("Location:index.php?action=mapage");
     } else{
         echo 'Adresse pas pareil';
-
     }
-        
+}
+
+if(isset($_POST['pwd']) && isset($_POST['pwdverif']) && $_POST['pwd'] != null && $_POST['pwdverif'] != null){
+    if($_POST['pwd'] == $_POST['pwdverif']){
+        $mdp = $_POST['pwd'];
+        $crypte = MD5('$mdp');
+        $sql = "UPDATE utilisateurs SET mdp=? WHERE id=?";
+        $query = $pdo->prepare($sql);
+        $query->execute(array($crypte, $_SESSION['id']));
+        header("Location:index.php?action=mapage");
+    } else{
+        echo 'Mdp pas pareil';
+    }
+
 }
 
 
