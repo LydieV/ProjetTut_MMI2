@@ -634,6 +634,8 @@ header a{
 .changementinfo{
     font-size: 12px;
     text-decoration: underline;
+    background-color: transparent;
+    border: none;
 }
 
 .info{
