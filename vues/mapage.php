@@ -4,9 +4,7 @@ if(isset($_SESSION['id'])){
 
 ?>
     <div class="monprofil">
-        <div class='infosprofil'>
-
-            <?php
+        <div class='infosprofil'> <?php
             $sql="SELECT * FROM utilisateurs WHERE id=?";
             $query = $pdo->prepare($sql);
             $query->execute(array($_SESSION['id']));
@@ -68,4 +66,3 @@ if(isset($_SESSION['id'])){
 }
 
 ?>
-

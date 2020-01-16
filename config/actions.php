@@ -14,5 +14,6 @@ $listeDesActions = array(
     "changeinfo" => "traitement/changeinfo.php",
     "changemail" => "traitement/changemail.php",
     "changemdp" => "traitement/changemdp.php",
+    "changeinfo" => "traitement/changeinfo.php",
     "erreur" => "vues/404.php"
 );

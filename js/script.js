@@ -1,14 +1,14 @@
 function ouvrirmodaleinscription(){
-    $('#inscription').css("display", "block");
+    $('#inscription').fadeIn(500);
 }
 function fermermodaleinscription(){
-    $('#inscription').css("display", "none");
+    $('#inscription').fadeOut(500);
 }
 function ouvrirmodaleconnexion(){
-    $('#connexion').css("display", "block");
+    $('#connexion').fadeIn(500);
 }
 function fermermodaleconnexion(){
-    $('#connexion').css("display", "none");
+    $('#connexion').fadeOut(500);
 }
 
 function idaleatoire() {
