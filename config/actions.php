@@ -11,5 +11,7 @@ $listeDesActions = array(
     "deconnexion" => "traitement/deconnexion.php",
     "supcompte" => "traitement/suppressioncompte.php",
     "changeinfo" => "traitement/changeinfo.php",
+    "changemail" => "traitement/changemail.php",
+    "changemdp" => "traitement/changemdp.php",
     "erreur" => "vues/404.php"
 );
