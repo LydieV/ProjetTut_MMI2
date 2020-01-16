@@ -5,19 +5,22 @@ if(isset($_SESSION['id'])){
 ?>
     <div class="monprofil">
         <div class='infosprofil'>
-            <h2> <?php echo $_SESSION['identifiant'] ?> </h2>
+
+            <?php
+            $sql="SELECT * FROM utilisateurs WHERE id=?";
+            $query = $pdo->prepare($sql);
+            $query->execute(array($_SESSION['id']));
+            $infoPsn = $query->fetch();
+            ?>
+
+            <h2> <?php echo $infoPsn['identifiant'] ?> </h2>
             <form method="POST" action="index.php?action=changeinfo">
                 <input type="hidden" name="changepseudo"/>
                 <input type="submit" class="changementinfo" id="changepseudo" name="modif" value=""/>
             </form>
 
             <div class="info">
-                <?php
-                    $sql="SELECT * FROM utilisateurs WHERE id=?";
-                    $query = $pdo->prepare($sql);
-                    $query->execute(array($_SESSION['id']));
-                    $infoPsn = $query->fetch();
-                ?>
+
                 
                 <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>
                 <form method="POST" action="index.php?action=changeinfo">

@@ -2,7 +2,7 @@
 
 if(isset($_POST['pseudo']) && isset($_POST['pseudoverif']) && $_POST['pseudo'] != null && $_POST['pseudoverif'] != null){
     if($_POST['pseudo'] == $_POST['pseudoverif']){
-        $sql = "UPDATE utilisateurs SET pseudo=? WHERE id=?";
+        $sql = "UPDATE utilisateurs SET identifiant=? WHERE id=?";
         $query = $pdo->prepare($sql);
         $query->execute(array($_POST['pseudo'], $_SESSION['id']));
         header("Location:index.php?action=mapage");
