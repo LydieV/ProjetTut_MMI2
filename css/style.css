@@ -624,6 +624,7 @@ header a{
 
 .infosprofil{
     text-align: center;
+    position: relative;
 }
 
 .titreinfo{
@@ -636,6 +637,17 @@ header a{
     text-decoration: underline;
     background-color: transparent;
     border: none;
+}
+
+#changepseudo{
+    background-image: url("../img/crayon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10%;
+    height: 40px;
+    top: 0;
+    right: 0;
+    position: absolute;
 }
 
 .info{

@@ -6,8 +6,12 @@ if(isset($_SESSION['id'])){
     <div class="monprofil">
         <div class='infosprofil'>
             <h2> <?php echo $_SESSION['identifiant'] ?> </h2>
+            <form method="POST" action="index.php?action=changeinfo">
+                <input type="hidden" name="changepseudo"/>
+                <input type="submit" class="changementinfo" id="changepseudo" name="modif" value=""/>
+            </form>
+
             <div class="info">
-                
                 <?php
                     $sql="SELECT * FROM utilisateurs WHERE id=?";
                     $query = $pdo->prepare($sql);
@@ -17,14 +21,16 @@ if(isset($_SESSION['id'])){
                 
                 <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>
                 <form method="POST" action="index.php?action=changeinfo">
-                    <input type="submit" class="changementinfo" name="changeemail" value="Vous désirez changer d'adresse mail ?"/>
+                    <input type="hidden" name="changeemail"/>
+                    <input type="submit" class="changementinfo" name="modif" value="Vous désirez changer d'adresse mail ?"/>
                 </form>
             </div>
 
             <div class="info">
                 <p> <span class="titreinfo"> Mot de passe : </span> ******* </p>
                 <form method="POST" action="index.php?action=changeinfo">
-                    <input type="submit" class="changementinfo" name="changemdp" value="Vous désirez changer de mot de passe ?"/>
+                    <input type="hidden" name="changemdp"/>
+                    <input type="submit" class="changementinfo" name="modif" value="Vous désirez changer de mot de passe ?"/>
                 </form>
             </div>
             <div class="info">

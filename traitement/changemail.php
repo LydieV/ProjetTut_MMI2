@@ -16,7 +16,6 @@ if($_POST['email'] == null || $_POST['emailverif'] == null) {
     <form method="POST" action="#">
         <input type="email" name="email"/>
         <input type="email" name="emailverif"/>
-        <input type="hidden" value="<?php echo $_POST['changeemail'] ?>" name="changeemail"/>
         <input type="submit" value="Changer adresse email"/>
     </form>
     <?php
