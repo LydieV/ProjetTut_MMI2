@@ -3,23 +3,29 @@
 if(isset($_SESSION['id'])){
 
 ?>
+    <div class="banniere_mapage">
+        <div class="couleur_banniere">
+            <p> Bienvenue sur votre page personnelle. </p>
+        </div>
+    </div>
+
     <div class="monprofil">
-        <div class='infosprofil'> <?php
+        <div class='infosprofil'>
+
+            <?php
             $sql="SELECT * FROM utilisateurs WHERE id=?";
             $query = $pdo->prepare($sql);
             $query->execute(array($_SESSION['id']));
             $infoPsn = $query->fetch();
             ?>
 
-            <h2> <?php echo $infoPsn['identifiant'] ?> </h2>
+            <h2 class="ident"> <?php echo $infoPsn['identifiant'] ?> </h2>
             <form method="POST" action="index.php?action=changeinfo">
                 <input type="hidden" name="changepseudo"/>
                 <input type="submit" class="changementinfo" id="changepseudo" name="modif" value=""/>
             </form>
 
             <div class="info">
-
-                
                 <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>
                 <form method="POST" action="index.php?action=changeinfo">
                     <input type="hidden" name="changeemail"/>

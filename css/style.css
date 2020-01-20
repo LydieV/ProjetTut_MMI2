@@ -612,10 +612,37 @@ header a{
 
 
 /* Ma page */
+.banniere_mapage{
+    height: 18vh;
+    position: relative;
+    background-image: url("../img/banniere_mapage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.couleur_banniere{
+    background-color: var(--violet);
+    position: absolute;
+    opacity: 0.8;
+    content: "";
+    height: 18vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.couleur_banniere p{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .monprofil{
     display: flex;
     justify-content: space-around;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .infosprofil h2{
@@ -651,8 +678,8 @@ header a{
 }
 
 .info{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .infosprofil #supcompte{
@@ -660,4 +687,23 @@ header a{
     border: none;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.ident{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.ident::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    bottom: -5px;
+    left: 25%;
+    border-bottom: 7px solid var(--orange2);
+}
+
+.activitesprofil{
+    text-align: center;
+    text-transform: uppercase;
 }
