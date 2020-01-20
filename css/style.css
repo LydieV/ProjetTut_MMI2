@@ -612,10 +612,37 @@ header a{
 
 
 /* Ma page */
+.banniere_mapage{
+    height: 18vh;
+    position: relative;
+    background-image: url("../img/banniere_mapage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.couleur_banniere{
+    background-color: var(--violet);
+    position: absolute;
+    opacity: 0.8;
+    content: "";
+    height: 18vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.couleur_banniere p{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .monprofil{
     display: flex;
     justify-content: space-around;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .infosprofil h2{

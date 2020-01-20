@@ -3,6 +3,12 @@
 if(isset($_SESSION['id'])){
 
 ?>
+    <div class="banniere_mapage">
+        <div class="couleur_banniere">
+            <p> Bienvenue sur votre page personnelle. </p>
+        </div>
+    </div>
+
     <div class="monprofil">
         <div class='infosprofil'>
 
@@ -20,8 +26,6 @@ if(isset($_SESSION['id'])){
             </form>
 
             <div class="info">
-
-                
                 <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>
                 <form method="POST" action="index.php?action=changeinfo">
                     <input type="hidden" name="changeemail"/>
