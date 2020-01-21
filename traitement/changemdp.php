@@ -15,10 +15,23 @@ if(isset($_POST['pwd']) && isset($_POST['pwdverif']) && $_POST['pwd'] != null &&
 
 if($_POST['pwd'] == null || $_POST['pwdverif'] == null){
     ?>
-    <form method="POST" action="index.php?action=changemdp">
-        <input type="password" name="pwd"/>
-        <input type="password" name="pwdverif"/>
-        <input type="submit" value="Changer mot de passe"/>
+    <div class="banniere_mapage">
+        <div class="couleur_banniere">
+            <p> Bienvenue sur votre page personnelle. </p>
+        </div>
+    </div>
+    <a href='index.php?action=mapage' class='buttonretour'> Retour </a>
+    <form method="POST" action="index.php?action=changemdp" class="formchange">
+        <h2> <?php echo $_SESSION['identifiant'] ?> </h2>
+        <div class="elementchangement">
+            <label for="pwd"> Votre nouveau mot de passe : </label>
+            <input type="password" name="pwd"/>
+        </div>
+        <div class="elementchangement">
+            <label for="pwdverif"> Confirmez votre mot de passe : </label>
+            <input type="password" name="pwdverif"/>
+        </div>
+        <input type="submit" value="Confirmer" class="boutonconf"/>
     </form>
 
     <?php

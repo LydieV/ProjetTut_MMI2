@@ -13,10 +13,27 @@ if(isset($_POST['email']) && isset($_POST['emailverif']) && $_POST['email'] != n
 
 if($_POST['email'] == null || $_POST['emailverif'] == null) {
     ?>
-    <form method="POST" action="#">
-        <input type="email" name="email"/>
-        <input type="email" name="emailverif"/>
-        <input type="submit" value="Changer adresse email"/>
+    <div class="banniere_mapage">
+        <div class="couleur_banniere">
+            <p> Bienvenue sur votre page personnelle. </p>
+        </div>
+    </div>
+    <a href='index.php?action=mapage' class='buttonretour'> Retour </a>
+    <form method="POST" action="index.php?action=changemail" class="formchange">
+        <h2> <?php echo $_SESSION['identifiant'] ?> </h2>
+        <div class="elementchangement">
+            <label for="ancienmail"> Votre ancienne adresse mail : </label>
+            <input type="text" name="ancienmail" value=""/>
+        </div>
+        <div class="elementchangement">
+            <label for="mail"> Votre nouvelle adresse mail : </label>
+            <input type="email" name="email"/>
+        </div>
+        <div class="elementchangement">
+            <label for="emailverif"> Confirmez votre mail : </label>
+            <input type="email" name="emailverif"/>
+        </div>
+        <input type="submit" value="Confirmer" class="boutonconf"/>
     </form>
     <?php
 }

@@ -645,10 +645,6 @@ header a{
     margin-top: 60px;
 }
 
-.infosprofil h2{
-    text-transform: uppercase;
-}
-
 .infosprofil{
     text-align: center;
     position: relative;
@@ -692,6 +688,7 @@ header a{
 .ident{
     position: relative;
     margin-bottom: 60px;
+    text-transform: uppercase;
 }
 
 .ident::after{
@@ -706,4 +703,56 @@ header a{
 .activitesprofil{
     text-align: center;
     text-transform: uppercase;
+}
+
+.formchange{
+    margin-left: auto;
+    margin-right: auto;
+    width: 36%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.elementchangement{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.elementchangement label{
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.elementchangement input{
+    margin-left: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px 10px;
+}
+
+.ancien{
+    border:none!important;
+}
+
+.boutonconf{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--orange2);
+    padding: 5px 35px;
+    color: white;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.buttonretour{
+    margin-top: 30px;
+    display: inline-block;
+    background-color: var(--violet);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
 }
