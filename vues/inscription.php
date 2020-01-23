@@ -1,6 +1,6 @@
 <div id="inscription" class="inscription">
     <div class="modale">
-        <i class="fas fa-times boutonfermer" onclick="fermermodale()"></i>
+        <i class="fas fa-times boutonfermer" onclick="fermermodaleinscription()"></i>
         <p>Pour éviter toute tentative qui se voudrait malveillante, il est obligatoire  de créer un compte.</p>
         <form  method="POST" id="forminscription" action="#">
             <div class="ligne1">

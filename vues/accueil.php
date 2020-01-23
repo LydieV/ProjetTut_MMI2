@@ -1,4 +1,5 @@
 <div class="contenuaccueil">
+    <?php var_dump($_SESSION); ?>
     <div class="banniereaccueil">
         <a href="#">
         <div class="bouton voirplus">

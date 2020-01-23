@@ -1,1 +1,1 @@
-<p>Contenu de la page resources</p>
+<p>Contenu de la page ressources</p>

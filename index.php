@@ -39,7 +39,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             unset($_SESSION['info']);
         }
 
-        if (!isset($_SESSION['id'])){
+        if (!isset($_SESSION['identifiant'])){
             echo '<header>
             <a href="index.php"><h3>Parlons harcèlement</h3></a>
                 <div class="items">
@@ -47,8 +47,8 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     <a href="index.php?action=idees"><p>Changer ses idées</p></a>
                     <a href="index.php?action=ressources"><p>Ressources</p></a>
                     <a href="index.php?action=contact"><p>Contact</p></a>
-                    <a href="index.php?action=connexion"><p>Se connecter</p></a>
-                    <a onclick="ouvrirmodale()"><p>S\'inscrire</p></a>
+                    <a onclick="ouvrirmodaleconnexion()"><p>Se connecter</p></a>
+                    <a onclick="ouvrirmodaleinscription()"><p>S\'inscrire</p></a>
                 </div>
             </header>';
         }else{
@@ -86,6 +86,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     ?>
 
         <?php include("vues/inscription.php"); ?>
+        <?php include("vues/connexion.php"); ?>
         <footer></footer>
     </body>
 <script src="js/script.js"></script>
