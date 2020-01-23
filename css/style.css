@@ -725,6 +725,7 @@ header a{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
 }
 
 .couleur_banniere{
