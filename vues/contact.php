@@ -12,9 +12,12 @@
             <label for="email" id="label2"> Sujet </label>
             <input type="text" name="sujet" id="sujet" onclick="glissement(this.id)"/>
             <label for="msg"> Message </label>
-            <textarea name="msg"></textarea>
-            <input type="submit" value="Envoyer" class="boutonconf"/>
+            <textarea name="message" id="message"></textarea>
+            <a class="boutonconf" onclick="validateForm()"> Envoyer</a>
         </form>
+        <div>
+            <p id="status"></p>
+        </div>
     </div>
     <div>
         <div class="infonumvert">
@@ -33,18 +36,3 @@
     </div>
 </div>
 
-<?php
-
-if(isset($_POST['email']) && isset($_POST['sujet']) && isset($_POST['msg'])){
-
-    $emailpsn = $_POST['email'];
-    ini_set("smtp_port", "25");
-    $mail = mail('parlonsharcelementcontact@gmail.com', 'Sujet : '. $_POST['sujet'], $_POST['msg'], 'From : ' . $emailpsn );
-    if($mail){
-        echo "Message envoyé";
-    } else {
-        echo "erreur";
-    }
-}
-
-?>
