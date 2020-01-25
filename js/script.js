@@ -64,3 +64,61 @@ $(function(){
     });
     return false;
 });
+
+
+// Fonction page contact, effet
+function glissement(a){
+    if(a == "email"){
+        document.getElementById("label1").style.marginTop = "-20px";
+    }
+    if(a == "sujet"){
+        document.getElementById("label2").style.marginTop = "60px";
+    }
+}
+
+
+//Fonction valider form contact
+function validateForm() {
+
+  document.getElementById('status').innerHTML = "Envoi en cours...";
+
+    formData = {
+
+        'email'    : $('input[name=email]').val(),
+
+        'subject'  : $('input[name=sujet]').val(),
+
+        'message'  : $('textarea[name=message]').val()
+
+    };
+
+    $.ajax({
+
+        url : "traitement/mail.php",
+
+        type: "POST",
+
+        async : true,
+
+        data : formData,
+
+        success: function(data, textStatus, jqXHR)
+
+        {
+
+            $('#status').text(data.message);
+
+            if (data.code) //Si le mail à bien été envoyé
+
+                $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            document.getElementById('status').innerHTML = "L'envoi du mail a échoué !";
+        }
+    });
+
+
+
+}

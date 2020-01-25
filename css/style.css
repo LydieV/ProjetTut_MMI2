@@ -725,6 +725,7 @@ header a{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
 }
 
 .couleur_banniere{
@@ -861,4 +862,68 @@ header a{
     border-radius: 10px;
     padding: 5px 10px;
     text-decoration: none;
+}
+
+
+
+/* Page contact */
+.pagecontact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.pagecontact div:first-child{
+    width: 30%;
+}
+
+.pagecontact form{
+    display: flex;
+    flex-direction: column;
+}
+
+.pagecontact input[type='text'], .pagecontact input[type='email']{
+    margin-bottom: 60px;
+    border: none;
+    border-bottom: 3px solid var(--orange);
+    width: 60%;
+    background-color: transparent;
+    position: relative;
+}
+
+.pagecontact #label1, .pagecontact #label2{
+    position: absolute;
+}
+
+.pagecontact #label2{
+    margin-top: 80px;
+}
+
+.pagecontact textarea{
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    resize: none;
+    width: 85%;
+    height: 120px;
+}
+
+.infonumvert{
+    text-align: center;
+    width: 100%!important;
+    margin-bottom: 20px;
+    color: #00a94f;
+}
+
+.numerovert{
+    border: 2px solid #00a94f;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reseausociaux{
+    display: flex;
+    justify-content: space-around;
 }

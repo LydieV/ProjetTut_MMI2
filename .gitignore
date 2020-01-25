@@ -1,6 +1,2 @@
 config/config.php
-.idea/.gitignore
-.idea/misc.xml
-.idea/modules.xml
-.idea/ProjetTut_MMI2.iml
-.idea/vcs.xml
+.idea
