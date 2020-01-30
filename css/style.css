@@ -918,16 +918,8 @@ header a{
 }
 
 .infosreseaux{
-    position: relative;
-}
-
-.infosreseaux::after{
-    content: "";
-    position: absolute;
-    width: 50%;
-    left: 0;
-    border-bottom: 4px solid grey;
-    transform: translateY(10px);
+    border-left: 2px solid grey;
+    padding-left: 50px;
 }
 
 .infonumvert{
