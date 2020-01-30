@@ -44,7 +44,6 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             <a href="index.php"><h3>Parlons harcèlement</h3></a>
                 <div class="items">
                     <a href="index.php?action=temoignages"><p>Témoignages</p></a>
-                    <a href="index.php?action=idees"><p>Changer ses idées</p></a>
                     <a href="index.php?action=ressources"><p>Ressources</p></a>
                     <a href="index.php?action=contact"><p>Contact</p></a>
                     <a onclick="ouvrirmodaleconnexion()"><p>Se connecter</p></a>
@@ -56,7 +55,6 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             <a href="index.php"><h3>Parlons harcèlement</h3></a>
                 <div class="items">
                     <a href="index.php?action=temoignages"><p>Témoignages</p></a>
-                    <a href="index.php?action=idees"><p>Changer ses idées</p></a>
                     <a href="index.php?action=ressources"><p>Ressources</p></a>
                     <a href="index.php?action=contact"><p>Contact</p></a>
                     <a href="index.php?action=mapage"><p>Ma page</p></a>
