@@ -11,7 +11,7 @@
             <input type="email" name="email" id="email" onclick="glissement(this.id)"/>
             <label for="email" id="label2"> Sujet </label>
             <input type="text" name="sujet" id="sujet" onclick="glissement(this.id)"/>
-            <label for="msg"> Message </label>
+            <label for="msg" class="labelmsg"> Message </label>
             <textarea name="message" id="message"></textarea>
             <a class="boutonconf" onclick="validateForm()"> Envoyer</a>
         </form>
@@ -19,7 +19,7 @@
             <p id="status"></p>
         </div>
     </div>
-    <div>
+    <div class="infosreseaux">
         <div class="infonumvert">
             <p> Numéro vert </p>
             <p class="numerovert"> 0 800 00 00 01 </p>
