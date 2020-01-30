@@ -8,6 +8,7 @@ $listeDesActions = array(
     "mapage" => "vues/mapage.php",
     "ressources" => "vues/ressources.php",
     "contact" => "vues/contact.php",
+    "poster" => "vues/poster.php",
     "deconnexion" => "traitement/deconnexion.php",
     "supcompte" => "traitement/suppressioncompte.php",
     "changepseudo" => "traitement/changepseudo.php",
@@ -15,5 +16,6 @@ $listeDesActions = array(
     "changemail" => "traitement/changemail.php",
     "changemdp" => "traitement/changemdp.php",
     "changeinfo" => "traitement/changeinfo.php",
+    "postertemoignage" => "traitement/postertemoignage.php",
     "erreur" => "vues/404.php"
 );

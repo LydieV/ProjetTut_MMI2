@@ -62,6 +62,25 @@ $(function(){
             }
         });
     });
+
+    //Lors de l'envoi d'un témoignage
+    /*$("#formtemoignage").submit(function(event){
+        event.preventDefault();
+
+        let formData = {
+            'temoignage' : $('textarea[name=temoignage]').val(),
+        };
+        console.log(formData);
+
+        $.post( "./traitement/postertemoignage.php", formData, function(data) {
+            if (data != 'Succes'){
+                //$('#statusconnexion').html(data);
+            }else{
+                $(location).attr('href',"index.php?action=temoignages");
+            }
+        });
+    });*/
+
     return false;
 });
 
