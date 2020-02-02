@@ -954,15 +954,17 @@ header a{
 }
 
 .infosreseaux{
-    border-left: 2px solid grey;
+    border-left: 5px solid #F4F4F4;
     padding-left: 50px;
 }
 
 .infonumvert{
+    margin-top: 50px;
     text-align: center;
     width: 100%!important;
     margin-bottom: 20px;
     color: #00a94f;
+    font-size: 20px;
 }
 
 .infonumvert p:first-child{
@@ -972,14 +974,25 @@ header a{
 
 .numerovert{
     border: 2px solid #00a94f;
-    border-radius: 10px;
-    width: 40%;
+    border-radius: 18px;
+    width: 60%;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
 }
 
+.reseaux{
+    margin-top: 60px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
 .reseausociaux{
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
 }
