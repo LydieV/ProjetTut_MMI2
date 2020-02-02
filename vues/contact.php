@@ -24,14 +24,16 @@
             <p> Numéro vert </p>
             <p class="numerovert"> 0 800 00 00 01 </p>
         </div>
-        <p> Vous pouvez aussi consulter nos réseaux sociaux </p>
-        <div class="reseausociaux">
-            <a href="#">
-                <img src="img/icone_facebook.png" alt="icone_facebook"/>
-            </a>
-            <a href="#">
-                <img src="img/icone_twitter.png" alt="icone_twitter"/>
-            </a>
+        <div class="reseaux">
+            <p> Vous pouvez aussi consulter nos réseaux sociaux </p>
+            <div class="reseausociaux">
+                <a href="https://www.facebook.com/Parlons-harc%C3%A8lement-103908774511172/?view_public_for=103908774511172">
+                    <img src="img/icone_facebook.png" alt="icone_facebook"/>
+                </a>
+                <a href="https://twitter.com/ParlonsHarclem1">
+                    <img src="img/icone_twitter.png" alt="icone_twitter"/>
+                </a>
+            </div>
         </div>
     </div>
 </div>
