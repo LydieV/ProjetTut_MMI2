@@ -87,5 +87,5 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <?php include("vues/connexion.php"); ?>
         <footer></footer>
     </body>
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </html>

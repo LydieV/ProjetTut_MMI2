@@ -8,7 +8,7 @@
     <div class="temoignage">
         <div class="partiegauche">
             <p>Souhaitez-vous témoigner ?</p>
-            <a href="#">
+            <a href="index.php?action=poster">
                 <div class="bouton rediger">
                     <p>Rédiger maintenant</p>
                 </div>
@@ -16,57 +16,29 @@
         </div>
         <div class="partiedroite">
             <div class="filtres">
-                <div class="filtreviolet tous"><p>Tous</p><div class="selecteur"></div></div>
-                <div class="filtreviolet scolaire active"><p>Harcèlement scolaire</p><div class="selecteur"></div></div>
-                <div class="filtreviolet professionnel"><p>Harcèlement professionnel</p><div class="selecteur"></div></div>
-                <div class="filtreviolet cyber"><p>Cyber-harcèlement</p><div class="selecteur"></div></div>
-                <div class="filtreviolet sexuel"><p>Harcèlement sexuel</p><div class="selecteur"></div></div>
+                <div class="filtreviolet filter-button active" data-filter="tous"><p>Tous</p><div class="selecteur"></div></div>
+                <div class="filtreviolet filter-button" data-filter="Scolaire"><p>Harcèlement scolaire</p><div class="selecteur"></div></div>
+                <div class="filtreviolet filter-button" data-filter="Professionnel"><p>Harcèlement professionnel</p><div class="selecteur"></div></div>
+                <div class="filtreviolet filter-button" data-filter="Cyber"><p>Cyber-harcèlement</p><div class="selecteur"></div></div>
+                <div class="filtreviolet filter-button" data-filter="Sexuel"><p>Harcèlement sexuel</p><div class="selecteur"></div></div>
             </div>
             <div class="listeposts">
-                <div class="post">
-                    <div class="illustrationpost">
-
-                    </div>
-                    <div class="contenupost">
-                        <div class="titrefiltre">Professionnel</div>
-                        <div class="datepublication">Publié le 10/01/2020</div>
-                        <div class="apercu">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea facere fugit hic magni modi, nostrum officia quasi, quisquam similique tempore veniam! Asperiores laborum praesentium reiciendis tenetur vel. Dicta, officiis..."</div>
-                        <a href="#"><div class="continuerlecture">continuer la lecture...</div></a>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="illustrationpost">
-
-                    </div>
-                    <div class="contenupost">
-                        <div class="titrefiltre">Professionnel</div>
-                        <div class="datepublication">Publié le 10/01/2020</div>
-                        <div class="apercu">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea facere fugit hic magni modi, nostrum officia quasi, quisquam similique tempore veniam! Asperiores laborum praesentium reiciendis tenetur vel. Dicta, officiis..."</div>
-                        <a href="#"><div class="continuerlecture">continuer la lecture...</div></a>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="illustrationpost">
-
-                    </div>
-                    <div class="contenupost">
-                        <div class="titrefiltre">Professionnel</div>
-                        <div class="datepublication">Publié le 10/01/2020</div>
-                        <div class="apercu">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea facere fugit hic magni modi, nostrum officia quasi, quisquam similique tempore veniam! Asperiores laborum praesentium reiciendis tenetur vel. Dicta, officiis..."</div>
-                        <a href="#"><div class="continuerlecture">continuer la lecture...</div></a>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="illustrationpost">
-
-                    </div>
-                    <div class="contenupost">
-                        <div class="titrefiltre">Professionnel</div>
-                        <div class="datepublication">Publié le 10/01/2020</div>
-                        <div class="apercu">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea facere fugit hic magni modi, nostrum officia quasi, quisquam similique tempore veniam! Asperiores laborum praesentium reiciendis tenetur vel. Dicta, officiis..."</div>
-                        <a href="#"><div class="continuerlecture">continuer la lecture...</div></a>
-                    </div>
-                </div>
+                <?php
+                $sql = "SELECT *, DATE_FORMAT(dateEcrit, '%d/%m/%Y') AS dateEcritFormate FROM ecrit ORDER BY id DESC";
+                $query = $pdo -> prepare($sql);
+                $query->execute();
+                while($line = $query->fetch()){
+                    $contenu=$line['contenu'];
+                    $categorie = $line['categorie'];
+                    $dateEcrit = $line['dateEcritFormate'];
+                    echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
+                    echo "<div class='titrefiltre'>$categorie</div>";
+                    echo "<div class='datepublication'>Publié le $dateEcrit</div>";
+                    echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
+                    echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                    echo '</div></div>';
+                }
+                ?>
             </div>
         </div>
     </div>

@@ -1,3 +1,7 @@
+<?php if(!isset ($_SESSION['id'])){
+    header('Location: index.php?action=temoignages');
+}?>
+
 <div class="contenuposter">
     <div class="bannieretemoignages">
         <div class="couleur_banniere textebannieretemoignages">
@@ -12,7 +16,7 @@
         dans la rubrique correspondante après lecture.</p>
     </div>
     <div class="formposter">
-        <form id="formtemoignage" method="POST" action="index.php?action=postertemoignage">
+        <form id="formtemoignage" method="POST">
             <textarea name="temoignage" placeholder="Décrivez les faits dont vous avez été victime..."></textarea>
             <input class="bouton envoitemoignage" type="submit" value="Envoyer mon témoigage"></input>
         </form>

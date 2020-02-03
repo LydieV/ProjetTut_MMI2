@@ -64,7 +64,7 @@ $(function(){
     });
 
     //Lors de l'envoi d'un témoignage
-    /*$("#formtemoignage").submit(function(event){
+    $("#formtemoignage").submit(function(event){
         event.preventDefault();
 
         let formData = {
@@ -79,7 +79,22 @@ $(function(){
                 $(location).attr('href',"index.php?action=temoignages");
             }
         });
-    });*/
+    });
+
+    /* Fonction permettant le filtrage par catÃ©gories */
+    $(".filter-button").click(function(){
+        $(".filter-button").removeClass('active');
+        $(this).addClass("active");
+        let value = $(this).attr('data-filter');
+
+        if(value == "tous"){
+            $('.filter').show('1000');
+        }
+        else{
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+        }
+    });
 
     return false;
 });
@@ -137,7 +152,5 @@ function validateForm() {
             document.getElementById('status').innerHTML = "L'envoi du mail a échoué !";
         }
     });
-
-
-
 }
+
