@@ -46,6 +46,11 @@ header a{
 .items > a:hover{
     background-color:var(--orange3);
 }
+.iconemenu, .iconemenuc{
+    display:none;
+    width:20px;
+    height:20px;
+}
 
 /* Page d'accueil */
 .contenuaccueil{
@@ -505,6 +510,124 @@ header a{
     border:0;
     margin-top:30px;
     width:40%;
+}
+
+
+@media screen and (max-width: 500px){
+    header{
+        position: fixed;
+        z-index: 100;
+    }
+    .contenuaccueil{
+        padding-top:60px;
+    }
+    .items{
+        flex-direction: column;
+        position:fixed;
+        top:60px;
+        left:0px;
+        background-color:var(--orange2);
+        z-index: 100;
+        width:100vw;
+        align-items: center;
+        height:0;
+        transition:0.7s;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .items > a{
+        padding-bottom: 90px;
+    }
+    .items > a >p{
+        font-size:1.6rem;
+    }
+    .iconemenu{
+        display:block;
+    }
+    .contenuaccueil > h1{
+        font-size:2.9rem;
+    }
+    .contenuaccueil > h1:after{
+        bottom:0px;
+    }
+    .contenuaccueil{
+        width:100vw!important;
+    }
+    .cartes{
+        flex-direction:column;
+        align-items: center;
+    }
+    .carte{
+        width:80%;
+    }
+    .carte:nth-child(1), .carte:nth-child(2){
+        margin-bottom: 25px;
+    }
+    .carte > a > .masque{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color: var(--violet);
+        opacity: 0.8;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carte > a > .masque > p{
+        display:block;
+    }
+
+    .descagir{
+        display:block;
+    }
+    .descagir > p{
+        width:90%;
+        border-right:none;
+        padding: 0;
+        margin: auto;
+    }
+    .agircontact{
+        align-items: center;
+        justify-content: center;
+        padding-top:25px;
+        margin:auto;
+        width:90%;
+        flex-direction: row;
+    }
+    .agircontact > h3{
+        padding:0;
+    }
+
+    /* Modale connexion */
+    .inscription, .connexion{
+        z-index: 1000;
+    }
+    .modale{
+        width:90%;
+        height:80vh;
+    }
+    .ligne1{
+        flex-direction: column;
+    }
+    .identifiant, .datenaissance{
+        width:100%;
+        padding-top: 15px;
+    }
+    .ligne3{
+        align-items: flex-end;
+    }
+    .ligne4{
+        padding:0;
+    }
+    .envoi{
+        padding:0;
+        width:80%;
+    }
+    .mdpconnexion{
+        width:100%;
+        padding-top:15px;
+    }
+
 }
 
 

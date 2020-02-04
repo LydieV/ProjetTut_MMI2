@@ -11,6 +11,24 @@ function fermermodaleconnexion(){
     $('#connexion').fadeOut(500);
 }
 
+function ouvrirmenu(){
+    let menu = document.getElementById("items");
+    menu.style.height="-webkit-fill-available";
+    let iconemenuo = document.getElementById("iconemenueo");
+    iconemenuo.style.display="none";
+    let iconemenuc = document.getElementById("iconemenuec");
+    iconemenuc.style.display="block";
+}
+
+function fermermenu(){
+    let menu = document.getElementById("items");
+    menu.style.height="0";
+    let iconemenuo = document.getElementById("iconemenueo");
+    iconemenuo.style.display="block";
+    let iconemenuc = document.getElementById("iconemenuec");
+    iconemenuc.style.display="none";
+}
+
 function idaleatoire() {
     let size = Math.random() * (10 - 4) + 4;
     let liste = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
