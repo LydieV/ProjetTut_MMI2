@@ -32,16 +32,28 @@
                     echo 'Aucun témoignage n\'a été trouvé...';
                 }else{
                     while($line = $query->fetch()){
+                        $id=$line['id'];
                         $contenu=$line['contenu'];
                         $categorie = $line['categorie'];
                         $dateEcrit = $line['dateEcritFormate'];
                         if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
                             echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
-                            echo "<div class='titrefiltre'>$categorie</div>";
+                            echo "<form method='POST' action='index.php?action=acceptertemoignage'><input name='id' value='$id' type='hidden'>";
+                            echo "<div class='titrefiltre'>
+                            <select name='categorie'>
+                             <option selected value='Scolaire'>Scolaire</option>
+                             <option value='Professionnel'>Professionnel</option>
+                             <option value='Cyber'>Cyber</option>
+                             <option value='Sexuel'>Sexuel</option>
+                            </select></div>";
                             echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                             echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
                             echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
-                            echo '<a href="index.php?action=acceptertemoignage&id='.$line['id'].'"><button>Accepter</button></a><a href="index.php?action=supprimertemoignage&id='.$line['id'].'"><button>Supprimer</button></a></div></div>';
+                            echo '<input type="submit" value="Accepter"></form>';
+                            echo '<form method="POST" action="index.php?action=supprimertemoignage">';
+                            echo "<input name='id' value='$id' type='hidden'>";
+                            echo '<input type="submit" value="Supprimer"></form>';
+                            echo '</div></div>';
                         }else{
                             if($line['visible']=="1"){
                                 echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
@@ -49,6 +61,11 @@
                                 echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                                 echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
                                 echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                                if($_SESSION['admin'] == "1"){
+                                    echo '<form method="POST" action="index.php?action=supprimertemoignage">';
+                                    echo "<input name='id' value='$id' type='hidden'>";
+                                    echo '<input type="submit" value="Supprimer"></form>';
+                                }
                                 echo '</div></div>';
                             }
 
