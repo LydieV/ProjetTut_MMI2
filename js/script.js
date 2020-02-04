@@ -120,11 +120,13 @@ $(function(){
 
 // Fonction page contact, effet
 function glissement(a){
-    if(a == "email"){
-        document.getElementById("label1").style.marginTop = "-20px";
-    }
-    if(a == "sujet"){
-        document.getElementById("label2").style.marginTop = "60px";
+    if(document.body.clientWidth > 500){
+        if(a == "email"){
+            document.getElementById("label1").style.marginTop = "-20px";
+        }
+        if(a == "sujet"){
+            document.getElementById("label2").style.marginTop = "60px";
+        }
     }
 }
 
