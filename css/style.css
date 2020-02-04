@@ -58,9 +58,10 @@ header a{
 }
 .banniereaccueil{
     height:30vh;
-    background-image: url('../img/banniereaccueil.png');
+    background-image: url('../img/banniereaccueil.jpg');
     background-size:cover;
     position: relative;
+    background-position: center;
 }
 .bouton{
     background-color:var(--orange2);
@@ -518,7 +519,7 @@ header a{
         position: fixed;
         z-index: 100;
     }
-    .contenuaccueil{
+    .contenuaccueil, .contenutemoignages, .contenuposter{
         padding-top:60px;
     }
     .items{
@@ -604,7 +605,7 @@ header a{
     }
     .modale{
         width:90%;
-        height:80vh;
+        height:auto;
     }
     .ligne1{
         flex-direction: column;
@@ -626,6 +627,60 @@ header a{
     .mdpconnexion{
         width:100%;
         padding-top:15px;
+    }
+    .modale > p{
+        font-size: 0.8rem;
+        width: 74%;
+    }
+    .ligne4 > div:nth-child(2):hover {
+        transform: none;
+    }
+    .ligne4 > div > p{
+        width:95%;
+        font-size:0.9rem;
+        color: white;
+    }
+
+    .textebanniere > p{
+        font-size:1rem!important;
+        width:90%;
+    }
+    .textebannieretemoignages > p{
+        font-size:0.7rem!important;
+        width:90%;
+    }
+    .descriptionposter > p{
+        width:90%;
+        font-size:1rem;
+    }
+    .temoignage{
+        flex-direction: column;
+    }
+    .partiegauche{
+        width:80%;
+        border-right:0;
+        height: max-content;
+        margin:auto;
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+    .partiedroite{
+        width:100%;
+        margin:auto;
+        padding:0;
+    }
+    .filtres{
+        flex-direction: column;
+    }
+    .filtres > div{
+        width:90%;
+        margin:auto;
+    }
+    #formtemoignage{
+        width:90%;
+    }
+    #formtemoignage > input{
+        width:90%;
     }
 
 }

@@ -17,6 +17,9 @@ if (isset($_POST['identifiant']) && !empty($_POST['identifiant']) && isset($_POS
         session_start();
         $_SESSION['id'] = $line['id'];
         $_SESSION['identifiant'] = $line['identifiant'];
+        if($line['admin'] == "1"){
+            $_SESSION['admin'] = true;
+        }
         echo 'Succes';
     }else{
         echo 'Identifiant ou mot de passe invalide !';

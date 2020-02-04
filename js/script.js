@@ -13,7 +13,7 @@ function fermermodaleconnexion(){
 
 function ouvrirmenu(){
     let menu = document.getElementById("items");
-    menu.style.height="-webkit-fill-available";
+    menu.style.height="100vh";
     let iconemenuo = document.getElementById("iconemenueo");
     iconemenuo.style.display="none";
     let iconemenuc = document.getElementById("iconemenuec");

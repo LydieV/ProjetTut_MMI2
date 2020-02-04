@@ -27,17 +27,37 @@
                 $sql = "SELECT *, DATE_FORMAT(dateEcrit, '%d/%m/%Y') AS dateEcritFormate FROM ecrit ORDER BY id DESC";
                 $query = $pdo -> prepare($sql);
                 $query->execute();
-                while($line = $query->fetch()){
-                    $contenu=$line['contenu'];
-                    $categorie = $line['categorie'];
-                    $dateEcrit = $line['dateEcritFormate'];
-                    echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
-                    echo "<div class='titrefiltre'>$categorie</div>";
-                    echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                    echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
-                    echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
-                    echo '</div></div>';
+                $count = $query->rowCount();
+                if($count == 0){
+                    echo 'Aucun témoignage n\'a été trouvé...';
+                }else{
+                    while($line = $query->fetch()){
+                        $contenu=$line['contenu'];
+                        $categorie = $line['categorie'];
+                        $dateEcrit = $line['dateEcritFormate'];
+                        if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
+                            echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
+                            echo "<div class='titrefiltre'>$categorie</div>";
+                            echo "<div class='datepublication'>Publié le $dateEcrit</div>";
+                            echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
+                            echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                            echo '<a href="index.php?action=acceptertemoignage&id='.$line['id'].'"><button>Accepter</button></a><a href="index.php?action=supprimertemoignage&id='.$line['id'].'"><button>Supprimer</button></a></div></div>';
+                        }else{
+                            if($line['visible']=="1"){
+                                echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
+                                echo "<div class='titrefiltre'>$categorie</div>";
+                                echo "<div class='datepublication'>Publié le $dateEcrit</div>";
+                                echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
+                                echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                                echo '</div></div>';
+                            }
+
+                        }
+
+
+                    }
                 }
+
                 ?>
             </div>
         </div>

@@ -17,5 +17,7 @@ $listeDesActions = array(
     "changemdp" => "traitement/changemdp.php",
     "changeinfo" => "traitement/changeinfo.php",
     "postertemoignage" => "traitement/postertemoignage.php",
+    "acceptertemoignage" => "traitement/acceptertemoignage.php",
+    "supprimertemoignage" => "traitement/supprimertemoignage.php",
     "erreur" => "vues/404.php"
 );
