@@ -54,7 +54,7 @@
         }
         if($ok==true && $motdepasse == true && $formatemail == true){
             //On insère les données dans la bdd
-            $sql = "INSERT INTO utilisateurs VALUES(NULL,'$identifiant',PASSWORD('$mdp'),'$email',NULL, NULL)";
+            $sql = "INSERT INTO utilisateurs VALUES(NULL,'$identifiant',PASSWORD('$mdp'),'$email',NULL, NULL,0)";
             $query = $pdo->prepare($sql);
             $query->execute();
             $id = $pdo->lastInsertId();
