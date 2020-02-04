@@ -52,7 +52,22 @@ if(isset($_SESSION['id'])){
         <div class="activitesprofil">
             <div>
                 <h3> Les témoignages que j'ai postés </h3>
-                <div></div>
+                <?php
+                $sql = "SELECT * FROM ecrit WHERE idAuteur=?";
+                $query = $pdo -> prepare($sql);
+                $query->execute(array($_SESSION['id']));
+                while($line=$query->fetch()){
+                    $contenu=substr($line['contenu'], 0, 25). ' ...';
+                    echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="apercutemoignage"><p>'.$contenu   .'</p></div></a>';
+                }
+
+
+
+
+
+
+
+                ?>
             </div>
             <div>
                 <h3> Les témoignages que j'ai sauvegardé </h3>

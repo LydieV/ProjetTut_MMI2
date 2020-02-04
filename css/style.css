@@ -685,6 +685,19 @@ header a{
 
 }
 
+.apercutemoignage{
+    width:30%;
+    height:100px;
+    background-color: var(--violet);
+    color:white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+
+}
+
 
 
 
