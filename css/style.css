@@ -996,3 +996,39 @@ header a{
     display: flex;
     justify-content: space-around;
 }
+
+@media screen and (max-width: 500px) {
+    .pagecontact{
+        display: inline-block;
+        margin-top: 50px;
+    }
+
+    .pagecontact div:first-child{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagecontact input[type='text'], .pagecontact input[type='email']{
+        margin-bottom: 50px;
+    }
+
+    .pagecontact #label2{
+        margin-top: 48px;
+    }
+
+    .pagecontact #label1{
+        margin-top: -22px;
+    }
+
+    .boutonconf{
+        margin-top: 0;
+    }
+
+    .infosreseaux{
+        border-left: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+}
