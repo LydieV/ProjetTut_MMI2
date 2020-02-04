@@ -60,18 +60,19 @@ if(isset($_SESSION['id'])){
                     $contenu=substr($line['contenu'], 0, 25). ' ...';
                     echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="apercutemoignage"><p>'.$contenu   .'</p></div></a>';
                 }
-
-
-
-
-
-
-
                 ?>
             </div>
             <div>
                 <h3> Les témoignages que j'ai sauvegardé </h3>
-                <div></div>
+                <?php
+                $sql = "SELECT *, ecrit.id AS idecrit FROM ecrit JOIN sauvegarde ON idUtilisateur=? WHERE sauvegarde.idUtilisateur=? AND sauvegarde.idTemoignage=ecrit.id";
+                $query = $pdo -> prepare($sql);
+                $query->execute(array($_SESSION['id'],$_SESSION['id']));
+                while($line=$query->fetch()){
+                    $contenu=substr($line['contenu'], 0, 25). ' ...';
+                    echo '<a href="index.php?action=temoignage&id='.$line['idecrit'].'"><div class="apercutemoignage"><p>'.$contenu   .'</p></div></a>';
+                }
+                ?>
             </div>
             <div>
                 <h3> Les commentaires que j'ai posté</h3>
