@@ -9,6 +9,8 @@ $listeDesActions = array(
     "ressources" => "vues/ressources.php",
     "contact" => "vues/contact.php",
     "poster" => "vues/poster.php",
+    "erreur" => "vues/404.php",
+    "temoignage" => "vues/temoignage.php",
     "deconnexion" => "traitement/deconnexion.php",
     "supcompte" => "traitement/suppressioncompte.php",
     "changepseudo" => "traitement/changepseudo.php",
@@ -19,5 +21,6 @@ $listeDesActions = array(
     "postertemoignage" => "traitement/postertemoignage.php",
     "acceptertemoignage" => "traitement/acceptertemoignage.php",
     "supprimertemoignage" => "traitement/supprimertemoignage.php",
-    "erreur" => "vues/404.php"
+    "sauvegarde" => "traitement/sauvegarde.php",
+    "retirersauvegarde" => "traitement/retirersauvegarde.php"
 );
