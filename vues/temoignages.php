@@ -47,7 +47,7 @@
                              <option value='Sexuel'>Sexuel</option>
                             </select></div>";
                             echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                            echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
+                            echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
                             echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                             echo '<input type="submit" value="Accepter"></form>';
                             echo '<form method="POST" action="index.php?action=supprimertemoignage">';
@@ -59,7 +59,7 @@
                                 echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
                                 echo "<div class='titrefiltre'>$categorie</div>";
                                 echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                                echo '<div class="apercu">"'.substr($contenu, 0, 150).' ..."</div>';
+                                echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
                                 echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                                 if($_SESSION['admin'] == "1"){
                                     echo '<form method="POST" action="index.php?action=supprimertemoignage">';
