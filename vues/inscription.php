@@ -12,31 +12,7 @@
                 <div class="datenaissance">
                     <label for="naissance">Date de naissance</label>
                     <div class="choixnaissance">
-                        <input list="jour" name="jour" placeholder="1">
-                        <datalist id="jour">
-                            <?php
-                                for($i=1;$i<32;$i++){
-                                    echo "<option value='$i'></option>";
-                                }
-                            ?>
-                        </datalist>
-                        <input list="mois" name="mois" placeholder="Jan.">
-                        <datalist id="mois">
-                            <?php
-                                $tabmois=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sept.','Oct.','Nov','Déc.'];
-                                foreach($tabmois as $mois){
-                                    echo "<option value='$mois'></option>";
-                                }
-                            ?>
-                        </datalist>
-                        <input list="annee" name="annee" placeholder="1900">
-                        <datalist id="annee">
-                            <?php
-                                for($i=1900;$i<2020;$i++){
-                                    echo "<option value='$i'></option>";
-                                }
-                            ?>
-                        </datalist>
+                        <input type="date" id="start" name="naissance" required>
                     </div>
                 </div>
             </div>

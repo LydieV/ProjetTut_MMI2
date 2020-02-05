@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="temoignage">
-        <div class="partiegauche">
+        <!-- <div class="partiegauche">
 
             <?php
             if (!isset($_SESSION['id'])){
@@ -19,7 +19,7 @@
                 echo '</div></a>';
             }
             ?>
-        </div>
+        </div>-->
         <div class="partiedroite">
             <div class="filtres">
                 <div class="filtreviolet filter-button active" data-filter="tous"><p>Tous</p><div class="selecteur"></div></div>
