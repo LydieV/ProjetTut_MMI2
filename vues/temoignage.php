@@ -15,25 +15,25 @@ if(isset($_GET['id'])){
         echo '<br />';
         echo $line['contenu'];
 
-        //On donne la possibilité de sauvegarder le témoignage
-        $sql="SELECT * FROM sauvegarde WHERE idUtilisateur=? AND idTemoignage=?";
-        $query = $pdo -> prepare($sql);
-        $query->execute(array($_SESSION['id'],$id));
-        $count=$query->rowCount();
+        if(isset($_SESSION['id'])){
+            //On donne la possibilité de sauvegarder le témoignage si la personne est connectée
+            $sql="SELECT * FROM sauvegarde WHERE idUtilisateur=? AND idTemoignage=?";
+            $query = $pdo -> prepare($sql);
+            $query->execute(array($_SESSION['id'],$id));
+            $count=$query->rowCount();
 
-        if($count == 0){
-            echo '<form method="POST" action="index.php?action=sauvegarde">';
-            echo "<input type='hidden' name='id' value='$id'>";
-            echo "<input type='submit' value='Sauvegarder'>";
-            echo '</form>';
-        }else{
-            echo '<form method="POST" action="index.php?action=retirersauvegarde">';
-            echo "<input type='hidden' name='id' value='$id'>";
-            echo "<input type='submit' value='Ne plus sauvegarder'>";
-            echo '</form>';
+            if($count == 0){
+                echo '<form method="POST" action="index.php?action=sauvegarde">';
+                echo "<input type='hidden' name='id' value='$id'>";
+                echo "<input type='submit' value='Sauvegarder'>";
+                echo '</form>';
+            }else{
+                echo '<form method="POST" action="index.php?action=retirersauvegarde">';
+                echo "<input type='hidden' name='id' value='$id'>";
+                echo "<input type='submit' value='Ne plus sauvegarder'>";
+                echo '</form>';
+            }
         }
-
-
     }
 }
 
