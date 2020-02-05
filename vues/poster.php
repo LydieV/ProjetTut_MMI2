@@ -1,6 +1,5 @@
 <?php if(!isset ($_SESSION['id'])){
     header('Location: index.php?action=temoignages');
-    $_SESSION['seconnecter']='Vous devez posséder un compte pour pouvoir poster un témoignage !';
 }?>
 
 <div class="contenuposter">
