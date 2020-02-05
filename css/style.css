@@ -685,18 +685,7 @@ header a{
 
 }
 
-.apercutemoignage{
-    width:30%;
-    height:100px;
-    background-color: var(--violet);
-    color:white;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: none;
 
-}
 
 
 
@@ -1091,6 +1080,74 @@ header a{
     text-decoration: none;
 }
 
+.carousel_activites{
+    margin-top: 30px;
+}
+
+.carousel_activites a{
+    text-decoration: none;
+}
+
+.apercutemoignage{
+    width:40%;
+    height:100px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    border: solid 1px var(--violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+}
+
+.apercutemoignage:hover{
+    background-color: var(--violet);
+    color: white;
+}
+
+.section_activite{
+    margin-bottom: 70px;
+}
+
+.titre1{
+    position: relative;
+}
+
+.titre1::after{
+    content: "";
+    position: absolute;
+    width: 84%;
+    bottom: -5px;
+    left: 8%;
+    border-bottom: 7px solid var(--violet);
+}
+
+.titre2{
+    position: relative;
+}
+
+.titre2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    left: 0%;
+    border-bottom: 7px solid var(--violet);
+}
+
+.titre3{
+    position: relative;
+}
+
+.titre3::after{
+    content: "";
+    position: absolute;
+    width: 87%;
+    bottom: -5px;
+    left: 6.5%;
+    border-bottom: 7px solid var(--violet);
+}
 
 
 /* Page contact */
