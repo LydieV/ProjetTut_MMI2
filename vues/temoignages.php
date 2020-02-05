@@ -7,12 +7,18 @@
     </div>
     <div class="temoignage">
         <div class="partiegauche">
-            <p>Souhaitez-vous témoigner ?</p>
-            <a href="index.php?action=poster">
-                <div class="bouton rediger">
-                    <p>Rédiger maintenant</p>
-                </div>
-            </a>
+
+            <?php
+            if (!isset($_SESSION['id'])){
+                echo '<p>Merci de vous inscrire ou de vous identifier pour pouvoir poster un témoignage</p>';
+            }else{
+                echo '<p>Souhaitez-vous témoigner ?</p>';
+                echo '<a href="index.php?action=poster">';
+                echo '<div class="bouton rediger">';
+                echo '<p>Rédiger maintenant</p>';
+                echo '</div></a>';
+            }
+            ?>
         </div>
         <div class="partiedroite">
             <div class="filtres">
