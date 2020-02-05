@@ -410,7 +410,10 @@ footer{
     text-decoration: none;
 }
 .partiegauche > p{
-    padding-bottom:50px;
+    padding-bottom:30px;
+}
+.partiegauche > p:nth-child(2){
+    padding-top:20px;
 }
 
 .partiedroite{
