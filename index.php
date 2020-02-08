@@ -89,7 +89,13 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 
         <?php include("vues/inscription.php"); ?>
         <?php include("vues/connexion.php"); ?>
-        <footer></footer>
+        <footer>
+            <div><div class="apropos"><p>" Parlons Harcèlement " est une campagne contre le harcèlement dans toutes ses formes et accompagne les victimes à témoigner et agir contre le harcèlement. </p></div>
+                <div class="reseauxsociaux"><p>Facebook</p><p>Twitter</p></div>
+                <div class="contacts"><p>Mail : parlonsharcelementcontact@gmail.com</p><p>Téléphone : 0781257059</p></div>
+            </div>
+            <div class="mentions"><p>Mentions légales | Confodentialité | Cookies</p></div>
+        </footer>
     </body>
     <script src="js/script.js"></script>
 </html>

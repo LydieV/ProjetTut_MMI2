@@ -543,6 +543,34 @@ footer{
     width:40%;
 }
 
+/* Footer */
+footer{
+    height:max-content;
+    padding:50px;
+}
+
+footer > div{
+    display:flex;
+    align-items: center;
+    color:white;
+    justify-content: space-around;
+}
+.apropos{
+    width:30%;
+}
+.reseauxsociaux{
+    width:30%;
+    text-align: center;
+}
+.contacts{
+    width:30%;
+}
+.mentions{
+    padding-top:15px;
+    display:flex;
+    justify-content: flex-end;
+}
+
 
 @media screen and (max-width: 500px){
     header{
