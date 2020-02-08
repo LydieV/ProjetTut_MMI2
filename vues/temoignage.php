@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
     if($line['visible'] == 0){
         header('Location:index.php?action=temoignages');
     }else{
-        echo '<div class="banniere_mapage">';
+        echo '<div class="contenutemoignage"><div class="banniere_mapage">';
             echo '<div class="couleur_banniere">';
                 echo "<p> Témoigner, c'est une marque de courage </p>";
             echo '</div>';
@@ -24,7 +24,8 @@ if(isset($_GET['id'])){
             echo '</div>';
             echo '<div class="temoignagecontenu">"' . $line['contenu'] . '"</div>';
 
-            //On donne la possibilité de sauvegarder le témoignage
+            //On donne la possibilité de sauvegarder le témoignage si la pers est connextée
+        if (isset($_SESSION['id'])){
             $sql="SELECT * FROM sauvegarde WHERE idUtilisateur=? AND idTemoignage=?";
             $query = $pdo -> prepare($sql);
             $query->execute(array($_SESSION['id'],$id));
@@ -41,29 +42,44 @@ if(isset($_GET['id'])){
                 echo "<input type='submit' value='Ne plus sauvegarder le témoignage' class='boutonvalider'>";
                 echo '</form>';
             }
+        }
+        ?>
 
-            echo '<div class="commentaire">';
-                    echo '<form class="formnouvcom">';
-                        echo '<input type="text" placeholder="Laissez un commentaire juste ici..." class="postercom"/>';
-                    echo '</form>';
-                    echo '<div class="listecommentaires">';
-                        echo '<div class="uncommentaire">';
-                            echo '<div class="infocom">';
-                                echo '<p> Publié le 05/02/2020 par </p>';
-                                echo '<p> Emilie Durant </p>';
-                            echo '</div>';
-                            echo '<p class="contenucom"> " Contenu du commentaire " </p>';
-                        echo '</div>';
-                    echo '</div>';
-            echo '</div>';
+        <div class="commentaire">
+        <?php
+            if (isset($_SESSION['id'])){
+                echo '<form class="formnouvcom" action="index.php?action=nouveaucommentaire" method="POST">
+                            <textarea type="text" placeholder="Laissez un commentaire juste ici..." class="postercom autoExpand" rows="1" data-min-rows="1" name="commentaire" /></textarea>
+                            <input type="hidden" name="idTemoignage" value="'.$_GET['id'].'">
+                            <input type="submit" id="submit" hidden><label for="submit"><i class="fas fa-paper-plane"></i></label>
+                      </form>';
+            }else{
+                echo '<p>Vous devez posséder un compte pour pouvoir poster un commentaire.</p>';
+            }
 
-            echo "<a href='index.php?action=temoignages' class='buttonretour2'> Retour vers Témoignages </a>";
-        echo '</div>';
+            echo '<div class="listecommentaires">';
+
+            // On affiche les commentaires liés au post
+            $sql="SELECT *, DATE_FORMAT(dateCommentaire, '%d/%m/%Y') AS dateCommentaireFormate FROM commentaires JOIN utilisateurs ON idAuteur=utilisateurs.id WHERE idTemoignage=? ORDER BY commentaires.id DESC";
+            $query = $pdo -> prepare($sql);
+            $query->execute(array($_GET['id']));
+            $count=$query->rowCount();
+
+            while($line=$query->fetch()){
+                echo '<div class="uncommentaire">';
+                echo '<div class="infocom">';
+                echo '<p> Publié le '. $line['dateCommentaireFormate'] .' par</p>';
+                echo '<p>'. $line['identifiant'] .'</p>';
+                echo '</div>';
+                echo '<p class="contenucom"> "'. $line['commentaire'] .'"</p>';
+                echo '</div>';
+            }
+
+        ?></div>
+        </div>
+
+        <a href='index.php?action=temoignages' class='buttonretour2'> Retour vers Témoignages </a>
+        </div></div>
+    <?php
     }
-}
-
-
-
-
-
-?>
+}?>

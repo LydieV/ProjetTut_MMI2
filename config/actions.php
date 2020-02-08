@@ -22,5 +22,6 @@ $listeDesActions = array(
     "acceptertemoignage" => "traitement/acceptertemoignage.php",
     "supprimertemoignage" => "traitement/supprimertemoignage.php",
     "sauvegarde" => "traitement/sauvegarde.php",
-    "retirersauvegarde" => "traitement/retirersauvegarde.php"
+    "retirersauvegarde" => "traitement/retirersauvegarde.php",
+    "nouveaucommentaire" => "traitement/nouveaucommentaire.php"
 );
