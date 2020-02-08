@@ -70,7 +70,7 @@ footer{
     text-align: center;
     padding-top:60px;
 }
-.contenuaccueil, .contenutemoignages, .contenuposter, .contenutemoignage{
+.contenuaccueil, .contenutemoignages, .contenuposter, .contenutemoignage, .contenucontact, .contenumapage{
     padding-top:60px;
 }
 .banniereaccueil{
@@ -571,11 +571,59 @@ footer > div{
     justify-content: flex-end;
 }
 
+/* Page 404 */
+.p404{
+    color:var(--violet);
+    position:absolute;
+    bottom:-50px;
+    left:15%;
+    font-size:10rem;
+    text-shadow: 2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, -2px 0 0 white, 2px 2px 0 white, 2px -2px 0 white, -2px 2px 0 white, -2px -2px 0 white;
+}
+.erreur404{
+    text-align: center;
+    padding-top:15vh;
+    position:relative;
+}
 
-@media screen and (max-width: 500px){
+.erreur404 > p{
+    color:var(--violet);
+    text-transform: uppercase;
+    font-size:1.5rem;
+    font-weight: bold;
+    padding-bottom:60px;
+}
+.erreur404 > a{
+    text-decoration: none;
+}
+.btnaccueil{
+    border-radius: 10px;
+    color: white;
+    padding: 7px 30px 7px 30px;
+    width: fit-content;
+    background-color: var(--violet);
+    margin:auto;
+}
+
+@media screen and (max-width: 768px){
     header{
         position: fixed;
         z-index: 100;
+    }
+    footer{
+        padding:30px;
+    }
+    footer > div{
+        flex-direction:column;
+        align-items: flex-start;
+        width:100%;
+    }
+    .contenu404{
+        padding-bottom:50px;
+    }
+    .apropos,.reseauxsociaux,.contacts{
+        width:100%;
+        padding-bottom:15px;
     }
     .contenuaccueil, .contenutemoignages, .contenuposter{
         padding-top:60px;
@@ -744,6 +792,58 @@ footer > div{
         width:100%;
     }
 
+    /* Page contact */
+    .pagecontact{
+        display: inline-block;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .pagecontact div:first-child{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagecontact input[type='text'], .pagecontact input[type='email']{
+        margin-bottom: 50px;
+    }
+
+    .pagecontact #label2{
+        margin-top: 48px;
+    }
+
+    .pagecontact #label1{
+        margin-top: -22px;
+    }
+
+    .boutonconf{
+        margin-top: 0;
+    }
+
+    .infosreseaux{
+        border-left: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Page témoignage */
+    .temoignageentier{
+        width:90%;
+        margin-top:25px!important;
+        margin-left:auto!important;
+        margin-right:auto!important;
+    }
+
+     /* Ma page */
+    .monprofil{
+        flex-direction:column;
+        padding:20px;
+        margin-top:0!important;
+    }
+    .infosprofil{
+        padding-bottom: 25px;
+    }
 }
 
 
@@ -1419,41 +1519,4 @@ footer > div{
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
-}
-
-@media screen and (max-width: 500px) {
-    .pagecontact{
-        display: inline-block;
-        margin-top: 50px;
-        width: 100%;
-    }
-
-    .pagecontact div:first-child{
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .pagecontact input[type='text'], .pagecontact input[type='email']{
-        margin-bottom: 50px;
-    }
-
-    .pagecontact #label2{
-        margin-top: 48px;
-    }
-
-    .pagecontact #label1{
-        margin-top: -22px;
-    }
-
-    .boutonconf{
-        margin-top: 0;
-    }
-
-    .infosreseaux{
-        border-left: none;
-        padding-left: 0;
-        margin-top: 20px;
-    }
-
 }
