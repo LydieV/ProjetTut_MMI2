@@ -15,7 +15,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nom du site</title>
+        <title>Parlons Harcèlement</title>
 
 
     
@@ -94,7 +94,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                 <div class="reseauxsociaux"><p>Facebook</p><p>Twitter</p></div>
                 <div class="contacts"><p>Mail : parlonsharcelementcontact@gmail.com</p><p>Téléphone : 0781257059</p></div>
             </div>
-            <div class="mentions"><p>Mentions légales | Confodentialité | Cookies</p></div>
+            <div class="mentions"><p>Mentions légales | Confidentialité | Cookies</p></div>
         </footer>
     </body>
     <script src="js/script.js"></script>
