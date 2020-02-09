@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
     $query->execute(array($id));
     $line=$query->fetch();
 
-    if($line['visible'] == 0){
+    if($line['visible'] == 0 && !isset($_SESSION['admin'])){
         header('Location:index.php?action=temoignages');
     }else{
         echo '<div class="contenutemoignage"><div class="banniere_mapage">';
@@ -16,13 +16,28 @@ if(isset($_GET['id'])){
         echo '</div>';
         echo '<div class="temoignageentier">';
             echo '<div class="titrefiltre">';
+            if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
+                echo "<form method='POST' action='index.php?action=acceptertemoignage'><input name='id' value='$id' type='hidden'>";
+                echo "<div class='titrefiltre'>
+                            <select name='categorie'>
+                             <option selected value='Scolaire'>Scolaire</option>
+                             <option value='Professionnel'>Professionnel</option>
+                             <option value='Cyber'>Cyber</option>
+                             <option value='Sexuel'>Sexuel</option>
+                            </select></div></div>";
+                echo '<input type="submit" value="Accepter"></form>';
+
+            }else{
                 echo $line['categorie'];
-            echo '</div>';
+                echo '</div>';
+            }
+
+
             echo '<div class="infotemoignage">';
                 echo '<p> Publié le '.$line['dateEcritFormate'].' par </p>';
                 echo '<p> '.$line['identifiant'] . '</p>';
             echo '</div>';
-            echo '<div class="temoignagecontenu">"' . $line['contenu'] . '"</div>';
+            echo '<div class="temoignagecontenu">"' . stripslashes($line['contenu']) . '"</div>';
 
             //On donne la possibilité de sauvegarder le témoignage si la pers est connextée
         if (isset($_SESSION['id'])){
