@@ -50,6 +50,10 @@ footer{
     background-color:var(--orange2);
     margin-top:auto;
 }
+.mentions > p > a{
+    text-decoration: none;
+    color:white;
+}
 .items{
     width:60%;
     display:flex;
@@ -603,6 +607,21 @@ footer > div{
     width: fit-content;
     background-color: var(--violet);
     margin:auto;
+}
+
+/* Politique de Confidentialité */
+
+.pac{
+    width:80%;
+    margin:auto;
+    padding-top:60px;
+}
+.pac > p,.pac > h3{
+    padding-bottom:1rem;
+}
+.titrepage{
+    text-align: center;
+    padding:25px;
 }
 
 @media screen and (max-width: 768px){

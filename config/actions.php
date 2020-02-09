@@ -10,6 +10,7 @@ $listeDesActions = array(
     "contact" => "vues/contact.php",
     "poster" => "vues/poster.php",
     "erreur" => "vues/404.php",
+    "confidentialite" => "vues/politique-confidentialite.php",
     "temoignage" => "vues/temoignage.php",
     "deconnexion" => "traitement/deconnexion.php",
     "supcompte" => "traitement/suppressioncompte.php",

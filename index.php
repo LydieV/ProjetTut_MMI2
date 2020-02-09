@@ -94,7 +94,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                 <div class="reseauxsociaux"><p>Facebook</p><p>Twitter</p></div>
                 <div class="contacts"><p>Mail : parlonsharcelementcontact@gmail.com</p><p>Téléphone : 0781257059</p></div>
             </div>
-            <div class="mentions"><p>Mentions légales | Confidentialité | Cookies</p></div>
+            <div class="mentions"><p>Mentions légales | <a href="index.php?action=confidentialite">Confidentialité</a> | Cookies</p></div>
         </footer>
     </body>
     <script src="js/script.js"></script>
