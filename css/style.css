@@ -1060,7 +1060,25 @@ footer > div{
 
 
 
+/* index modif*/
+.contact_footer{
+    margin-top: 20px;
+    text-align: center;
+}
 
+.contact_footer a{
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contact_footer img{
+    width: 8%;
+}
+
+.mentions{
+    padding-top: 25px;
+}
 
 
 
@@ -1110,7 +1128,7 @@ footer > div{
 }
 
 .descagir > p{
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .descagir{
