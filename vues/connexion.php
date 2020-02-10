@@ -19,6 +19,7 @@
                     <p id="statusconnexion"></p>
                 </div>
                 <div class="envoi">
+                    <input type="hidden" name="url" value="<?php echo $_SERVER["REQUEST_URI"];?>">
                     <input type="submit" value="Se connecter"></input>
                 </div>
 

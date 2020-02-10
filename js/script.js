@@ -77,7 +77,7 @@ $(function(){
             if (data != 'Succes'){
                 $('#statusconnexion').html(data);
             }else{
-                $(location).attr('href',"index.php?action=mapage");
+                $(location).attr('href',$('input[name=url]').val());
             }
         });
     });
