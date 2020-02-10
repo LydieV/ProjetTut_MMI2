@@ -1389,6 +1389,13 @@ footer > div{
     background-color: var(--violet);
     color: white;
 }
+.commentairemapage > a > p{
+    padding-bottom:5px;
+    text-transform: none;
+}
+.commentairemapage > a{
+    text-decoration: none;
+}
 
 .section_activite{
     margin-bottom: 70px;
@@ -1422,6 +1429,7 @@ footer > div{
 
 .titre3{
     position: relative;
+    margin-bottom:15px;
 }
 
 .titre3::after{

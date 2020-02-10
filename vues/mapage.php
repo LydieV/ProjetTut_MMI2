@@ -85,7 +85,17 @@ if(isset($_SESSION['id'])){
                 </div>
                 <div class="section_activite">
                     <h3 class="titre3"> Les commentaires que j'ai postés </h3>
-                    <div></div>
+                    <div class="commentairemapage">
+                        <?php
+                        $sql = "SELECT * FROM commentaires WHERE idAuteur=? LIMIT 5";
+                        $query = $pdo -> prepare($sql);
+                        $query->execute(array($_SESSION['id']));
+                        while($line=$query->fetch()){
+                            $contenu=substr($line['commentaire'], 0, 25). ' ...';
+                            echo '<a href="index.php?action=temoignage&id='.$line['idTemoignage'].'"><p>"'.$contenu.'"</p></a>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
 
