@@ -1,31 +1,33 @@
 <div class="contenuaccueil">
     <div class="banniereaccueil">
-        <a href="#">
-        <div class="bouton voirplus">
-            <p>En voir plus</p>
+        <div class="couleur_banniere">
+           <!-- <a href="#">
+            <div class="bouton voirplus">
+                <p>En voir plus</p>
+            </div>
+            </a>-->
         </div>
-        </a>
     </div>
     <h1>Plus fort, ensemble !</h1>
     <div class="cartes">
         <div class="carte">
             <a href="#">
                 <div class="masque">
-                    <p>Vers la galerie de ressources</p>
+                  <!--  <p>Vers la galerie des ressources</p>-->
                 </div>
             </a>
         </div>
         <div class="carte">
             <a href="#">
                 <div class="masque">
-                    <p>Vers la galerie de ressources</p>
+                  <!--  <p>Vers la galerie des ressources</p>-->
                 </div>
             </a>
         </div>
         <div class="carte">
             <a href="#">
                 <div class="masque">
-                    <p>Vers la galerie de ressources</p>
+                  <!--  <p>Vers la galerie des ressources</p>-->
                 </div>
             </a>
         </div>
@@ -46,7 +48,7 @@
         <div class="descagir">
             <p>
                 Si vous voyez une personne être victime de hacèlement : agissez !
-                Vous pouvez informer quelqu’un de compétent afin d’arrêter les harceleurs ou contacter le numéro vert : 0 800 00 00 01
+                Vous pouvez informer quelqu’un de compétent afin d’arrêter les harceleurs ou contacter le numéro vert : 30 20
                 si vous ne savez pas comment agir. Restez présent pour cette personne, montrez lui que vous êtes là et qu’elle n’est pas seule.
             </p>
             <div class="agircontact">

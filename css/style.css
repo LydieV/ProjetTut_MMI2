@@ -1084,15 +1084,43 @@ footer > div{
 
 
 
+/* page accueil modifs */
+.banniereaccueil{
+    height: 24vh;
+}
 
+.banniereaccueil .couleur_banniere{
+    height: 24vh;
+}
 
+.contenuaccueil > h1{
+    margin-top: 40px;
+}
 
+.cartes{
+    padding-top: 25px;
+}
 
+.but{
+    padding-top: 100px;
+}
 
+.agir{
+    padding-top: 50px;
+}
 
+.descagir > p{
+    padding-top: 20px;
+}
 
+.descagir{
+    margin-bottom: 50px;
+}
 
-
+.agircontact{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 
 
