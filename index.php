@@ -91,9 +91,21 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <?php include("vues/inscription.php"); ?>
         <?php include("vues/connexion.php"); ?>
         <footer>
-            <div><div class="apropos"><p>" Parlons Harcèlement " est une campagne contre le harcèlement dans toutes ses formes et accompagne les victimes à témoigner et agir contre le harcèlement. </p></div>
-                <div class="reseauxsociaux"><p>Facebook</p><p>Twitter</p></div>
-                <div class="contacts"><p>Mail : parlonsharcelementcontact@gmail.com</p><p>Téléphone : 0781257059</p></div>
+            <div>
+                <div class="contact_footer">
+                    <a href="https://www.facebook.com/Parlons-harc%C3%A8lement-103908774511172/?view_public_for=103908774511172">
+                        <img src="./img/icone_facebook_accueil.png" alt="icone_facebook_accueil"/>
+                    </a>
+                    <a href="https://twitter.com/ParlonsHarclem1">
+                        <img src="./img/icone_twitter_accueil.png" alt="icone_twitter_accueil"/>
+                    </a>
+                    <a href="mailto:parlonsharcelementcontact@gmail.com">
+                        <img src="./img/icone_mail_accueil.png" alt="icone_mail_accueil"/>
+                    </a>
+                    <a href="tel:+33781257059">
+                        <img src="./img/icone_telephone_accueil.png" alt="icone_telephone_accueil"/>
+                    </a>
+                </div>
             </div>
             <div class="mentions"><p>Mentions légales | <a href="index.php?action=confidentialite">Confidentialité</a> | Cookies</p></div>
         </footer>
