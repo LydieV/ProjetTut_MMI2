@@ -1129,6 +1129,12 @@ footer > div{
     padding-bottom: 20px;
 }
 
+.lientemoignages{
+    text-decoration: none;
+    color: var(--violet);
+    font-weight: bold;
+}
+
 
 
 
