@@ -91,7 +91,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <?php include("vues/inscription.php"); ?>
         <?php include("vues/connexion.php"); ?>
         <footer>
-            <div>
+            <div class="footer">
                 <div class="contact_footer">
                     <a href="https://www.facebook.com/Parlons-harc%C3%A8lement-103908774511172/?view_public_for=103908774511172">
                         <img src="./img/icone_facebook_accueil.png" alt="icone_facebook_accueil"/>
@@ -106,8 +106,11 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                         <img src="./img/icone_telephone_accueil.png" alt="icone_telephone_accueil"/>
                     </a>
                 </div>
+                <div class="mentions">
+                    <p>Mentions légales | <a href="index.php?action=confidentialite">Confidentialité</a> | Cookies</p>
+                </div>
             </div>
-            <div class="mentions"><p>Mentions légales | <a href="index.php?action=confidentialite">Confidentialité</a> | Cookies</p></div>
+
         </footer>
     </body>
     <script src="js/script.js"></script>
