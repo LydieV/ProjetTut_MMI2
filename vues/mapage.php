@@ -21,10 +21,6 @@ if(isset($_SESSION['id'])){
                 ?>
 
                 <h2 class="ident"> <?php echo $infoPsn['identifiant'] ?> </h2>
-                <form method="POST" action="index.php?action=changeinfo">
-                    <input type="hidden" name="changepseudo"/>
-                    <input type="submit" class="changementinfo" id="changepseudo" name="modif" value=""/>
-                </form>
 
                 <div class="info">
                     <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>

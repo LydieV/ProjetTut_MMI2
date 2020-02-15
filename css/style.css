@@ -1050,15 +1050,21 @@ footer > div{
 
 
 /* index modif*/
+
+.footer{
+    justify-content: space-between;
+}
+
 .contact_footer{
     margin-top: 20px;
     text-align: center;
+    width: 30%;
 }
 
 .contact_footer a{
     text-decoration: none;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .contact_footer img{
@@ -1067,6 +1073,10 @@ footer > div{
 
 .mentions{
     padding-top: 25px;
+}
+
+footer{
+    padding: 35px;
 }
 
 
@@ -1134,6 +1144,8 @@ footer > div{
     color: var(--violet);
     font-weight: bold;
 }
+
+
 
 
 
@@ -1588,3 +1600,4 @@ footer > div{
     display: flex;
     justify-content: space-around;
 }
+
