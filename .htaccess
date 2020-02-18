@@ -8,4 +8,17 @@ RewriteRule ^/$ index.php
 # RewriteRule ^/index.php?action=accueil/lire-([0-9]+)-([a-z0-9\-]+)\.html$ /index.php?rub=lireArticle&id=$1 [L]
 RewriteRule ^temoignage-([0-9]+)$ index.php?action=temoignage&id=$1
 RewriteRule ^contact$ index.php?action=contact
-RewriteRule ^temoignages$ index.php?action=temoignages [L]
+RewriteRule ^mapage$ index.php?action=mapage
+RewriteRule ^deconnexion$ index.php?action=deconnexion
+RewriteRule ^poster$ index.php?action=poster
+RewriteRule ^ressources$ index.php?action=ressources
+RewriteRule ^erreur$ index.php?action=erreur
+RewriteRule ^accueil$ index.php?action=accueil
+RewriteRule ^confidentialite$ index.php?action=confidentialite
+RewriteRule ^temoignages$ index.php?action=temoignages
+
+#Gestion page 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . erreur [L]
+

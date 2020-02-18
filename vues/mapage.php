@@ -56,7 +56,7 @@ if(isset($_SESSION['id'])){
                         $query->execute(array($_SESSION['id']));
                         while($line=$query->fetch()){
                             $contenu=substr($line['contenu'], 0, 25). ' ...';
-                            echo '<a href="index.php?action=temoignage&id='.$line['id'].'">';
+                            echo '<a href="./temoignage-'.$line['id'].'">';
                                 echo '<div class="apercutemoignage">';
                                     echo '<p>"'.$contenu   .'"</p>';
                                 echo '</div>';
@@ -74,7 +74,7 @@ if(isset($_SESSION['id'])){
                         $query->execute(array($_SESSION['id'],$_SESSION['id']));
                         while($line=$query->fetch()){
                             $contenu=substr($line['contenu'], 0, 25). ' ...';
-                            echo '<a href="index.php?action=temoignage&id='.$line['idecrit'].'"><div class="apercutemoignage"><p>"'.$contenu   .'"</p></div></a>';
+                            echo '<a href="./temoignage-'.$line['idecrit'].'"><div class="apercutemoignage"><p>"'.$contenu   .'"</p></div></a>';
                         }
                         ?>
                     </div>
@@ -88,7 +88,7 @@ if(isset($_SESSION['id'])){
                         $query->execute(array($_SESSION['id']));
                         while($line=$query->fetch()){
                             $contenu=substr($line['commentaire'], 0, 25). ' ...';
-                            echo '<a href="index.php?action=temoignage&id='.$line['idTemoignage'].'"><p>"'.$contenu.'"</p></a>';
+                            echo '<a href="./temoignage-'.$line['idTemoignage'].'"><p>"'.$contenu.'"</p></a>';
                         }
                         ?>
                     </div>

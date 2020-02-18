@@ -4,7 +4,7 @@
     </div>
     <div class="erreur404">
         <p>Oops ! La page que vous recherchez n'existe pas ou a été supprimée.</p>
-        <a href="index.php?action=accueil">
+        <a href="./accueil">
             <div class="btnaccueil">
                 <p>Retour vers l'accueil</p>
             </div>

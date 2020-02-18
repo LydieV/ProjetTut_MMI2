@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
     $titre = $line['titre'];
 
     if($line['visible'] == 0 && !isset($_SESSION['admin'])){
-        header('Location:index.php?action=temoignages');
+        header('Location:./temoignages');
     }else{
         echo '<div class="contenutemoignage"><div class="banniere_mapage">';
             echo '<div class="couleur_banniere">';
@@ -119,7 +119,7 @@ if(isset($_GET['id'])){
         ?></div>
         </div>
 
-        <a href='index.php?action=temoignages' class='buttonretour2'> Retour vers Témoignages </a>
+        <a href='./temoignages' class='buttonretour2'> Retour vers Témoignages </a>
         </div></div>
     <?php
     }

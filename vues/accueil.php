@@ -37,7 +37,7 @@
         <h1>En quoi consiste notre campagne ?</h1>
         <p>
            <span> Parlons harcèlement </span>  a pour but d’accompagner les victimes de harcèlement afin qu’elle ne se retrouve pas seule.
-            Découvrez sur ce site l’onglet <a href="index.php?action=temoignages" class="lientemoignages"> témoignages </a> afin de déposer un témoignage ou de répondre à celui de quelqu’un. <br/>
+            Découvrez sur ce site l’onglet <a href="./temoignages" class="lientemoignages"> témoignages </a> afin de déposer un témoignage ou de répondre à celui de quelqu’un. <br/>
             C’est important de ne <span> pas rester seule </span> dans ces moments-là, nous sommes là pour vous écouter et non pour vous juger. <br/>
             Nous organisons des <span>  conférences et des interventions </span> dans des écoles afin de toucher le plus de personne possible.
         </p>
@@ -53,7 +53,7 @@
             </p>
             <div class="agircontact">
                 <h3>Ou parlez-en avec les bonnes personnes </h3>
-                <a href="index.php?action=contact">
+                <a href="./contact">
                     <div class="bouton"> Contacts</div>
                 </a>
             </div>

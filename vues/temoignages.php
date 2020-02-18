@@ -13,7 +13,7 @@
                 echo '<p>Merci de vous inscrire ou de vous identifier pour pouvoir poster un témoignage</p>';
             }else{
                 echo '<p>Souhaitez-vous témoigner ?</p>';
-                echo '<a href="index.php?action=poster">';
+                echo '<a href="./poster">';
                 echo '<div class="bouton rediger">';
                 echo '<p>Rédiger maintenant</p>';
                 echo '</div></a>';
@@ -55,7 +55,7 @@
                             echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                             echo '<input type="text" placeholder="titre" name="titre" required>';
                             echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
-                            echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                            echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                             echo '<input type="submit" value="Accepter"></form>';
                             echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                             echo "<input name='id' value='$id' type='hidden'>";
@@ -69,7 +69,7 @@
                                 echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                                 echo "<div class='titretemoignage'><h3>$titre</h3></div>";
                                 echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
-                                echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                                echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                                 if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
                                     echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                                     echo "<input name='id' value='$id' type='hidden'>";
