@@ -4,7 +4,7 @@
 $listeDesActions = array(
     "accueil" => "vues/accueil.php",
     "temoignages" => "vues/temoignages.php",
-    "changeidees" => "vues/changeidees  .php",
+    "changeidees" => "vues/changeidees.php",
     "mapage" => "vues/mapage.php",
     "ressources" => "vues/ressources.php",
     "contact" => "vues/contact.php",
