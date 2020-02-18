@@ -5,8 +5,8 @@ if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && isset($_POST['idcomm
     $sql = "UPDATE commentaires SET visible = 1 WHERE id = ?";
     $query = $pdo -> prepare($sql);
     $query->execute(array($idaccepter));
-    header('Location: index.php?action=temoignage&id='.$idpage);
+    header('Location: ./temoignage-'.$idpage);
 }else{
-    header('Location: index.php?action=temoignages');
+    header('Location: ./temoignages');
 }
 ?>

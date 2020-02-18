@@ -21,5 +21,5 @@
             <input class="bouton envoitemoignage" type="submit" value="Envoyer mon témoigage"></input>
         </form>
     </div>
-    <a href="index.php?action=temoignages" class="buttonretour2"> Retour vers Témoignages </a>
+    <a href="./temoignages" class="buttonretour2"> Retour vers Témoignages </a>
 </div>
