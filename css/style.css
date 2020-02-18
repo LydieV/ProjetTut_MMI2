@@ -1513,11 +1513,11 @@ footer{
 .pagecontact{
     display: flex;
     justify-content: space-around;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
-.pagecontact div:first-child{
-    width: 30%;
+.partiegauche_contact{
+    width: 50%;
 }
 
 .pagecontact form{
@@ -1532,6 +1532,10 @@ footer{
     width: 60%;
     background-color: transparent;
     position: relative;
+}
+
+.pagecontact input[type="text"]{
+    margin-bottom: 50px;
 }
 
 .pagecontact label{
@@ -1562,21 +1566,7 @@ footer{
 
 .infosreseaux{
     border-left: 5px solid #F4F4F4;
-    padding-left: 50px;
-}
-
-.infonumvert{
-    margin-top: 50px;
-    text-align: center;
-    width: 100%!important;
-    margin-bottom: 20px;
-    color: #00a94f;
-    font-size: 20px;
-}
-
-.infonumvert p:first-child{
-    text-transform: uppercase;
-    font-weight: bold;
+    padding-left: 60px;
 }
 
 .numerovert{
@@ -1587,10 +1577,13 @@ footer{
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
+    color: #00a94f;
+    padding: 3px 10px;
+    text-decoration: none;
 }
 
 .reseaux{
-    margin-top: 60px;
+    margin-top: 150px;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
@@ -1603,4 +1596,75 @@ footer{
     display: flex;
     justify-content: space-around;
 }
+
+.titre_contact{
+    text-align: center;
+    position: relative;
+}
+
+.titre_contact::after{
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid var(--orange4);
+    bottom: -5px;
+}
+
+.contact1::after{
+    width: 60%;
+    left: 20%;
+}
+
+.contact2::after{
+    width: 40%;
+    left: 30%;
+}
+
+.form_contact{
+    margin-top: 50px;
+}
+
+.infos_contact{
+    margin-top: 40px;
+}
+
+.infos_contact p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 28px;
+}
+
+.gras{
+    font-weight: bold;
+}
+
+.soustitre_contact{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.liste_associations{
+    list-style-type: '- ';
+    margin-bottom: 80px;
+}
+
+.liste_associations li{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.liste_associations a, .contact_source{
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.liste_associations a:hover, .contact_source:hover{
+    color: var(--violet);
+}
+
+.infosreseaux{
+    margin-bottom: 50px;
+}
+
+
 
