@@ -22,6 +22,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 
         <!-- Chargement des feuilles de style nécessaires -->
         <link href="./css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
         <!-- Chargement des polices -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -111,4 +112,24 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         </footer>
     </body>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#7C277D",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#F9A01B"
+                }
+            },
+            "position": "bottom-right",
+            "content": {
+                "message": "En cliquant sur ”J’accepte”, vous acceptez l’utilisation des cookies. Vous pourrez toujours les désactiver ultérieurement. Si vous supprimez ou désactivez nos cookies, vous pourriez rencontrer des interruptions ou des problèmes d’accès au site.\"",
+                "dismiss": "J'accepte",
+                "link": "En savoir plus"
+            }
+        });
+    </script>
 </html>

@@ -19,7 +19,9 @@ body{
     --orange3:#FCB420;
     --orange4:#F7901E;
 }
-
+.cc-btn{
+    color:white!important;
+}
 /* Header du site */
 header{
     width:100%;
@@ -1335,6 +1337,9 @@ footer{
 .titreinfo{
     color: var(--orange);
     font-weight: bold; 
+}
+.titretemoignage{
+    text-align: center;
 }
 
 .changementinfo{
