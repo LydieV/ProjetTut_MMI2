@@ -7,9 +7,9 @@ if (isset($_COOKIE['remember'])){
     $query = $pdo->prepare($sql);
     $query->execute(array($_SESSION['id']));
     unset($_SESSION['id']);
-    header('Location: index.php?action=accueil');
+    header('Location: ./accueil');
 }else{
     unset($_SESSION['id']);
-    header('Location: index.php?action=accueil');
+    header('Location: ./accueil');
 }
 ?>

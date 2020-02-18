@@ -50,10 +50,10 @@ if(isset($_POST['modif'])){
     }
 
     if(!isset($_POST['changeemail']) && !isset($_POST['changemdp']) && !isset($_POST['changepseudo'])){
-        header("Location: index.php?action=mapage");
+        header("Location: ./mapage");
     }
 } else{
-    header("Location: index.php?action=mapage");
+    header("Location: ./mapage");
 }
 
 

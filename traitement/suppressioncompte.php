@@ -4,6 +4,6 @@
     $q = $pdo->prepare($sql);
     $q->execute(array($_SESSION['id']));
 
-    header("Location:index.php?action=deconnexion");
+    header("Location: ./deconnexion");
 
 ?>

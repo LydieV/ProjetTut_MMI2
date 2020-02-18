@@ -10,12 +10,12 @@ if (isset($_SESSION['id']) && isset($_POST['commentaire']) && !empty($_POST['com
     $sql="INSERT INTO commentaires VALUES (NULL, ? , ? , ? , NOW(), '0')";
     $query = $pdo->prepare($sql);
     $query->execute(array($commentaire,$idTemoignage,$idAuteur));
-    header('Location: index.php?action=temoignage&id='.$_POST['idTemoignage']);
+    header('Location: ./temoignage-'.$idTemoignage);
 }else{
     if (isset($_POST['idTemoignage'])){
-        header('Location: index.php?action=temoignage&id='.$_POST['idTemoignage']);
+        header('Location: ./temoignage-'.$_POST['idTemoignage']);
     }else{
-        header('Location: index.php');
+        header('Location: ./accueil');
     }
 }
 ?>

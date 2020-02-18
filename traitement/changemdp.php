@@ -38,7 +38,7 @@ if($_POST['pwd'] == null || $_POST['pwdverif'] == null){
 }
 
 if(!isset($_POST['pwd']) && !isset($_POST['pwdverif'])){
-    header("Location:index.php?action=mapage");
+    header("Location: ./mapage");
 }
 
 ?>

@@ -39,7 +39,7 @@ if($_POST['email'] == null || $_POST['emailverif'] == null) {
 }
 
 if(!isset($_POST['email']) && !isset($_POST['emailverif'])){
-    header("Location:index.php?action=mapage");
+    header("Location: ./mapage");
 }
 
 ?>
