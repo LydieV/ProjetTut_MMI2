@@ -51,8 +51,9 @@ $(function(){
             'email' : $('input[name=email]').val(),
             'mdp' : $('input[name=mdp]').val(),
             'mdp2' : $('input[name=mdp2]').val(),
-            'naissance' : $('input[name=naissance]').val(),
+            'naissance' : $('select[name=naissance]').val(),
         };
+        console.log(formData);
 
         $.post( "./traitement/inscription.php", formData, function(data) {
             if (data != 'Succes'){

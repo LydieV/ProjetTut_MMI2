@@ -10,9 +10,15 @@
                     <a onclick="idaleatoire()">Générer un identifiant au hasard ?</a>
                 </div>
                 <div class="datenaissance">
-                    <label for="naissance">Date de naissance</label>
+                    <label for="naissance">Année de naissance</label>
                     <div class="choixnaissance">
-                        <input type="date" id="start" name="naissance" required>
+                        <select id="start" name="naissance" required>
+                            <option>1900</option>
+                            <?php $years = range(1901, strftime("%Y", time()));
+                            foreach($years as $year) : ?>
+                                <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                 </div>
             </div>
