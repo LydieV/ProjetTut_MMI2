@@ -52,9 +52,9 @@
                 si vous ne savez pas comment agir. Restez présent pour cette personne, montrez lui que vous êtes là et qu’elle n’est pas seule.
             </p>
             <div class="agircontact">
-                <h3>Ou contactez-nous directement</h3>
+                <h3>Ou parlez-en avec les bonnes personnes </h3>
                 <a href="index.php?action=contact">
-                    <div class="bouton">Nous contacter</div>
+                    <div class="bouton"> Contacts</div>
                 </a>
             </div>
         </div>
