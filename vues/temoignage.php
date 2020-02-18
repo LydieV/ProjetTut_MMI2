@@ -5,6 +5,7 @@ if(isset($_GET['id'])){
     $query = $pdo -> prepare($sql);
     $query->execute(array($id));
     $line=$query->fetch();
+    $titre = $line['titre'];
 
     if($line['visible'] == 0 && !isset($_SESSION['admin'])){
         header('Location:index.php?action=temoignages');
@@ -15,6 +16,7 @@ if(isset($_GET['id'])){
             echo '</div>';
         echo '</div>';
         echo '<div class="temoignageentier">';
+        echo "<div class='titretemoignage'><h3>$titre</h3></div>";
             echo '<div class="titrefiltre">';
             if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
                 echo "<form method='POST' action='index.php?action=acceptertemoignage'><input name='id' value='$id' type='hidden'>";
@@ -25,13 +27,13 @@ if(isset($_GET['id'])){
                              <option value='Cyber'>Cyber</option>
                              <option value='Sexuel'>Sexuel</option>
                             </select></div></div>";
+                echo '<input type="text" placeholder="titre" name="titre" required>';
                 echo '<input type="submit" value="Accepter"></form>';
 
             }else{
                 echo $line['categorie'];
                 echo '</div>';
             }
-
 
             echo '<div class="infotemoignage">';
                 echo '<p> Publié le '.$line['dateEcritFormate'].' par </p>';

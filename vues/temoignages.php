@@ -43,7 +43,7 @@
                         $categorie = $line['categorie'];
                         $dateEcrit = $line['dateEcritFormate'];
                         if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
-                            echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
+                            echo '<div class="post filter '.$categorie.'"><div class="illustrationpost" style="background-image: url(/img/aucunecategorie.jpg);"></div><div class="contenupost">';
                             echo "<form method='POST' action='index.php?action=acceptertemoignage'><input name='id' value='$id' type='hidden'>";
                             echo "<div class='titrefiltre'>
                             <select name='categorie'>
@@ -53,6 +53,7 @@
                              <option value='Sexuel'>Sexuel</option>
                             </select></div>";
                             echo "<div class='datepublication'>Publié le $dateEcrit</div>";
+                            echo '<input type="text" placeholder="titre" name="titre" required>';
                             echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
                             echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                             echo '<input type="submit" value="Accepter"></form>';
@@ -62,9 +63,11 @@
                             echo '</div></div>';
                         }else{
                             if($line['visible']=="1"){
+                                $titre = $line['titre'];
                                 echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
                                 echo "<div class='titrefiltre'>$categorie</div>";
                                 echo "<div class='datepublication'>Publié le $dateEcrit</div>";
+                                echo "<div class='titretemoignage'><h3>$titre</h3></div>";
                                 echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
                                 echo '<a href="index.php?action=temoignage&id='.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                                 if($_SESSION['admin'] == "1"){
