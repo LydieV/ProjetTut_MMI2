@@ -102,9 +102,6 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     <a href="mailto:parlonsharcelementcontact@gmail.com">
                         <img src="./img/icone_mail_accueil.png" alt="icone_mail_accueil"/>
                     </a>
-                    <a href="tel:+33781257059">
-                        <img src="./img/icone_telephone_accueil.png" alt="icone_telephone_accueil"/>
-                    </a>
                 </div>
                 <div class="mentions">
                     <p>Mentions légales | <a href="index.php?action=confidentialite">Confidentialité</a> | Cookies</p>
