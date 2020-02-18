@@ -75,19 +75,43 @@ if(isset($_GET['id'])){
             echo '<div class="listecommentaires">';
 
             // On affiche les commentaires liés au post
-            $sql="SELECT *, DATE_FORMAT(dateCommentaire, '%d/%m/%Y') AS dateCommentaireFormate FROM commentaires JOIN utilisateurs ON idAuteur=utilisateurs.id WHERE idTemoignage=? ORDER BY commentaires.id DESC";
+            $sql="SELECT *, DATE_FORMAT(dateCommentaire, '%d/%m/%Y') AS dateCommentaireFormate, commentaires.id AS idcomm FROM commentaires JOIN utilisateurs ON idAuteur=utilisateurs.id WHERE idTemoignage=? ORDER BY commentaires.id DESC";
             $query = $pdo -> prepare($sql);
             $query->execute(array($_GET['id']));
             $count=$query->rowCount();
 
             while($line=$query->fetch()){
-                echo '<div class="uncommentaire">';
-                echo '<div class="infocom">';
-                echo '<p> Publié le '. $line['dateCommentaireFormate'] .' par</p>';
-                echo '<p>'. $line['identifiant'] .'</p>';
-                echo '</div>';
-                echo '<p class="contenucom"> "'. $line['commentaire'] .'"</p>';
-                echo '</div>';
+                if($line['visible'] == 1){
+                    echo '<div class="uncommentaire">';
+                    echo '<div class="infocom">';
+                    echo '<p> Publié le '. $line['dateCommentaireFormate'] .' par</p>';
+                    echo '<p>'. $line['identifiant'] .'</p>';
+                    echo '</div>';
+                    echo '<p class="contenucom"> "'. $line['commentaire'] .'"</p>';
+                    if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==1){
+                        echo '<form method="POST" action="index.php?action=masquercommentaire">
+                        <input type="hidden" name="idcomm" value="'.$line['idcomm'].'">
+                        <input type="hidden" name="idpage" value="'.$_GET['id'].'">
+                        <input type="submit" value="Masquer">
+                        </form>';
+                    }
+                    echo '</div>';
+                }else{
+                    if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
+                        echo '<div class="uncommentaire">';
+                        echo '<div class="infocom">';
+                        echo '<p> Publié le '. $line['dateCommentaireFormate'] .' par</p>';
+                        echo '<p>'. $line['identifiant'] .'</p>';
+                        echo '</div>';
+                        echo '<p class="contenucom"> "'. $line['commentaire'] .'"</p>';
+                        echo '<form method="POST" action="index.php?action=acceptercommentaire">
+                        <input type="hidden" name="idcomm" value="'.$line['idcomm'].'">
+                        <input type="hidden" name="idpage" value="'.$_GET['id'].'">
+                        <input type="submit" value="Accepter">
+                        </form>';
+                        echo '</div>';
+                    }
+                }
             }
 
         ?></div>

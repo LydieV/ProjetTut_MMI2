@@ -221,6 +221,9 @@ footer{
     display:none;
 z-index:1000;
 }
+#status, #statusconnexion{
+    color:white;
+}
 
 .modale{
     position:absolute;
