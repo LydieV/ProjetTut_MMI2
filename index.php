@@ -41,7 +41,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 
         if (!isset($_SESSION['identifiant'])){
             echo '<header>
-            <a href="./accueil"><h3>Parlons harcèlement</h3></a>
+            <a href="./accueil"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
                     <a href="./temoignages"><p>Témoignages</p></a>
                     
@@ -54,7 +54,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             </header>';
         }else{
             echo '<header>
-            <a href="./accueil"><h3>Parlons harcèlement</h3></a>
+            <a href="./accueil"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
                     <a href="./temoignages"><p>Témoignages</p></a>
                     

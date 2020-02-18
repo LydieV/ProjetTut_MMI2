@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    max-width:1400px;
+    max-width:2000px;
     margin:auto;
     display:flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ header{
     padding:0px 15px 0px 15px;
     position:fixed;
     z-index:100;
-    max-width:1400px;
+    max-width:2000px;
 
 }
 header a{
@@ -43,6 +43,9 @@ header a{
     align-items: center;
     padding:0px 5px 0px 5px;
     cursor:pointer;
+}
+header > a > .logobanniere{
+    height:80%;
 }
 footer{
     width:100%;
@@ -76,6 +79,8 @@ footer{
 }
 .contenuaccueil, .contenutemoignages, .contenuposter, .contenutemoignage, .contenucontact, .contenumapage{
     padding-top:60px;
+    width:80%;
+    margin:auto;
 }
 .banniereaccueil{
     height:30vh;
@@ -854,6 +859,12 @@ footer > div{
     }
     .infosprofil{
         padding-bottom: 25px;
+    }
+
+
+    .partieposter{
+        width:60%;
+        margin-bottom:30px;
     }
 }
 
