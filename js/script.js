@@ -41,6 +41,23 @@ function idaleatoire() {
 
 //On attends le chargement de JQuery
 $(function(){
+    $('.afficherconnexion').click(function () {
+        $('#forminscription').slideUp().hide();
+        $('#formconnexion').slideDown().css('display', 'flex');
+        $('.msgconn').hide();
+        $('.msginsc').show();
+        $('.msginfoinsc').hide();
+    });
+
+    $('.afficherinscription').click(function () {
+        $('#formconnexion').slideUp().hide();
+        $('#forminscription').slideDown();
+        $('.msgconn').show();
+        $('.msginsc').hide();
+        $('.msginfoinsc').show();
+    });
+
+
     //Lors de l'envoi du formulaire d'inscription
     $("#forminscription").submit(function(event){
         event.preventDefault();

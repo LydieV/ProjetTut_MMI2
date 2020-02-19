@@ -60,10 +60,13 @@ footer{
     color:white;
 }
 .items{
-    width:60%;
-    display:flex;
-    justify-content: space-between;
-
+    width: max-content;
+    display: flex;
+    justify-content: space-around;
+}
+.items > a{
+    margin-left:20px;
+    margin-right:20px;
 }
 .items > a:hover{
     background-color:var(--orange3);
@@ -232,11 +235,22 @@ z-index:1000;
 #status, #statusconnexion{
     color:white;
 }
+#formconnexion{
+    display:none;
+}
+.msginsc{
+    display:none;
+}
+.msgconn, .msginsc{
+    margin-top:30px;
+    height:10%;
+    max-height:10%;
+}
 
 .modale{
     position:absolute;
     width:50%;
-    height:fit-content;
+    height:60%;
     padding-bottom:20px;
     background-color: var(--orange2);
     top:50%;
@@ -248,21 +262,30 @@ z-index:1000;
     animation-duration: 0.6s;
 
 }
-.modale > p{
+.modale > p, .modale > form > p{
     color:white;
     text-transform: uppercase;
-    padding-top:20px;
+    padding-top:15px;
     width:85%;
     text-align: center;
-    margin:auto;
+    margin-left:auto;
+    margin-right: auto;
     font-weight:bold;
     line-height:1.5;
     padding-bottom: 25px;
 }
+.modale > form{
+    height:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .ligne1{
     display:flex;
     width:85%;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
     padding-bottom:20px;
 }
 .identifiant, .mdpconnexion{
@@ -317,7 +340,8 @@ z-index:1000;
     display:flex;
     flex-direction: column;
     width:85%;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
     padding-bottom:20px;
     padding-left:15px;
     padding-right:15px;
@@ -331,7 +355,8 @@ z-index:1000;
 }
 .ligne3{
     width:85%;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
     display:flex;
     padding-left:15px;
     padding-right:15px;
@@ -358,7 +383,8 @@ z-index:1000;
 
 .ligne4{
     width:85%;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
     display:flex;
     padding-left:15px;
     padding-right:15px;
@@ -730,7 +756,7 @@ footer > div{
     }
     .modale{
         width:90%;
-        height:auto;
+        height:90%;
     }
     .ligne1{
         flex-direction: column;
