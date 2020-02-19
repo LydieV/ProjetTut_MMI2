@@ -1132,6 +1132,10 @@ footer{
     margin-bottom: 15px;
 }
 
+.categorietemoignage{
+    color: #bcbcbc;
+}
+
 
 
 
@@ -1248,7 +1252,7 @@ footer{
 
 .commentaire{
     margin-top: 60px;
-    background-color: #e8e7e7;
+    background-color: #f7f7f7;
     padding-top: 30px;
     padding-bottom: 30px;
 }

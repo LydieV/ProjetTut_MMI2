@@ -17,21 +17,21 @@ if(isset($_GET['id'])){
         echo '</div>';
         echo '<div class="temoignageentier">';
         echo "<div class='titretemoignage'><h3>$titre</h3></div>";
-            echo '<div class="titrefiltre">';
+            echo '<div class="categorietemoignage">';
             if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
                 echo "<form method='POST' action='index.php?action=acceptertemoignage'><input name='id' value='$id' type='hidden'>";
-                echo "<div class='titrefiltre'>
+                echo "<div class='datepublication'>
                             <select name='categorie'>
                              <option selected value='Scolaire'>Scolaire</option>
                              <option value='Professionnel'>Professionnel</option>
-                             <option value='Cyber'>Cyber</option>
+                             <option value='Cyber'>Cyberharcèlement</option>
                              <option value='Sexuel'>Sexuel</option>
                             </select></div></div>";
                 echo '<input type="text" placeholder="titre" name="titre" required>';
                 echo '<input type="submit" value="Accepter"></form>';
 
             }else{
-                echo $line['categorie'];
+                echo "<p> Catégorie : ". $line['categorie'] . "</p>";
                 echo '</div>';
             }
 
