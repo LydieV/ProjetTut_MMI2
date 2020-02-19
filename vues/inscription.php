@@ -1,8 +1,10 @@
 <div id="inscription" class="inscription">
     <div class="modale">
         <i class="fas fa-times boutonfermer" onclick="fermermodaleinscription()"></i>
-        <p>Pour éviter toute tentative qui se voudrait malveillante, il est obligatoire  de créer un compte.</p>
+        <p class="msgconn">Déja inscris ? <span class="afficherconnexion">Connexion</span></p>
+        <p class="msginsc">Pas encore inscris inscris ? <span class="afficherinscription">Inscription</span></p>
         <form  method="POST" id="forminscription" action="#">
+            <p class="msginfoinsc">Pour éviter toute tentative qui se voudrait malveillante, il est obligatoire  de créer un compte.</p>
             <div class="ligne1">
                 <div class="identifiant">
                     <label for="identifiant">Identifiant</label>
@@ -49,6 +51,30 @@
 
             </div>
             
+        </form>
+        <form  method="POST" id="formconnexion" action="#">
+            <div class="ligne1">
+                <div class="identifiant">
+                    <label for="identifiant">Identifiant</label>
+                    <input type="text" name="identifiantconnexion" id="identifiantconnexion">
+                </div>
+                <div class="mdpconnexion">
+                    <label for="mdp">Mot de passe</label>
+                    <input type="password" name="mdpconnexion">
+                </div>
+            </div>
+
+            <div class="ligne4">
+                <div class="captcha">
+                    <p id="statusconnexion"></p>
+                </div>
+                <div class="envoi">
+                    <input type="hidden" name="url" value="<?php echo $_SERVER["REQUEST_URI"];?>">
+                    <input type="submit" value="Se connecter"></input>
+                </div>
+
+            </div>
+
         </form>
     </div>
 </div>

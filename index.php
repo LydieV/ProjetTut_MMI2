@@ -47,8 +47,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     <a href="./temoignages"><p>Témoignages</p></a>
                     
                     <a href="./contact"><p>Contact</p></a>
-                    <a onclick="ouvrirmodaleconnexion()"><p>Se connecter</p></a>
-                    <a onclick="ouvrirmodaleinscription()"><p>S\'inscrire</p></a>
+                    <a onclick="ouvrirmodaleinscription()"><i class="fas fa-user-alt"></i></a>
                 </div>
                 <img id="iconemenueo" class="iconemenu" src="img/menu.png" onclick="ouvrirmenu()">
                 <img id="iconemenuec" class="iconemenuc" src="img/close.png" onclick="fermermenu()">
