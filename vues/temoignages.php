@@ -1,8 +1,7 @@
 <div class="contenutemoignages">
     <div class="bannieretemoignages">
         <div class="couleur_banniere textebanniere">
-            <p> Sur cette page, vous pouvez lire des témoignages d'autres victimes de harcèlement. Ils
-            peuvent aussi vous aider à identifier le type de harcèlement dont vous avez été victime.</p>
+            <p> Sur cette page, vous pouvez lire des témoignages de victimes d'harcèlement. N'hésitez pas à interagir et écrire ce que vous ressentez.</p>
         </div>
     </div>
     <div class="temoignage">
@@ -64,17 +63,23 @@
                         }else{
                             if($line['visible']=="1"){
                                 $titre = $line['titre'];
-                                echo '<div class="post filter '.$categorie.'"><div class="illustrationpost"></div><div class="contenupost">';
-                                echo "<div class='titrefiltre'>$categorie</div>";
-                                echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                                echo "<div class='titretemoignage'><h3>$titre</h3></div>";
-                                echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
-                                echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
-                                if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
-                                    echo '<form method="POST" action="index.php?action=supprimertemoignage">';
-                                    echo "<input name='id' value='$id' type='hidden'>";
-                                    echo '<input type="submit" value="Supprimer"></form>';
-                                }
+                                echo '<div class="post filter '.$categorie.'">';
+                                echo '<div class="illustrationpost"></div>';
+                                    echo '<div class="contenupost">';
+                                        echo "<div class='titretemoignage'>";
+                                        if($categorie != "Cyber"){
+                                            echo "<h3> Témoignage sur le harcèlement $categorie</h3></div>";
+                                        } else{
+                                            echo "<h3> Témoignage sur le Cyber-harcèlement </h3></div>";
+                                        }
+                                        echo "<div class='datepublication'>Publié le $dateEcrit</div>";
+                                        echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
+                                        echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
+                                    if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
+                                        echo '<form method="POST" action="index.php?action=supprimertemoignage">';
+                                        echo "<input name='id' value='$id' type='hidden'>";
+                                        echo '<input type="submit" value="Supprimer"></form>';
+                                    }
                                 echo '</div></div>';
                             }
 
