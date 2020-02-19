@@ -1092,13 +1092,44 @@ footer > div{
 }
 
 footer{
-    padding: 35px;
+    padding: 30px;
 }
 
 
 
+/* modif témoignages */
+
+.contenupost{
+    background-color: #f7f7f7;
+}
 
 
+.liresuite{
+    font-size:0.8rem;
+    text-align: right;
+}
+
+.liresuite a{
+    background-color: var(--violet);
+    padding: 6px;
+    text-decoration: none;
+    color:white;
+}
+
+.titretemoignage h3{
+    margin-bottom: 8px;
+    width: 90%;
+}
+
+.datepublication{
+    font-size: 14px;
+}
+
+.apercu{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
 
 
 
