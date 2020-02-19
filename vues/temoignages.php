@@ -66,12 +66,8 @@
                                 echo '<div class="post filter '.$categorie.'">';
                                 echo '<div class="illustrationpost"></div>';
                                     echo '<div class="contenupost">';
-                                        echo "<div class='titretemoignage'>";
-                                        if($categorie != "Cyber"){
-                                            echo "<h3> Témoignage sur le harcèlement $categorie</h3></div>";
-                                        } else{
-                                            echo "<h3> Témoignage sur le Cyber-harcèlement </h3></div>";
-                                        }
+                                        echo "<div class='titretemoignage'><h3> $titre</h3></div>";
+                                        echo "<div class='datepublication'>Catégorie : $categorie</div>";
                                         echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                                         echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
                                         echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
