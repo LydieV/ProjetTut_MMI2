@@ -10,9 +10,9 @@ if(isset($_GET['id'])){
     if($line['visible'] == 0 && !isset($_SESSION['admin'])){
         header('Location:./temoignages');
     }else{
-        echo '<div class="contenutemoignage"><div class="banniere_mapage">';
+        echo '<div class="contenutemoignage"><div class="bannieretemoignages">';
             echo '<div class="couleur_banniere">';
-                echo "<p> Témoigner, c'est une marque de courage </p>";
+                echo "<p> Témoigner, c'est une marque de courage.<br/> Nous sommes là pour partager et s'entraider, et non juger. </p>";
             echo '</div>';
         echo '</div>';
         echo '<div class="temoignageentier">';

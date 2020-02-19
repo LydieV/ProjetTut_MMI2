@@ -1,5 +1,5 @@
 <div class="contenucontact">
-    <div class="banniere_mapage">
+    <div class="banniere_contact">
         <div class="couleur_banniere">
             <p> Retrouvez tous les contacts afin de vous aider. </p>
         </div>
