@@ -427,7 +427,7 @@ z-index:1000;
     text-align: center;
     height: 18vh;
     position: relative;
-    background-image: url(../img/banniere_mapage.jpg);
+    background-image: url(../img/banniere_temoignages.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1158,6 +1158,10 @@ footer{
     margin-bottom: 15px;
 }
 
+.categorietemoignage{
+    color: #bcbcbc;
+}
+
 
 
 
@@ -1274,7 +1278,7 @@ footer{
 
 .commentaire{
     margin-top: 60px;
-    background-color: #e8e7e7;
+    background-color: #f7f7f7;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -1584,6 +1588,17 @@ footer{
 
 
 /* Page contact */
+.banniere_contact{
+    text-align: center;
+    height: 18vh;
+    position: relative;
+    background-image: url(../img/banniere_contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom:20px;
+}
+
 .pagecontact{
     display: flex;
     justify-content: space-around;
@@ -1740,5 +1755,29 @@ footer{
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px){
+    /*page contact*/
+    .pagecontact{
+        display: block;
+    }
+
+    .partiegauche_contact{
+        width: 100%;
+    }
+
+    .infosreseaux{
+        border: none;
+        padding: 0;
+    }
+
+    .reseaux{
+        margin-top: 50px;
+    }
+
+    /*footer*/
+    .contact_footer{
+        width: 100%;
+    }
+}
 
 
