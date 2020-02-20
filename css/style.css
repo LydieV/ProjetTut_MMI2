@@ -1586,6 +1586,12 @@ footer{
     border-bottom: 7px solid var(--violet);
 }
 
+.carousel-inner{
+    width: 70%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* Page contact */
 .banniere_contact{

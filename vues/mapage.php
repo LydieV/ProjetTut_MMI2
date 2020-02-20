@@ -1,3 +1,8 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
 <?php
 
 if(isset($_SESSION['id'])){
@@ -49,20 +54,56 @@ if(isset($_SESSION['id'])){
             <div class="activitesprofil">
                 <div class="section_activite">
                     <h3 class="titre1"> Les témoignages que j'ai postés </h3>
-                    <div class="carousel_activites">
-                        <?php
-                        $sql = "SELECT * FROM ecrit WHERE idAuteur=?";
-                        $query = $pdo -> prepare($sql);
-                        $query->execute(array($_SESSION['id']));
-                        while($line=$query->fetch()){
-                            $contenu=substr($line['contenu'], 0, 25). ' ...';
-                            echo '<a href="./temoignage-'.$line['id'].'">';
-                                echo '<div class="apercutemoignage">';
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <?php
+                            $sql = "SELECT COUNT(*) AS nb FROM ecrit WHERE idAuteur=?";
+                            $query1 = $pdo->prepare($sql);
+                            $query1->execute(array($_SESSION['id']));
+                            $colums = $query1->fetch();
+                            $nb = $colums['nb'];
+                            $nombre = 1;
+                            for($i=0; $i < $nb-1; $i++){
+                                echo '<li data-target="#myCarousel" data-slide-to="'. $nombre. '"></li>';
+                                $nombre = $nombre + 1;
+                            }
+                            ?>
+                        </ol>
+                        <div class="carousel-inner">
+                            <?php
+                            $sql = "SELECT * FROM ecrit WHERE idAuteur=?";
+                            $query = $pdo -> prepare($sql);
+                            $query->execute(array($_SESSION['id']));
+
+                            while($line=$query->fetch()){
+                                //le if qu'il faut changer
+                                if($line == $line[0]){
+                                    $contenu=substr($line['contenu'], 0, 25). ' ...';
+                                    echo '<a href="./temoignage-'.$line['id'].'" class="item active">';
+                                    echo '<div class="apercutemoignage">';
                                     echo '<p>"'.$contenu   .'"</p>';
-                                echo '</div>';
-                            echo '</a>';
-                        }
-                        ?>
+                                    echo '</div>';
+                                    echo '</a>';
+                                } else {
+                                    $contenu=substr($line['contenu'], 0, 25). ' ...';
+                                    echo '<a href="./temoignage-'.$line['id'].'" class="item">';
+                                    echo '<div class="apercutemoignage">';
+                                    echo '<p>"'.$contenu   .'"</p>';
+                                    echo '</div>';
+                                    echo '</a>';
+                                }
+                            }
+                            ?>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
                 <div class="section_activite">
@@ -104,3 +145,6 @@ if(isset($_SESSION['id'])){
 }
 
 ?>
+
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
