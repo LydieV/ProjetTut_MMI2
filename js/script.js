@@ -41,6 +41,9 @@ function idaleatoire() {
 
 //On attends le chargement de JQuery
 $(function(){
+    //Ajout du display block au premier item pour le carousel
+    $('.item0').css('display', 'block');
+
     $('.afficherconnexion').click(function () {
         $('#forminscription').slideUp().hide();
         $('#formconnexion').slideDown().css('display', 'flex');
@@ -56,6 +59,9 @@ $(function(){
         $('.msginsc').hide();
         $('.msginfoinsc').show();
     });
+
+
+
 
 
     //Lors de l'envoi du formulaire d'inscription

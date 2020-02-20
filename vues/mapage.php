@@ -75,24 +75,15 @@ if(isset($_SESSION['id'])){
                             $sql = "SELECT * FROM ecrit WHERE idAuteur=?";
                             $query = $pdo -> prepare($sql);
                             $query->execute(array($_SESSION['id']));
-
+                            $nb=0;
                             while($line=$query->fetch()){
-                                //le if qu'il faut changer
-                                if($line == $line[0]){
-                                    $contenu=substr($line['contenu'], 0, 25). ' ...';
-                                    echo '<a href="./temoignage-'.$line['id'].'" class="item active">';
-                                    echo '<div class="apercutemoignage">';
-                                    echo '<p>"'.$contenu   .'"</p>';
-                                    echo '</div>';
-                                    echo '</a>';
-                                } else {
-                                    $contenu=substr($line['contenu'], 0, 25). ' ...';
-                                    echo '<a href="./temoignage-'.$line['id'].'" class="item">';
-                                    echo '<div class="apercutemoignage">';
-                                    echo '<p>"'.$contenu   .'"</p>';
-                                    echo '</div>';
-                                    echo '</a>';
-                                }
+                                $contenu=substr($line['contenu'], 0, 25). ' ...';
+                                echo '<a href="./temoignage-'.$line['id'].'" class="item item'.$nb.'">';
+                                echo '<div class="apercutemoignage">';
+                                echo '<p>"'.$contenu   .'"</p>';
+                                echo '</div>';
+                                echo '</a>';
+                                $nb++;
                             }
                             ?>
                         </div>
@@ -146,5 +137,3 @@ if(isset($_SESSION['id'])){
 
 ?>
 
-<script src="./js/jquery-3.4.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
