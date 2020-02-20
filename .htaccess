@@ -15,6 +15,7 @@ RewriteRule ^ressources$ index.php?action=ressources
 RewriteRule ^erreur$ index.php?action=erreur
 RewriteRule ^accueil$ index.php?action=accueil
 RewriteRule ^confidentialite$ index.php?action=confidentialite
+RewriteRule ^mentions-legales$ index.php?action=mentionslegales
 RewriteRule ^temoignages$ index.php?action=temoignages
 
 #Gestion page 404
