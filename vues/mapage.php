@@ -1,6 +1,5 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
-    <script src="./js/jquery-3.4.1.min.js"></script>
 </head>
 
 <?php

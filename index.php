@@ -23,12 +23,13 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <!-- Chargement des feuilles de style nécessaires -->
         <link href="./css/style.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
         <!-- Chargement des polices -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
         <!-- Chargement de JQuery -->
-        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
     </head>
 
     <body>
@@ -89,7 +90,6 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     ?>
 
         <?php include("vues/inscription.php"); ?>
-        <?php include("vues/connexion.php"); ?>
         <footer>
             <div class="footer">
                 <div class="contact_footer">
