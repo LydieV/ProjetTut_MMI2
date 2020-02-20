@@ -104,7 +104,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     </a>
                 </div>
                 <div class="mentions">
-                    <p><a href="./mentions-legales">Mentions légales</a> | <a href="./confidentialite">Confidentialité</a> | Cookies</p>
+                    <p><a href="./mentions-legales">Mentions légales</a> | <a href="./confidentialite">Confidentialité</a></p>
                 </div>
             </div>
 
