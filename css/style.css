@@ -1114,10 +1114,6 @@ footer > div{
     width: 8%;
 }
 
-.mentions{
-    padding-top: 25px;
-}
-
 footer{
     padding: 30px;
 }
@@ -1587,9 +1583,36 @@ footer{
 }
 
 .carousel-inner{
-    width: 70%!important;
+    width: 50%!important;
     margin-left: auto;
     margin-right: auto;
+}
+
+.item{
+    background-color: white;
+}
+
+.glyphicon{
+    color: var(--violet)!important;
+}
+
+.carousel-indicators{
+    bottom: -35px!important;
+}
+
+.carousel-indicators li{
+    border: 1px solid var(--violet)!important;
+}
+
+.carousel-indicators .active{
+    background-color: var(--violet)!important;
+}
+
+.carousel-control.right, .carousel-control.left{
+    background-image: none!important;
+}
+.carousel{
+    margin-top: 20px;
 }
 
 
@@ -1783,6 +1806,12 @@ footer{
     /*footer*/
     .contact_footer{
         width: 100%;
+    }
+
+    .mentions{
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 25px;
     }
 }
 

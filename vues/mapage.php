@@ -67,6 +67,19 @@ if(isset($_SESSION['id'])){
                                 echo '<li data-target="#myCarousel" data-slide-to="'. $nombre. '"></li>';
                                 $nombre = $nombre + 1;
                             }
+
+                            if($nb == 0){
+                                echo '</ol>';
+                                echo '<div class="carousel-inner">';
+                                    echo '<a>';
+                                        echo '<div class="apercutemoignage item active">';
+                                            echo "<p> Vous n'avez pas encore écrit de témoignages. </p>";
+                                        echo '</div>';
+                                    echo '</a>';
+                                echo '</div>';
+                            } else {
+                                echo '</ol>';
+                            }
                             ?>
                         </ol>
                         <div class="carousel-inner">
@@ -77,11 +90,19 @@ if(isset($_SESSION['id'])){
                             $nb=0;
                             while($line=$query->fetch()){
                                 $contenu=substr($line['contenu'], 0, 25). ' ...';
-                                echo '<a href="./temoignage-'.$line['id'].'" class="item item'.$nb.'">';
-                                echo '<div class="apercutemoignage">';
-                                echo '<p>"'.$contenu   .'"</p>';
-                                echo '</div>';
-                                echo '</a>';
+                                if($nb == 0){
+                                    echo '<a href="./temoignage-'.$line['id'].'" class="item active">';
+                                        echo '<div class="apercutemoignage">';
+                                            echo '<p>"'.$contenu   .'"</p>';
+                                        echo '</div>';
+                                    echo '</a>';
+                                } else{
+                                    echo '<a href="./temoignage-'.$line['id'].'" class="item">';
+                                        echo '<div class="apercutemoignage">';
+                                            echo '<p>"'.$contenu   .'"</p>';
+                                        echo '</div>';
+                                    echo '</a>';
+                                }
                                 $nb++;
                             }
                             ?>
@@ -98,30 +119,133 @@ if(isset($_SESSION['id'])){
                 </div>
                 <div class="section_activite">
                     <h3 class="titre2"> Les témoignages que j'ai sauvegardés </h3>
-                    <div class="carousel_activites">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                            <?php
+                            $sql = "SELECT COUNT(*) AS nb FROM ecrit JOIN sauvegarde ON idUtilisateur=? WHERE sauvegarde.idUtilisateur=? AND sauvegarde.idTemoignage=ecrit.id";
+                            $query2 = $pdo->prepare($sql);
+                            $query2->execute(array($_SESSION['id'],$_SESSION['id']));
+                            $colums = $query2->fetch();
+                            $nb = $colums['nb'];
+                            $nombre = 1;
+                            for($i=0; $i < $nb-1; $i++){
+                                echo '<li data-target="#myCarousel" data-slide-to="'. $nombre. '"></li>';
+                                $nombre = $nombre + 1;
+                            }
+
+                            if($nb == 0){
+                                echo '</ol>';
+                                echo '<div class="carousel-inner">';
+                                    echo '<a>';
+                                        echo '<div class="apercutemoignage item active">';
+                                            echo "<p> Vous n'avez pas encore sauvegardé de témoignages. </p>";
+                                        echo '</div>';
+                                    echo '</a>';
+                                echo '</div>';
+                            } else {
+                                echo '</ol>';
+                            }
+                            ?>
+
+                        <div class="carousel-inner">
                         <?php
                         $sql = "SELECT *, ecrit.id AS idecrit FROM ecrit JOIN sauvegarde ON idUtilisateur=? WHERE sauvegarde.idUtilisateur=? AND sauvegarde.idTemoignage=ecrit.id";
                         $query = $pdo -> prepare($sql);
                         $query->execute(array($_SESSION['id'],$_SESSION['id']));
+                        $nb = 0;
                         while($line=$query->fetch()){
                             $contenu=substr($line['contenu'], 0, 25). ' ...';
-                            echo '<a href="./temoignage-'.$line['idecrit'].'"><div class="apercutemoignage"><p>"'.$contenu   .'"</p></div></a>';
+                            if($nb == 0){
+                                echo '<a href="./temoignage-'.$line['idecrit'].'" class="item active">';
+                                    echo '<div class="apercutemoignage">';
+                                        echo '<p>"'.$contenu   .'"</p>';
+                                        echo '</div></a>';
+
+                            } else{
+                                echo '<a href="./temoignage-'.$line['idecrit'].'" class="item">';
+                                    echo '<div class="apercutemoignage">';
+                                        echo '<p>"'.$contenu   .'"</p>';
+                                        echo '</div></a>';
+
+                            }
+                            $nb++;
                         }
                         ?>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
                 <div class="section_activite">
                     <h3 class="titre3"> Les commentaires que j'ai postés </h3>
-                    <div class="commentairemapage">
-                        <?php
-                        $sql = "SELECT * FROM commentaires WHERE idAuteur=? LIMIT 5";
-                        $query = $pdo -> prepare($sql);
-                        $query->execute(array($_SESSION['id']));
-                        while($line=$query->fetch()){
-                            $contenu=substr($line['commentaire'], 0, 25). ' ...';
-                            echo '<a href="./temoignage-'.$line['idTemoignage'].'"><p>"'.$contenu.'"</p></a>';
-                        }
-                        ?>
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                            <?php
+                            $sql = "SELECT COUNT(*) AS nb FROM commentaires WHERE idAuteur=? LIMIT 5";
+                            $query3 = $pdo->prepare($sql);
+                            $query3->execute(array($_SESSION['id']));
+                            $colums = $query3->fetch();
+                            $nb = $colums['nb'];
+                            $nombre = 1;
+                            for($i=0; $i < $nb-1; $i++){
+                                echo '<li data-target="#myCarousel" data-slide-to="'. $nombre. '"></li>';
+                                $nombre = $nombre + 1;
+                            }
+                            if($nb == 0){
+                                echo '</ol>';
+                                echo '<div class="carousel-inner">';
+                                echo '<a>';
+                                echo '<div class="apercutemoignage item active">';
+                                    echo "<p> Vous n'avez pas encore posté de commentaires. </p>";
+                                    echo '</div>';
+                                    echo '</a>';
+                                    echo '</div>';
+                            } else {
+                                echo '</ol>';
+                            }
+                            ?>
+
+                        <div class="carousel-inner">
+                            <?php
+                            $sql = "SELECT * FROM commentaires WHERE idAuteur=? LIMIT 5";
+                            $query = $pdo -> prepare($sql);
+                            $query->execute(array($_SESSION['id']));
+                            $nb=0;
+                            while($line=$query->fetch()){
+                                $contenu=substr($line['commentaire'], 0, 25). ' ...';
+                                if($nb == 0){
+                                    echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item active">';
+                                        echo '<div class="apercutemoignage">';
+                                            echo '<p>"'.$contenu   .'"</p>';
+                                        echo '</div>';
+                                    echo '</a>';
+                                } else{
+                                    echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item">';
+                                        echo '<div class="apercutemoignage">';
+                                            echo '<p>"'.$contenu   .'"</p>';
+                                        echo '</div>';
+                                    echo '</a>';
+                                }
+                                $nb++;
+                            }
+                            ?>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>

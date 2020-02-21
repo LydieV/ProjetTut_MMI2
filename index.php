@@ -111,7 +111,9 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         </footer>
     </body>
     <script src="js/script.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
     <script>
         window.cookieconsent.initialise({
             "palette": {
