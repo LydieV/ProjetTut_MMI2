@@ -62,7 +62,7 @@
                 <a class="boutonconf" onclick="validateForm()"> Envoyer</a>
             </form>
             <div>
-                <p id="status"></p>
+                <p id="status" class="statusemail"></p>
             </div>
 
             <div class="reseaux">

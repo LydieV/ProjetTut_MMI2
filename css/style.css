@@ -1819,6 +1819,11 @@ footer{
 .infosreseaux{
     margin-bottom: 50px;
 }
+.statusemail{
+    color:black!important;
+    padding-top:20px;
+    text-align: center;
+}
 
 @media screen and (max-width: 768px){
     /*page contact*/
