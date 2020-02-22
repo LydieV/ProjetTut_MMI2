@@ -1081,7 +1081,14 @@ footer > div{
 
 
 
+/* modif connexion / inscription */
+.afficherconnexion:hover,.afficherinscription:hover{
+    color: var(--violet);
+}
 
+.msgconn, .msginsc{
+    font-size: 20px;
+}
 
 
 
@@ -1502,18 +1509,6 @@ footer{
     text-decoration: none;
 }
 
-.carousel_activites{
-    margin-top: 30px;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.carousel_activites a{
-    text-decoration: none;
-    width:33%;
-}
-
 .apercutemoignage{
     height:100px;
     background-color: white;
@@ -1530,10 +1525,17 @@ footer{
     background-color: var(--violet);
     color: white;
 }
+
+.info p{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
 .commentairemapage > a > p{
     padding-bottom:5px;
     text-transform: none;
 }
+
 .commentairemapage > a{
     text-decoration: none;
 }
@@ -1613,6 +1615,10 @@ footer{
 }
 .carousel{
     margin-top: 20px;
+}
+
+.carousel-inner a:hover{
+    text-decoration: none;
 }
 
 
