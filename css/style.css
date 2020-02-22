@@ -313,6 +313,12 @@ z-index:1000;
     border:0;
     padding:10px;
 }
+.ligne1 > div > div > select{
+    width:50%;
+    border-radius:25px;
+    border:0;
+    padding:10px;
+}
 .ligne1 > div > label, .datenaissance > label, .ligne2 > label, .ligne3 > div >label{
     color:white;
     padding-bottom: 15px;
@@ -663,6 +669,9 @@ footer > div{
 }
 
 @media screen and (max-width: 768px){
+    .contenuaccueil, .contenutemoignages, .contenuposter, .contenutemoignage, .contenucontact, .contenumapage{
+        width:100%;
+    }
     header{
         position: fixed;
         z-index: 100;
@@ -704,6 +713,11 @@ footer > div{
     }
     .items > a >p{
         font-size:1.6rem;
+    }
+    .items > a:hover{
+        background-color:transparent!important;
+        text-decoration: none!important;
+        color: white!important;
     }
     .iconemenu{
         display:block;
@@ -857,7 +871,7 @@ footer > div{
     }
 
     .pagecontact div:first-child{
-        width: 80%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -879,9 +893,12 @@ footer > div{
     }
 
     .infosreseaux{
+        width:90%;
         border-left: none;
         padding-left: 0;
         margin-top: 20px;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     /* Page témoignage */
@@ -1096,6 +1113,7 @@ footer > div{
 /* modif connexion / inscription */
 .afficherconnexion:hover,.afficherinscription:hover{
     color: var(--violet);
+    cursor:pointer;
 }
 
 .msgconn, .msginsc{
