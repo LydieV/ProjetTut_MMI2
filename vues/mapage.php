@@ -73,7 +73,7 @@ if(isset($_SESSION['id'])){
                                 echo '<div class="carousel-inner">';
                                     echo '<a>';
                                         echo '<div class="apercutemoignage item active">';
-                                            echo "<p> Vous n'avez pas encore écrit de témoignages. </p>";
+                                            echo "<p> Vous n'avez pas encore posté de témoignages. </p>";
                                         echo '</div>';
                                     echo '</a>';
                                 echo '</div>';

@@ -55,7 +55,7 @@
         <form  method="POST" id="formconnexion" action="#">
             <div class="ligne1">
                 <div class="identifiant">
-                    <label for="identifiant">Identifiant</label>
+                    <label for="identifiant">Email</label>
                     <input type="text" name="identifiantconnexion" id="identifiantconnexion">
                 </div>
                 <div class="mdpconnexion">
