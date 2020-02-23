@@ -1158,6 +1158,8 @@ footer{
 .titretemoignage h3{
     margin-bottom: 8px;
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .datepublication{
