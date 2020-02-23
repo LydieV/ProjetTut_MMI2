@@ -546,10 +546,7 @@ z-index:1000;
 }
 
 /* Contenu page poster */
-.textebannieretemoignages > p{
-    font-size:1.2rem!important;
-    width:80%;
-}
+
 .descriptionposter{
     text-align: center;
 }
