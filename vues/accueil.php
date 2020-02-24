@@ -8,7 +8,7 @@
             </a>-->
         </div>
     </div>
-    <h1>Plus fort, ensemble !</h1>
+    <h1>Plus forts, ensemble !</h1>
   <!--  <div class="cartes">
         <div class="carte">
             <a href="#">
