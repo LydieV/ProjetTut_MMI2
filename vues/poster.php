@@ -5,9 +5,8 @@
 <div class="contenuposter">
     <div class="bannieretemoignages">
         <div class="couleur_banniere textebannieretemoignages">
-            <p> Cette page vous permet de partager les complications rencontrées au cours de votre vie. En témoignant, vous participerez non seulement à une meilleure compréhension de
-            la définition du mot "harcèlement".<br />
-            Qui plus est, votre témoignage peut également aider une personne à identifier le cas de harcèlement dont celle-ci fait face et l'aider à agir en conséquence.</p>
+            <p> Cette page vous permet de partager ce que vous avez vécu.<br />
+                Utilisez vos propres mots afin d'écrire votre témoignage.</p>
         </div>
     </div>
     <div class="descriptionposter">

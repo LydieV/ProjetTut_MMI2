@@ -1,7 +1,7 @@
 <div class="contenutemoignages">
     <div class="bannieretemoignages">
         <div class="couleur_banniere textebanniere">
-            <p> Sur cette page, vous pouvez lire des témoignages de victimes d'harcèlement. N'hésitez pas à en écrire un ou bien interagir aux autres témoignages.</p>
+            <p> Sur cette page, vous pouvez lire des témoignages de victimes de harcèlement. N'hésitez pas à en écrire un ou bien interagir aux autres témoignages.</p>
         </div>
     </div>
     <div class="temoignage">
