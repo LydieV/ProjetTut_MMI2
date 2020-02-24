@@ -54,15 +54,15 @@
             <h2 class="titre_contact contact2"> Pour nous contacter </h2>
             <form method="POST" class="form_contact">
                 <label for="email" id="label1"> Email </label>
-                <input type="email" name="email" id="email" onclick="glissement(this.id)"/>
+                <input type="email" name="emailcontact" id="email" onclick="glissement(this.id)"/>
                 <label for="email" id="label2"> Sujet </label>
-                <input type="text" name="sujet" id="sujet" onclick="glissement(this.id)"/>
+                <input type="text" name="sujetcontact" id="sujet" onclick="glissement(this.id)"/>
                 <label for="msg" class="labelmsg"> Message </label>
-                <textarea name="message" id="message"></textarea>
+                <textarea name="message" id="messagecontact"></textarea>
                 <a class="boutonconf" onclick="validateForm()"> Envoyer</a>
             </form>
             <div>
-                <p id="status" class="statusemail"></p>
+                <p id="statuscontact" class="statusemail"></p>
             </div>
 
             <div class="reseaux">

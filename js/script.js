@@ -159,15 +159,15 @@ function glissement(a){
 //Fonction valider form contact
 function validateForm() {
 
-  document.getElementById('status').innerHTML = "Envoi en cours...";
+  document.getElementById('statuscontact').innerHTML = "Envoi en cours...";
 
     formData = {
 
-        'email'    : $('input[name=email]').val(),
+        'email'    : $('input[name=emailcontact]').val(),
 
-        'subject'  : $('input[name=sujet]').val(),
+        'sujet'  : $('input[name=sujetcontact]').val(),
 
-        'message'  : $('textarea[name=message]').val()
+        'message'  : $('textarea[name=messagecontact]').val()
 
     };
 
@@ -185,7 +185,7 @@ function validateForm() {
 
         {
 
-            $('#status').text(data.message);
+            $('#statuscontact').text(data.message);
 
             if (data.code) //Si le mail à bien été envoyé
 
@@ -194,7 +194,7 @@ function validateForm() {
         },
         error: function (jqXHR, textStatus, errorThrown)
         {
-            document.getElementById('status').innerHTML = "L'envoi du mail a échoué !";
+            document.getElementById('statuscontact').innerHTML = "L'envoi du mail a échoué !";
         }
     });
 }

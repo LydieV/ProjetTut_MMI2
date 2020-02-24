@@ -878,7 +878,7 @@ footer > div{
     }
 
     .pagecontact #label2{
-        margin-top: 48px;
+        margin-top: 60px!important;
     }
 
     .pagecontact #label1{
@@ -920,6 +920,31 @@ footer > div{
     .partieposter{
         width:60%;
         margin-bottom:30px;
+    }
+
+    .couleur_banniere p{
+        font-size: 1rem!important;
+    }
+
+    .ligne1 > div > div > select {
+        width: 100%;
+    }
+    .modale > form{
+        font-size:0.7rem;
+    }
+    .ligne1,.ligne2,.ligne3,.modale > form > p{
+        padding-bottom:5px;
+    }
+    .msginfoinsc{
+        padding-top:0px;
+    }
+    .identifiant > a{
+        font-size:0.6rem;
+    }
+}
+@media screen and (max-width:340px){
+    .contenuaccueil > h1 {
+        font-size: 1.9rem;
     }
 }
 
