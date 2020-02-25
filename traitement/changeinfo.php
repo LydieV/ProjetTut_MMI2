@@ -2,7 +2,8 @@
 
 if(isset($_POST['modif'])){
     ?>
-    <div class="banniere_mapage">
+    <div class="contenumapage">
+    <div class="banniere_changeinfo">
         <div class="couleur_banniere">
             <p> Bienvenue sur votre page personnelle. </p>
         </div>
@@ -61,3 +62,4 @@ if(isset($_POST['modif'])){
 
 
 ?>
+    </div>
