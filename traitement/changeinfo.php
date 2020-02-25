@@ -2,7 +2,8 @@
 
 if(isset($_POST['modif'])){
     ?>
-    <div class="banniere_mapage">
+    <div class="contenumapage">
+    <div class="banniere_changeinfo">
         <div class="couleur_banniere">
             <p> Bienvenue sur votre page personnelle. </p>
         </div>
@@ -19,7 +20,7 @@ if(isset($_POST['modif'])){
                 <input type="text" name="ancienmail" value=""/>
             </div>
             <div class="elementchangement">
-                <label for="mail"> Votre nouvelle adresse nouveau mail : </label>
+                <label for="mail"> Votre nouvelle adresse mail : </label>
                 <input type="email" name="email"/>
             </div>
             <div class="elementchangement">
@@ -61,3 +62,4 @@ if(isset($_POST['modif'])){
 
 
 ?>
+    </div>

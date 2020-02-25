@@ -36,10 +36,10 @@
     <section class="but">
         <h1>En quoi consiste notre campagne ?</h1>
         <p>
-           <span> Parlons harcèlement </span>  a pour but d’accompagner les victimes de harcèlement afin qu’elle ne se retrouvent pas seules.
-            Découvrez sur ce site l’onglet <a href="./temoignages" class="lientemoignages"> témoignages </a> afin de déposer un témoignage ou de répondre à celui de quelqu’un. <br/>
-            C’est important de ne <span> pas rester seul </span> dans ces moments-là, nous sommes là pour vous écouter et non pour vous juger. <br/>
-            Nous organisons des <span>  conférences et des interventions </span> dans des écoles afin de toucher le plus de personne possible.
+           <span> Parlons harcèlement </span>  a pour but d’accompagner les victimes de harcèlement afin qu’elles ne se retrouvent pas seules.
+            Découvrez sur ce site l’onglet <a href="./temoignages" class="lientemoignages"> témoignages </a> qui permet de témoigner ou d'interagir aux témoignages d'autres victimes. <br/>
+            Il est important de ne <span> pas rester seul-e </span> dans ces moments-là, nous sommes présents pour vous écouter et non pour vous juger. <br/>
+            Nous organisons des <span>  conférences et des interventions </span> dans des écoles afin de toucher et sensibiliser le plus de personnes possible.
         </p>
     </section>
 
@@ -47,9 +47,9 @@
         <h1>Comment agir face au harcèlement ?</h1>
         <div class="descagir">
             <p>
-                Si vous voyez une personne être victime de hacèlement : agissez !
-                Vous pouvez informer quelqu’un de compétent afin d’arrêter le ou les harceleur(s) ou contacter le numéro vert : 30 20
-                si vous ne savez pas comment agir. Restez présent pour cette personne, montrez lui que vous êtes là et qu’elle n’est pas seule.
+                Si vous voyez une personne être victime de harcèlement : agissez !
+                Vous pouvez informer quelqu’un de compétent afin d’arrêter le ou les harceleur-s ou contacter le numéro vert : 30 20
+                si vous ne savez pas comment agir. Restez présent-e pour cette personne, montrez lui que vous êtes là et qu’elle n’est pas seule.
             </p>
             <div class="agircontact">
                 <h3>Ou parlez-en avec les bonnes personnes </h3>
