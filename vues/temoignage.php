@@ -89,7 +89,7 @@ if(isset($_GET['id'])){
                     echo '<p> Publié le '. $line['dateCommentaireFormate'] .' par</p>';
                     echo '<p>'. $line['identifiant'] .'</p>';
                     echo '</div>';
-                    echo '<p class="contenucom"> "'. $line['commentaire'] .'"</p>';
+                    echo '<p class="contenucom"> "'. stripslashes($line['commentaire']) .'"</p>';
                     if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==1){
                         echo '<form method="POST" action="index.php?action=masquercommentaire">
                         <input type="hidden" name="idcomm" value="'.$line['idcomm'].'">
@@ -105,7 +105,7 @@ if(isset($_GET['id'])){
                         echo '<p> Publié le '. $line['dateCommentaireFormate'] .' par</p>';
                         echo '<p>'. $line['identifiant'] .'</p>';
                         echo '</div>';
-                        echo '<p class="contenucom"> "'. $line['commentaire'] .'"</p>';
+                        echo '<p class="contenucom"> "'. stripslashes($line['commentaire']) .'"</p>';
                         echo '<form method="POST" action="index.php?action=acceptercommentaire">
                         <input type="hidden" name="idcomm" value="'.$line['idcomm'].'">
                         <input type="hidden" name="idpage" value="'.$_GET['id'].'">
