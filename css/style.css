@@ -706,7 +706,7 @@ footer > div{
         justify-content: center;
     }
     .items > a{
-        padding-bottom: 90px;
+        padding-bottom: 10px;
     }
     .items > a >p{
         font-size:1.6rem;
