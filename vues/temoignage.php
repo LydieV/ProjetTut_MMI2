@@ -81,7 +81,9 @@ if(isset($_GET['id'])){
             $query = $pdo -> prepare($sql);
             $query->execute(array($_GET['id']));
             $count=$query->rowCount();
-
+                echo "<div class='commentaireenvoye'>";
+                    echo "<p> Votre commentaire va être vérifié avant publication. Merci de votre compréhension. </p>";
+                echo '</div>';
             while($line=$query->fetch()){
                 if($line['visible'] == 1){
                     echo '<div class="uncommentaire">';
