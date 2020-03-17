@@ -12,11 +12,12 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="description" content="Parlons harcèlement, campagne contre le harcèlement qui accompagne les victimes. Découvrez des témoignages et intéragissez."/>
         <link rel="icon" type="image/png" href="img/favicon.jpg" />
         <title>Parlons Harcèlement</title>
 
