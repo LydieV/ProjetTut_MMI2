@@ -255,8 +255,11 @@ z-index:1000;
 }
 .msgconn, .msginsc{
     margin-top:30px;
-    height:10%;
+    height:auto;
     max-height:10%;
+    border-bottom: 2px solid var(--violet);
+    padding-bottom: 12px;
+    width:fit-content;
 }
 
 .modale{
@@ -1133,7 +1136,7 @@ footer > div{
 
 
 /* modif connexion / inscription */
-.afficherconnexion:hover,.afficherinscription:hover{
+.afficherconnexion,.afficherinscription{
     color: var(--violet);
     cursor:pointer;
 }
