@@ -257,7 +257,6 @@ z-index:1000;
     margin-top:30px;
     height:auto;
     max-height:10%;
-    border-bottom: 2px solid var(--violet);
     padding-bottom: 12px;
     width:fit-content;
 }
@@ -1137,6 +1136,12 @@ footer > div{
 
 /* modif connexion / inscription */
 .afficherconnexion,.afficherinscription{
+    color: white;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+.afficherconnexion:hover,.afficherinscription:hover{
     color: var(--violet);
     cursor:pointer;
 }
@@ -1144,7 +1149,11 @@ footer > div{
 .msgconn, .msginsc{
     font-size: 20px;
 }
-
+.actif{
+    background-color: var(--violet);
+    padding:10px;
+    border-radius:15px;
+}
 
 
 

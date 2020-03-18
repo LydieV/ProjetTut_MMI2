@@ -1,8 +1,8 @@
 <div id="inscription" class="inscription">
     <div class="modale">
         <i class="fas fa-times boutonfermer" onclick="fermermodaleinscription()"></i>
-        <p class="msgconn">Déja inscrit ? <span class="afficherconnexion">Connexion</span></p>
-        <p class="msginsc">Pas encore inscrit ? <span class="afficherinscription">Inscription</span></p>
+        <p class="msgconn"><span class="actif">Inscription</span><span class="afficherconnexion">Connexion</span></p>
+        <p class="msginsc"><span class="afficherinscription">Inscription</span> <span class=" actif">Connexion</span></p>
         <form  method="POST" id="forminscription" action="#">
             <p class="msginfoinsc">Pour éviter toute tentative qui se voudrait malveillante, il est obligatoire  de créer un compte.</p>
             <div class="ligne1">

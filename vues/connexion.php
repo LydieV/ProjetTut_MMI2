@@ -1,7 +1,6 @@
 <div id="connexion" class="connexion">
     <div class="modale">
         <i class="fas fa-times boutonfermer" onclick="fermermodaleconnexion()"></i>
-        <p>Vous avez déjà un compte ? Connectez-vous dès maintenant !</p>
         <form  method="POST" id="formconnexion" action="#">
             <div class="ligne1">
                 <div class="identifiant">
