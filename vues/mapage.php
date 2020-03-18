@@ -89,17 +89,17 @@ if(isset($_SESSION['id'])){
                             $query->execute(array($_SESSION['id']));
                             $nb=0;
                             while($line=$query->fetch()){
-                                $contenu=substr($line['contenu'], 0, 25). ' ...';
+                                //$contenu=substr($line['contenu'], 0, 25). ' ...';
                                 if($nb == 0){
                                     echo '<a href="./temoignage-'.$line['id'].'" class="item active">';
                                         echo '<div class="apercutemoignage">';
-                                            echo '<p>"'.$contenu   .'"</p>';
+                                            echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div>';
                                     echo '</a>';
                                 } else{
                                     echo '<a href="./temoignage-'.$line['id'].'" class="item">';
                                         echo '<div class="apercutemoignage">';
-                                            echo '<p>"'.$contenu   .'"</p>';
+                                            echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div>';
                                     echo '</a>';
                                 }
@@ -155,17 +155,17 @@ if(isset($_SESSION['id'])){
                         $query->execute(array($_SESSION['id'],$_SESSION['id']));
                         $nb = 0;
                         while($line=$query->fetch()){
-                            $contenu=substr($line['contenu'], 0, 25). ' ...';
+                            //$contenu=substr($line['contenu'], 0, 25). ' ...';
                             if($nb == 0){
                                 echo '<a href="./temoignage-'.$line['idecrit'].'" class="item active">';
                                     echo '<div class="apercutemoignage">';
-                                        echo '<p>"'.$contenu   .'"</p>';
+                                        echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div></a>';
 
                             } else{
                                 echo '<a href="./temoignage-'.$line['idecrit'].'" class="item">';
                                     echo '<div class="apercutemoignage">';
-                                        echo '<p>"'.$contenu   .'"</p>';
+                                        echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div></a>';
 
                             }
@@ -215,7 +215,7 @@ if(isset($_SESSION['id'])){
 
                         <div class="carousel-inner">
                             <?php
-                            $sql = "SELECT * FROM commentaires WHERE idAuteur=? LIMIT 5";
+                            $sql = "SELECT * FROM commentaires JOIN ecrit ON commentaires.idTemoignage=ecrit.id WHERE commentaires.idAuteur=? LIMIT 5";
                             $query = $pdo -> prepare($sql);
                             $query->execute(array($_SESSION['id']));
                             $nb=0;
@@ -224,7 +224,7 @@ if(isset($_SESSION['id'])){
                                 if($nb == 0){
                                     echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item active">';
                                         echo '<div class="apercutemoignage">';
-                                            echo '<p>"'.$contenu   .'"</p>';
+                                            echo '<p>"'.$contenu   .'" dans '.$line['titre'].'</p>';
                                         echo '</div>';
                                     echo '</a>';
                                 } else{
