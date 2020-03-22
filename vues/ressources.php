@@ -18,6 +18,10 @@
     <div id="fenetremodale" class="modal" onclick="fermerfenetre();">
         <img src="#" id="imagemodale" alt="Apercu de la photo choisie">
     </div>
+    <h2 class="titreressource">Flyer de la campagne</h2>
+    <div class="conteneurflyer">
+        <img class="flyer" src="./img/visuels/flyer.png" onclick="ouvrirmodale(this.src);">
+    </div>
     <script src="js/script.js"></script>
 </div>
 

@@ -708,6 +708,14 @@ footer > div{
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
+.flyer{
+    width:40%;
+}
+.conteneurflyer{
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
 
 @media screen and (max-width: 768px){
     .contenuaccueil, .contenutemoignages, .contenuposter, .contenutemoignage, .contenucontact, .contenumapage{
@@ -999,6 +1007,9 @@ footer > div{
     #imagemodale{
         width:90%;
         height:auto;
+    }
+    .flyer{
+        width:90%;
     }
 }
 @media screen and (max-width:340px){
