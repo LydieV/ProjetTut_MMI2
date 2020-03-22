@@ -50,7 +50,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             <a href="./accueil"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
                     <a href="./temoignages"><p>Témoignages</p></a>
-                    
+                    <a href="./ressources"><p>Ressources</p></a>
                     <a href="./contact"><p>Contact</p></a>
                     <a onclick="ouvrirmodaleinscription()"><i class="fas fa-user-alt"></i></a>
                 </div>
@@ -62,7 +62,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             <a href="./accueil"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
                     <a href="./temoignages"><p>Témoignages</p></a>
-                    
+                    <a href="./ressources"><p>Ressources</p></a>
                     <a href="./contact"><p>Contact</p></a>
                     <a href="./mapage"><p>Ma page</p></a>
                     <a href="./deconnexion"><i class="fas fa-sign-out-alt"></i></a>

@@ -11,6 +11,15 @@ function fermermodaleconnexion(){
     $('#connexion').fadeOut(500);
 }
 
+function ouvrirmodale(src){
+    //$('#fenetremodale').fadeIn(500);
+    document.getElementById('fenetremodale').style.display="flex";
+    document.getElementById('imagemodale').src=src;
+}
+function fermerfenetre(val){
+    $('#fenetremodale').fadeOut(500);
+}
+
 function ouvrirmenu(){
     let menu = document.getElementById("items");
     menu.style.height="100vh";
