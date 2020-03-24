@@ -15,7 +15,7 @@
         <img class="affiche" src="./img/visuels/affiche7.png" onclick="ouvrirmodale(this.src);">
     <!--    <img class="affiche" src="./img/visuels/affiche8.png" onclick="ouvrirmodale(this.src);">-->
     </div>
-    <div id="fenetremodale" class="modalimg" onclick="fermerfenetre();">
+    <div id="fenetremodale" class="modal" onclick="fermerfenetre();">
         <img src="#" id="imagemodale" alt="Apercu de la photo choisie">
     </div>
     <h2 class="titreressource">Flyer de la campagne</h2>
