@@ -674,7 +674,7 @@ footer > div{
     text-align: center;
     width:max-content;
     padding:10px 15px;
-    margin:auto;
+    margin:10px auto;
 }
 .conteneuraffiches{
     display: flex;
@@ -709,12 +709,16 @@ footer > div{
     to {transform:scale(1)}
 }
 .flyer{
-    width:40%;
+    width:20%;
 }
-.conteneurflyer{
+.conteneurflyer,.conteneurvideos{
     text-align: center;
     padding-top:10px;
     padding-bottom:10px;
+}
+.videoyt{
+    width:40vw;
+    height:25vw;
 }
 
 @media screen and (max-width: 768px){
@@ -996,12 +1000,14 @@ footer > div{
     .titreressource{
         font-size:1.5rem;
         width:auto;
+        margin-bottom:15px;
+        margin-top:15px;
     }
     .conteneuraffiches{
         flex-direction: column;
     }
     .affiche{
-        width:80%;
+        width:90%;
         padding:7px;
     }
     #imagemodale{
@@ -1010,6 +1016,10 @@ footer > div{
     }
     .flyer{
         width:90%;
+    }
+    .videoyt{
+        width:90%;
+        height:50vw;
     }
 }
 @media screen and (max-width:340px){
