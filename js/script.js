@@ -176,7 +176,7 @@ function validateForm() {
 
         'sujet'  : $('input[name=sujetcontact]').val(),
 
-        'message'  : $('textarea[name=messagecontact]').val()
+        'message'  : $('textarea[name=message]').val()
 
     };
 
