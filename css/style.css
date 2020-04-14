@@ -459,7 +459,7 @@ z-index:1000;
 }
 .partieposter{
     text-align: center;
-    width:20%;
+    width:30%;
     margin:auto;
 }
 .partieposter > a{
@@ -506,6 +506,17 @@ z-index:1000;
     display:flex;
     flex-wrap:wrap;
     padding-top:25px;
+    justify-content: center;
+}
+.listeposts > div{
+    text-align:center;
+}
+.listeposts > div a{
+    text-decoration:none;
+}
+.listeposts > div .bouton{
+    width:50%;
+    margin: 15px auto;
 }
 .post{
     display: flex;

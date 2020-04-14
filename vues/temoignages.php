@@ -21,13 +21,13 @@
         </div>
         <div class="partiedroite">
             <div class="filtres">
-                <div class="filtreviolet filter-button active" data-filter="tous"><p>Tous</p><div class="selecteur"></div></div>
+                <div class="filtreviolet filter-button active" data-filter="tout"><p>Tous</p><div class="selecteur"></div></div>
                 <div class="filtreviolet filter-button" data-filter="Scolaire"><p>Harcèlement scolaire</p><div class="selecteur"></div></div>
                 <div class="filtreviolet filter-button" data-filter="Professionnel"><p>Harcèlement professionnel</p><div class="selecteur"></div></div>
                 <div class="filtreviolet filter-button" data-filter="Cyber"><p>Cyber-harcèlement</p><div class="selecteur"></div></div>
                 <div class="filtreviolet filter-button" data-filter="Sexuel"><p>Harcèlement sexuel</p><div class="selecteur"></div></div>
             </div>
-            <div class="listeposts">
+            <div id="listeposts" class="listeposts">
                 <?php
                 $sql = "SELECT *, DATE_FORMAT(dateEcrit, '%d/%m/%Y') AS dateEcritFormate FROM ecrit ORDER BY id DESC";
                 $query = $pdo -> prepare($sql);

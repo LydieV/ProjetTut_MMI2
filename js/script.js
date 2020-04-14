@@ -133,19 +133,18 @@ $(function(){
         });
     });
 
-    /* Fonction permettant le filtrage par catÃ©gories */
+    /* Fonction permettant le filtrage par catégories */
     $(".filter-button").click(function(){
         $(".filter-button").removeClass('active');
         $(this).addClass("active");
-        let value = $(this).attr('data-filter');
+        let choix = $(this).attr('data-filter');
 
-        if(value == "tous"){
-            $('.filter').show('1000');
-        }
-        else{
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-        }
+        let formData={
+            'choix': choix
+        };
+        $.post( "traitement/tritemoignages.php", formData, function(data) {
+            $('#listeposts').hide().html(data).slideDown(500);
+        });
     });
 
     return false;
