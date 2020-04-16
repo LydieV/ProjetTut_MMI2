@@ -28,7 +28,7 @@ if(isset($_SESSION['id'])){
 
                 <div class="info">
                     <p> <span class="titreinfo"> Email : </span> <?php echo $infoPsn['email'] ?> </p>
-                    <form method="POST" action="index.php?action=changeinfo">
+                    <form method="POST" action="./changeinfo">
                         <input type="hidden" name="changeemail"/>
                         <input type="submit" class="changementinfo" name="modif" value="Vous désirez changer d'adresse mail ?"/>
                     </form>
@@ -36,7 +36,7 @@ if(isset($_SESSION['id'])){
 
                 <div class="info">
                     <p> <span class="titreinfo"> Mot de passe : </span> ******* </p>
-                    <form method="POST" action="index.php?action=changeinfo">
+                    <form method="POST" action="./changeinfo">
                         <input type="hidden" name="changemdp"/>
                         <input type="submit" class="changementinfo" name="modif" value="Vous désirez changer de mot de passe ?"/>
                     </form>
@@ -45,7 +45,7 @@ if(isset($_SESSION['id'])){
                     <p> <span class="titreinfo"> Date de naissance : </span> <?php echo $infoPsn['datenaissance'] ?> </p>
                 </div>
 
-                <form method="POST" action="index.php?action=supcompte">
+                <form method="POST" action="./supcompte">
                     <input type="submit" name="supprimercompte" value="Supprimer mon compte" id="supcompte"/>
                 </form>
             </div>
@@ -91,13 +91,13 @@ if(isset($_SESSION['id'])){
                             while($line=$query->fetch()){
                                 //$contenu=substr($line['contenu'], 0, 25). ' ...';
                                 if($nb == 0){
-                                    echo '<a href="./temoignage-'.$line['id'].'" class="item active">';
+                                    echo '<a href="./temoignage-'.$line['id'].'" class="item active" data-pjax>';
                                         echo '<div class="apercutemoignage">';
                                             echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div>';
                                     echo '</a>';
                                 } else{
-                                    echo '<a href="./temoignage-'.$line['id'].'" class="item">';
+                                    echo '<a href="./temoignage-'.$line['id'].'" class="item" data-pjax>';
                                         echo '<div class="apercutemoignage">';
                                             echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div>';
@@ -157,13 +157,13 @@ if(isset($_SESSION['id'])){
                         while($line=$query->fetch()){
                             //$contenu=substr($line['contenu'], 0, 25). ' ...';
                             if($nb == 0){
-                                echo '<a href="./temoignage-'.$line['idecrit'].'" class="item active">';
+                                echo '<a href="./temoignage-'.$line['idecrit'].'" class="item active" data-pjax>';
                                     echo '<div class="apercutemoignage">';
                                         echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div></a>';
 
                             } else{
-                                echo '<a href="./temoignage-'.$line['idecrit'].'" class="item">';
+                                echo '<a href="./temoignage-'.$line['idecrit'].'" class="item" data-pjax>';
                                     echo '<div class="apercutemoignage">';
                                         echo '<p>"'.$line['titre']   .'"</p>';
                                         echo '</div></a>';
@@ -222,13 +222,13 @@ if(isset($_SESSION['id'])){
                             while($line=$query->fetch()){
                                 $contenu=substr($line['commentaire'], 0, 25). ' ...';
                                 if($nb == 0){
-                                    echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item active">';
+                                    echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item active" data-pjax>';
                                         echo '<div class="apercutemoignage">';
                                             echo '<p>"'.$contenu   .'" dans '.$line['titre'].'</p>';
                                         echo '</div>';
                                     echo '</a>';
                                 } else{
-                                    echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item">';
+                                    echo '<a href="./temoignage-'.$line['idTemoignage'].'" class="item" data-pjax>';
                                         echo '<div class="apercutemoignage">';
                                             echo '<p>"'.$contenu   .'"</p>';
                                         echo '</div>';

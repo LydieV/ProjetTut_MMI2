@@ -12,7 +12,7 @@
                 echo '<p>Merci de vous inscrire ou de vous identifier pour pouvoir poster un témoignage</p>';
             }else{
                 echo '<p>Souhaitez-vous témoigner ?</p>';
-                echo '<a href="./poster">';
+                echo '<a href="./poster" data-pjax>';
                 echo '<div class="bouton rediger">';
                 echo '<p>Rédiger maintenant</p>';
                 echo '</div></a>';
@@ -54,7 +54,7 @@
                             echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                             echo '<input type="text" placeholder="titre" name="titre" required>';
                             echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
-                            echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                            echo '<a href="./temoignage-'.$line['id'].'" data-pjax><div class="continuerlecture">continuer la lecture...</div></a>';
                             echo '<input type="submit" value="Accepter"></form>';
                             echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                             echo "<input name='id' value='$id' type='hidden'>";
@@ -70,7 +70,7 @@
                                         echo "<div class='datepublication'>Catégorie : $categorie</div>";
                                         echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                                         echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
-                                        echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
+                                        echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'" data-pjax> Lire la suite </a></div>';
                                     if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
                                         echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                                         echo "<input name='id' value='$id' type='hidden'>";
@@ -90,6 +90,22 @@
         </div>
     </div>
 </div>
-<script src="./js/script.js"></script>
 <script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery.pjax.js"></script>
+<script src="./js/script.js"></script>
+<script>
+    $(".filter-button").click(function(){
+        $(".filter-button").removeClass('active');
+        $(this).addClass("active");
+        let choix = $(this).attr('data-filter');
+
+        let formData={
+            'choix': choix
+        };
+        $.post( "traitement/tritemoignages.php", formData, function(data) {
+            $('#listeposts').html(data);
+        });
+    });
+</script>
+
 

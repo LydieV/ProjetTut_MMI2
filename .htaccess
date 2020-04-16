@@ -17,6 +17,8 @@ RewriteRule ^accueil$ index.php?action=accueil
 RewriteRule ^confidentialite$ index.php?action=confidentialite
 RewriteRule ^mentions-legales$ index.php?action=mentionslegales
 RewriteRule ^temoignages$ index.php?action=temoignages
+RewriteRule ^changeinfo$ index.php?action=changeinfo
+RewriteRule ^supcompte$ index.php?action=supcompte
 
 #Gestion page 404
 RewriteCond %{REQUEST_FILENAME} !-f

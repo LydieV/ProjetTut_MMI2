@@ -9,7 +9,7 @@ if(isset($_POST['modif'])){
         </div>
     </div>
     <?php
-    echo "<a href='index.php?action=mapage' class='buttonretour'> Retour </a>";
+    echo "<a href='mapage' class='buttonretour' data-pjax> Retour </a>";
 
     if(isset($_POST['changeemail'])){
         ?>

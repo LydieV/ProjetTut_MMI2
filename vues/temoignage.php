@@ -121,7 +121,7 @@ if(isset($_GET['id'])){
         ?></div>
         </div>
 
-        <a href='./temoignages' class='buttonretour2'> Retour vers Témoignages </a>
+        <a href='./temoignages' class='buttonretour2' data-pjax> Retour vers Témoignages </a>
         </div></div>
     <?php
     }
