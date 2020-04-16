@@ -22,7 +22,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
         <title>Parlons Harcèlement</title>
 
 
-    
+
 
         <!-- Chargement des feuilles de style nécessaires -->
         <link href="./css/style.css" rel="stylesheet">
@@ -47,11 +47,11 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
 
         if (!isset($_SESSION['identifiant'])){
             echo '<header>
-            <a href="./accueil"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
+            <a href="accueil" class=""><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
-                    <a href="./temoignages"><p>Témoignages</p></a>
-                    <a href="./ressources"><p>Ressources</p></a>
-                    <a href="./contact"><p>Contact</p></a>
+                    <a href="temoignages"><p>Témoignages</p></a>
+                    <a href="ressources"><p>Ressources</p></a>
+                    <a href="contact"><p>Contact</p></a>
                     <a onclick="ouvrirmodaleinscription()"><i class="fas fa-user-alt"></i></a>
                 </div>
                 <img id="iconemenueo" class="iconemenu" src="img/menu.png" onclick="ouvrirmenu()">
@@ -59,22 +59,22 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
             </header>';
         }else{
             echo '<header>
-            <a href="./accueil"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
+            <a href="accueil" class=""><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
-                    <a href="./temoignages"><p>Témoignages</p></a>
-                    <a href="./ressources"><p>Ressources</p></a>
-                    <a href="./contact"><p>Contact</p></a>
-                    <a href="./mapage"><p>Ma page</p></a>
-                    <a href="./deconnexion"><i class="fas fa-sign-out-alt"></i></a>
+                    <a href="temoignages"><p>Témoignages</p></a>
+                    <a href="ressources"><p>Ressources</p></a>
+                    <a href="contact"><p>Contact</p></a>
+                    <a href="mapage"><p>Ma page</p></a>
+                    <a href="deconnexion"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
                 <img id="iconemenueo" class="iconemenu" src="img/menu.png" onclick="ouvrirmenu()">
                 <img id="iconemenuec" class="iconemenuc" src="img/close.png" onclick="fermermenu()">
             </header>';
         }
 
-        
-        ?>
 
+        ?>
+        <div id="contenu">
                     <?php
                     // Quelle est l'action à faire ?
                     if (isset($_GET["action"])) {
@@ -94,6 +94,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     ?>
 
         <?php include("vues/inscription.php"); ?>
+        </div>
         <footer>
             <div class="footer">
                 <div class="contact_footer">
@@ -108,10 +109,9 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
                     </a>
                 </div>
                 <div class="mentions">
-                    <p><a href="./mentions-legales">Mentions légales</a> | <a href="./confidentialite">Confidentialité</a></p>
+                    <p><a href="mentions-legales">Mentions légales</a> | <a href="confidentialite">Confidentialité</a></p>
                 </div>
             </div>
-
         </footer>
     </body>
     <script src="js/script.js"></script>

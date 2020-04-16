@@ -38,7 +38,7 @@
                 }else{
                     while($line = $query->fetch()){
                         $id=$line['id'];
-                        $contenu=$line['contenu'];
+                        $contenu=stripslashes($line['contenu']);
                         $categorie = $line['categorie'];
                         $dateEcrit = $line['dateEcritFormate'];
                         if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
@@ -53,7 +53,7 @@
                             </select></div>";
                             echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                             echo '<input type="text" placeholder="titre" name="titre" required>';
-                            echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
+                            echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
                             echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                             echo '<input type="submit" value="Accepter"></form>';
                             echo '<form method="POST" action="index.php?action=supprimertemoignage">';
@@ -90,4 +90,6 @@
         </div>
     </div>
 </div>
+<script src="./js/script.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
 

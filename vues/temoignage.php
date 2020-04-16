@@ -39,7 +39,7 @@ if(isset($_GET['id'])){
                 echo '<p> Publié le '.$line['dateEcritFormate'].' par </p>';
                 echo '<p> '.$line['identifiant'] . '</p>';
             echo '</div>';
-            echo '<div class="temoignagecontenu">"' . stripslashes($line['contenu']) . '"</div>';
+            echo '<div class="temoignagecontenu">"' . stripslashes(nl2br($line['contenu'])) . '"</div>';
 
             //On donne la possibilité de sauvegarder le témoignage si la pers est connextée
         if (isset($_SESSION['id'])){

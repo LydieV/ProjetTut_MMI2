@@ -15,7 +15,7 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
         }else{
             while($line = $query->fetch()){
                 $id=$line['id'];
-                $contenu=$line['contenu'];
+                $contenu=stripslashes($line['contenu']);
                 $categorie = $line['categorie'];
                 $dateEcrit = $line['dateEcritFormate'];
                 if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
@@ -30,7 +30,7 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                             </select></div>";
                     echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                     echo '<input type="text" placeholder="titre" name="titre" required>';
-                    echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
+                    echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
                     echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
                     echo '<input type="submit" value="Accepter"></form>';
                     echo '<form method="POST" action="index.php?action=supprimertemoignage">';
@@ -46,7 +46,7 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                         echo "<div class='titretemoignage'><h3> $titre</h3></div>";
                         echo "<div class='datepublication'>Catégorie : $categorie</div>";
                         echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                        echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
+                        echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
                         echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
                         if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
                             echo '<form method="POST" action="index.php?action=supprimertemoignage">';
@@ -75,7 +75,7 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
         }else{
             while($line = $query->fetch()){
                 $id=$line['id'];
-                $contenu=$line['contenu'];
+                $contenu=stripslashes($line['contenu']);
                 $categorie = $line['categorie'];
                 $dateEcrit = $line['dateEcritFormate'];
                 if($line['visible']=="1"){
@@ -86,7 +86,7 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                     echo "<div class='titretemoignage'><h3> $titre</h3></div>";
                     echo "<div class='datepublication'>Catégorie : $categorie</div>";
                     echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                    echo '<div class="apercu">"'.substr($contenu, 0, 25).' ..."</div>';
+                    echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
                     echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
                     if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
                         echo '<form method="POST" action="index.php?action=supprimertemoignage">';
