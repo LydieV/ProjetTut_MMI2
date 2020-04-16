@@ -75,9 +75,9 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
         echo '<header>
             <a href="accueil" data-pjax><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
-                    <a href="temoignages" data-pjax><p>Témoignages</p></a>
-                    <a href="ressources" data-pjax><p>Ressources</p></a>
-                    <a href="contact" data-pjax><p>Contact</p></a>
+                    <a href="temoignages" data-pjax class="menumobile"><p>Témoignages</p></a>
+                    <a href="ressources" data-pjax class="menumobile"><p>Ressources</p></a>
+                    <a href="contact" data-pjax class="menumobile"><p>Contact</p></a>
                     <a onclick="ouvrirmodaleinscription()"><i class="fas fa-user-alt"></i></a>
                 </div>
                 <img id="iconemenueo" class="iconemenu" src="img/menu.png" onclick="ouvrirmenu()">
@@ -87,10 +87,10 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
         echo '<header>
             <a href="accueil" data-pjax><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
-                    <a href="temoignages" data-pjax><p>Témoignages</p></a>
-                    <a href="ressources" data-pjax><p>Ressources</p></a>
-                    <a href="contact" data-pjax><p>Contact</p></a>
-                    <a href="mapage" data-pjax><p>Ma page</p></a>
+                    <a href="temoignages" data-pjax class="menumobile"><p>Témoignages</p></a>
+                    <a href="ressources" data-pjax class="menumobile"><p>Ressources</p></a>
+                    <a href="contact" data-pjax class="menumobile"><p>Contact</p></a>
+                    <a href="mapage" data-pjax class="menumobile"><p>Ma page</p></a>
                     <a href="deconnexion"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
                 <img id="iconemenueo" class="iconemenu" src="img/menu.png" onclick="ouvrirmenu()">

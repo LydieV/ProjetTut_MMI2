@@ -166,6 +166,12 @@ function glissement(a){
     }
 }
 
+$('.menumobile').click(function () {
+    if(document.body.clientWidth < 768){
+        fermermenu();
+    }
+});
+
 
 //Fonction valider form contact
 function validateForm() {
