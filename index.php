@@ -73,7 +73,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
     if (!isset($_SESSION['identifiant'])){
         echo '<header>
-            <a href="accueil" data-pjax><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
+            <a href="accueil" data-pjax class="menumobile"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
                     <a href="temoignages" data-pjax class="menumobile"><p>Témoignages</p></a>
                     <a href="ressources" data-pjax class="menumobile"><p>Ressources</p></a>
@@ -85,7 +85,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
             </header>';
     }else{
         echo '<header>
-            <a href="accueil" data-pjax><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
+            <a href="accueil" data-pjax class="menumobile"><img class="logobanniere" src="./img/logo.png" alt="Parlons Harcèlement"></a>
                 <div id="items" class="items">
                     <a href="temoignages" data-pjax class="menumobile"><p>Témoignages</p></a>
                     <a href="ressources" data-pjax class="menumobile"><p>Ressources</p></a>
