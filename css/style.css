@@ -264,7 +264,7 @@ z-index:1000;
 .modale{
     position:absolute;
     width:50%;
-    height:60%;
+    height:75%;
     padding-bottom:20px;
     background-color: var(--orange2);
     top:50%;

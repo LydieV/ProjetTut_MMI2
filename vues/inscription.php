@@ -78,3 +78,60 @@
         </form>
     </div>
 </div>
+<script>
+    $('.afficherconnexion').click(function () {
+        $('#forminscription').slideUp().hide();
+        $('#formconnexion').slideDown().css('display', 'flex');
+        $('.msgconn').hide();
+        $('.msginsc').show();
+        $('.msginfoinsc').hide();
+    });
+
+    $('.afficherinscription').click(function () {
+        $('#formconnexion').slideUp().hide();
+        $('#forminscription').slideDown();
+        $('.msgconn').show();
+        $('.msginsc').hide();
+        $('.msginfoinsc').show();
+    });
+    $("#forminscription").submit(function(event){
+        event.preventDefault();
+        //document.getElementById('status').innerHTML = "Inscription en cours...";
+
+        let formData = {
+            'identifiant' : $('input[name=identifiant]').val(),
+            'email' : $('input[name=email]').val(),
+            'mdp' : $('input[name=mdp]').val(),
+            'mdp2' : $('input[name=mdp2]').val(),
+            'naissance' : $('select[name=naissance]').val(),
+        };
+        console.log(formData);
+
+        $.post( "./traitement/inscription.php", formData, function(data) {
+            if (data != 'Succes'){
+                $('#status').html(data);
+            }else{
+                $(location).attr('href',"index.php?");
+            }
+        });
+    });
+
+    //Lors de l'envoi du formulaire de connexion
+    $("#formconnexion").submit(function(event){
+        event.preventDefault();
+        //document.getElementById('status').innerHTML = "Inscription en cours...";
+
+        let formData = {
+            'identifiant' : $('input[name=identifiantconnexion]').val(),
+            'mdp' : $('input[name=mdpconnexion]').val(),
+        };
+
+        $.post( "./traitement/connexion.php", formData, function(data) {
+            if (data != 'Succes'){
+                $('#statusconnexion').html(data);
+            }else{
+                $(location).attr('href',$('input[name=url]').val());
+            }
+        });
+    });
+</script>

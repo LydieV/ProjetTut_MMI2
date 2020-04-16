@@ -31,6 +31,9 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
         ?>
 
         <?php include("vues/inscription.php"); ?>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery.pjax.js"></script>
+        <script src="js/script.js"></script>
     </div>
     <?php
 }else{
