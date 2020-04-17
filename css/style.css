@@ -177,12 +177,12 @@ footer{
 .but{
     padding-top:50px;
 }
-.but > h1,.agir > h1{
+.but > h1,.agir > h1, .covid > h1{
     color:var(--orange);
     text-transform: uppercase;
     padding-bottom:30px;
 }
-.but > p{
+.but > p, .covid > p{
     text-indent: 50px;
     text-align: justify;
     padding-bottom:30px;
@@ -190,10 +190,10 @@ footer{
     padding-left:20px;
     padding-right:20px;
 }
-.but > p > span{
+.but > p > span, .covid > p > span{
     position:relative;
 }
-.but > p > span:after{
+.but > p > span:after,.covid > p > span:after{
     content: "";
     position: absolute;
     width: 100%;
@@ -1355,7 +1355,10 @@ footer{
 }
 
 .but{
-    padding-top: 100px;
+    padding-top: 50px;
+}
+.covid{
+    padding-top:100px;
 }
 
 .agir{
@@ -1375,7 +1378,7 @@ footer{
     padding-bottom: 20px;
 }
 
-.lientemoignages{
+.lien{
     text-decoration: none;
     color: var(--violet);
     font-weight: bold;
