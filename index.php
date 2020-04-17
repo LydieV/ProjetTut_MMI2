@@ -127,13 +127,13 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     <footer>
         <div class="footer">
             <div class="contact_footer">
-                <a href="https://www.facebook.com/Parlons-harc%C3%A8lement-103908774511172/?view_public_for=103908774511172">
+                <a href="https://www.facebook.com/parlonsharcelement/" target="_blank">
                     <img src="./img/icone_facebook_accueil.png" alt="icone_facebook_accueil"/>
                 </a>
-                <a href="https://twitter.com/ParlonsHarclem1">
+                <a href="https://twitter.com/ParlonsHarcelmt" target="_blank">
                     <img src="./img/icone_twitter_accueil.png" alt="icone_twitter_accueil"/>
                 </a>
-                <a href="mailto:parlonsharcelementcontact@gmail.com">
+                <a href="mailto:parlonsharcelementcontact@gmail.com" target="_blank">
                     <img src="./img/icone_mail_accueil.png" alt="icone_mail_accueil"/>
                 </a>
             </div>
