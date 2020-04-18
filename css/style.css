@@ -1435,6 +1435,7 @@ footer{
     margin-top: 50px;
     display: block;
     border-radius: 5px;
+    cursor:pointer;
 }
 
 .commentaire{

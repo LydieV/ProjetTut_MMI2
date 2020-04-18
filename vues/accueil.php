@@ -36,7 +36,7 @@
     <section class="covid">
         <h1>INFORMATION - COVID-19</h1>
         <p>
-            En cette période de confinement, le harcèle est toujours présent, mais il peut être différent.
+            En cette période de confinement, le harcèlement est toujours présent, mais il peut être différent.
             C’est pourquoi, durant plusieurs jours, nous allons mener notre étude afin d’analyser l’évolution du harcèlement
             un mois après le début du confinement. Nous publierons le résultat de notre étude le vendredi 24 avril.
             Une nouvelle rubrique s’ajoutera à notre site, concernant cette période. <br />

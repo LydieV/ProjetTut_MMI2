@@ -49,15 +49,9 @@ if(isset($_GET['id'])){
             $count=$query->rowCount();
 
             if($count == 0){
-                echo '<form method="POST" action="index.php?action=sauvegarde">';
-                echo "<input type='hidden' name='id' value='$id'>";
-                echo "<input type='submit' value='Sauvegarder le témoignage' class='boutonvalider'>";
-                echo '</form>';
+                echo "<a class='boutonvalider boutonsauvegarde' data-id='$id'>Sauvegarder le témoignage</a>";
             }else{
-                echo '<form method="POST" action="index.php?action=retirersauvegarde">';
-                echo "<input type='hidden' name='id' value='$id'>";
-                echo "<input type='submit' value='Ne plus sauvegarder le témoignage' class='boutonvalider'>";
-                echo '</form>';
+                echo "<a class='boutonvalider boutonsauvegarde' data-id='$id'>Ne plus sauvegarder le témoignage</a>";
             }
         }
         ?>
@@ -126,3 +120,19 @@ if(isset($_GET['id'])){
     <?php
     }
 }?>
+
+<script>
+    $('.boutonsauvegarde').click(function (e) {
+        e.preventDefault();
+        let idtemoignage=$(this).attr('data-id');
+        let a = $(this);
+
+        let formData={
+            idtemoignage: idtemoignage
+        }
+
+        $.post( "traitement/sauvegarde.php", formData, function(data) {
+            a.html(data);
+        });
+    });
+</script>

@@ -231,40 +231,4 @@ $(document).one('focus.autoExpand', 'textarea.autoExpand', function(){
     });
 
 
-/*$('[data-pjax]').click(function (e) {
-    e.preventDefault();
-    /*if($(this).attr('href') != 'http://localhost/ProjetTut_MMI2/'+$(this).attr('href')){
-        let root = 'http://localhost/ProjetTut_MMI2/';
-        let lien = $(this).attr('href');
-        $.get( root+lien, null, function(data) {
-            $('#contenu').html(data);
-            history.pushState({url : root+lien},'Affichage page '+lien, lien);
-        });
-    }
-    let root = 'http://localhost/ProjetTut_MMI2/';
-    let lien = $(this).attr('href');
-    $.get( root+lien, null, function(data) {
-        $('#contenu').html(data);
-        history.pushState({url : root+lien},'Affichage page '+history.length, lien);
-    });
-});*/
-/*window.onpopstate = function (e) {
-    e.preventDefault();
-    console.log(e);
-    //console.log(e.originalEvent.state);
-    if(e.state != null){
-        let root = 'http://localhost/ProjetTut_MMI2/';
-        let lien = e.state.url;
-        $.get( lien, null, function(data) {
-            $('#contenu').html(data);
-            history.replaceState({url : lien},'Affichage page '+lien, lien);
-        });
-    }else{
-        $.get( './accueil', '', function(data) {
-            $('#contenu').html(data);
-            history.replaceState({url : 'http://localhost/ProjetTut_MMI2/accueil'},'Affichage page accueil', 'accueil');
-        });
-    }
-};*/
-
 
