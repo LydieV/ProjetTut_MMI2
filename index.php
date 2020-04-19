@@ -55,6 +55,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
         <!-- Chargement des feuilles de style nécessaires -->
         <link href="./css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/wbbtheme.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
         <!-- Chargement des polices -->
@@ -167,6 +168,9 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
         }
         });
     </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.wysibb.min.js"></script>
+    <script src="js/wysibb.fr.js"></script>
     </html>
     <?php
 }

@@ -14,12 +14,26 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
             echo 'Aucun témoignage n\'a été trouvé...';
         }else{
             while($line = $query->fetch()){
+                require_once "../divers/jbbcode/Parser.php";
+
+                $parser = new JBBCode\Parser();
+                $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
+                $parser->addBBCode('center', "{param}");
+                $parser->addBBCode('left', "{param}");
+                $parser->addBBCode('right', "{param}");
+                $parser->addBBCode('size', "{param}");
+                $parser->addBBCode('quote', "{param}");
+                $parser->addBBCode('color', "{param}");
+                $parser->addBBCode('i', "{param}");
+                $parser->addBBCode('u', "{param}");
+                $parser->addBBCode('b', "{param}");
+
                 $id=$line['id'];
                 $contenu=stripslashes($line['contenu']);
                 $categorie = $line['categorie'];
                 $dateEcrit = $line['dateEcritFormate'];
                 if (isset($_SESSION['admin']) && $_SESSION['admin']=="1" && $line['visible']==0){
-                    echo '<div class="post filter '.$categorie.'"><div class="illustrationpost" style="background-image: url(/img/aucunecategorie.jpg);"></div><div class="contenupost">';
+                    echo '<div class="post filter '.$categorie.'"><div class="illustrationpost" style="background-image: url(img/aucunecategorie.jpg);"></div><div class="contenupost">';
                     echo "<form method='POST' action='index.php?action=acceptertemoignage'><input name='id' value='$id' type='hidden'>";
                     echo "<div class='titrefiltre'>
                             <select name='categorie'>
@@ -30,8 +44,9 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                             </select></div>";
                     echo "<div class='datepublication'>Publié le $dateEcrit</div>";
                     echo '<input type="text" placeholder="titre" name="titre" required>';
-                    echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
-                    echo '<a href="./temoignage-'.$line['id'].'"><div class="continuerlecture">continuer la lecture...</div></a>';
+                    echo '<div class="apercu">"'. $parser->parse(substr($contenu, 0, 40));
+                    $final= $parser->getAsHtml(); echo explode('[',$final)[0] .' ..."</div>';
+                    echo '<a href="./temoignage-'.$line['id'].'" data-pjax><div class="continuerlecture">continuer la lecture...</div></a>';
                     echo '<input type="submit" value="Accepter"></form>';
                     echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                     echo "<input name='id' value='$id' type='hidden'>";
@@ -46,8 +61,9 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                         echo "<div class='titretemoignage'><h3> $titre</h3></div>";
                         echo "<div class='datepublication'>Catégorie : $categorie</div>";
                         echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                        echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
-                        echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
+                        echo '<div class="apercu">"'.$parser->parse(substr($contenu, 0, 40));
+                        $final= $parser->getAsHtml(); echo explode('[',$final)[0].' ..."</div>';
+                        echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'" data-pjax> Lire la suite </a></div>';
                         if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
                             echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                             echo "<input name='id' value='$id' type='hidden'>";
@@ -55,7 +71,10 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                         }
                         echo '</div></div>';
                     }
+
                 }
+
+
             }
         }
     }else{
@@ -74,6 +93,19 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
             }
         }else{
             while($line = $query->fetch()){
+                require_once "../divers/jbbcode/Parser.php";
+
+                $parser = new JBBCode\Parser();
+                $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
+                $parser->addBBCode('center', "{param}");
+                $parser->addBBCode('left', "{param}");
+                $parser->addBBCode('right', "{param}");
+                $parser->addBBCode('size', "{param}");
+                $parser->addBBCode('quote', "{param}");
+                $parser->addBBCode('color', "{param}");
+                $parser->addBBCode('i', "{param}");
+                $parser->addBBCode('u', "{param}");
+                $parser->addBBCode('b', "{param}");
                 $id=$line['id'];
                 $contenu=stripslashes($line['contenu']);
                 $categorie = $line['categorie'];
@@ -86,8 +118,9 @@ if(isset($_POST['choix']) && !empty($_POST['choix'])){
                     echo "<div class='titretemoignage'><h3> $titre</h3></div>";
                     echo "<div class='datepublication'>Catégorie : $categorie</div>";
                     echo "<div class='datepublication'>Publié le $dateEcrit</div>";
-                    echo '<div class="apercu">"'.substr($contenu, 0, 40).' ..."</div>';
-                    echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'"> Lire la suite </a></div>';
+                    echo '<div class="apercu">"'.$parser->parse(substr($contenu, 0, 40));
+                    $final= $parser->getAsHtml(); echo explode('[',$final)[0].' ..."</div>';
+                    echo '<div class="liresuite"><a href="./temoignage-'.$line['id'].'" data-pjax> Lire la suite </a></div>';
                     if(isset($_SESSION['admin']) && $_SESSION['admin'] == "1"){
                         echo '<form method="POST" action="index.php?action=supprimertemoignage">';
                         echo "<input name='id' value='$id' type='hidden'>";

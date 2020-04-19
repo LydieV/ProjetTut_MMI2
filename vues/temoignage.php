@@ -10,6 +10,16 @@ if(isset($_GET['id'])){
     if($line['visible'] == 0 && !isset($_SESSION['admin'])){
         header('Location:./temoignages');
     }else{
+        require_once "divers/jbbcode/Parser.php";
+
+        $parser = new JBBCode\Parser();
+        $parser->addCodeDefinitionSet(new JBBCode\DefaultCodeDefinitionSet());
+        $parser->addBBCode('center', "<p class='centrer'>{param}</p>");
+        $parser->addBBCode('left', "<p class='gauche'>{param}</p>");
+        $parser->addBBCode('right', "<p class='droite'>{param}</p>");
+        $parser->addBBCode('quote', "<blockquote>{param}</blockquote>");
+        $parser->addBBCode('color', "{param}");
+
         echo '<div class="contenutemoignage"><div class="bannieretemoignages">';
             echo '<div class="couleur_banniere">';
                 echo "<p> Témoigner, c'est une marque de courage.<br/> Nous sommes là pour partager et s'entraider, et non juger. </p>";
@@ -39,7 +49,8 @@ if(isset($_GET['id'])){
                 echo '<p> Publié le '.$line['dateEcritFormate'].' par </p>';
                 echo '<p> '.$line['identifiant'] . '</p>';
             echo '</div>';
-            echo '<div class="temoignagecontenu">"' . stripslashes(nl2br($line['contenu'])) . '"</div>';
+            echo '<div class="temoignagecontenu">"' . $parser->parse(stripslashes(nl2br($line['contenu'])));
+        echo $parser->getAsHtml() . '"</div>';
 
             //On donne la possibilité de sauvegarder le témoignage si la pers est connextée
         if (isset($_SESSION['id'])){

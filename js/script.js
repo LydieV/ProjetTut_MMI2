@@ -130,6 +130,8 @@ $(function(){
         $.post( "./traitement/postertemoignage.php", formData, function(data) {
             if (data != 'Succes'){
                 //$('#statusconnexion').html(data);
+                console.log(formData);
+                console.log(data);
             }else{
                 $(location).attr('href',"index.php?action=temoignages");
             }

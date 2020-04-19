@@ -1849,16 +1849,24 @@ footer{
     margin-top: 80px;
 }
 
-.pagecontact textarea{
+.pagecontact textarea, .wysibb{
     border: 1px solid grey;
     border-radius: 8px;
     margin-bottom: 30px;
     resize: none;
     width: 100%;
-    height: 140px;
+    height: 30vh;
     box-shadow: -1px 2px 5px 1px grey;
 }
-
+.wysibb-text,.wysibb-text-editor{
+    height:93%;
+}
+.bottom-resize-line{
+    display:none!important;
+}
+.wysibb .wysibb-toolbar .modeSwitch{
+    display:none!important;
+}
 .pagecontact .labelmsg{
     margin-bottom: 10px;
 }
@@ -2012,5 +2020,29 @@ footer{
     }
 }
 
+/* Parseur bbcode */
+.centrer{
+    text-align:center;
+}
+.gauche{
+    text-align:left;
+}
+.droite{
+    text-align:right;
+}
+blockquote
+{
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 32px;
+    border-left: 4px solid #CCC;
+    padding-left: 8px;
+}
 
+.apercu strong, .apercu em, .apercu u, .apercu, .apercu blockquote{
+    text-decoration: none;
+    font-size:initial;
+    font-style: normal;
+    font-weight: normal;
+}
 
