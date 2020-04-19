@@ -1,3 +1,18 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.wysibb.min.js"></script>
+<script src="js/wysibb.fr.js"></script>
+<link rel="stylesheet" href="css/wbbtheme.css" />
+<script>
+
+    var $jq=jQuery.noConflict();
+    var wbbOpt = {
+        buttons: "bold,italic,underline,justifyleft,justifycenter,justifyright,fontsize,quote",
+        lang: "fr"
+    }
+    $jq(function(){
+        $jq("#area").wysibb(wbbOpt);
+    })
+</script>
 <?php
 if(isset($_GET['id'])){
     $id=$_GET['id'];
@@ -49,11 +64,15 @@ if(isset($_GET['id'])){
                 echo '</div>';
             }
 
+            if(isset($_SESSION['admin'])){
+                echo '<div id="edition"><i id="editer" data-idtemoignage="'.$id.'" class="fas fa-edit"></i></div>';
+            }
+
             echo '<div class="infotemoignage">';
             echo '<p> Publié le '.$line['dateEcritFormate'].' par </p>';
             echo '<p> '.$line['identifiant'] . '</p>';
             echo '</div>';
-            echo '<div class="temoignagecontenu">"' . $parser->parse(stripslashes(nl2br($line['contenu'])));
+            echo '<div id="temoignagecontenu" class="temoignagecontenu">"' . $parser->parse(stripslashes(nl2br($line['contenu'])));
             echo $parser->getAsHtml() . '"</div>';
 
             //On donne la possibilité de sauvegarder le témoignage si la pers est connextée
@@ -136,6 +155,7 @@ if(isset($_GET['id'])){
         }
     }
 }?>
+<div id="script"></div>
 
 <script>
     $('.boutonsauvegarde').click(function (e) {
@@ -149,6 +169,39 @@ if(isset($_GET['id'])){
 
         $.post( "traitement/sauvegarde.php", formData, function(data) {
             a.html(data);
+        });
+    });
+</script>
+<script>
+    $("#editer").click(function(event){
+        event.preventDefault();
+        $('#edition').html('<i id="voir" class="fas fa-eye" data-idtemoignage="'+$(this).attr('data-idtemoignage')+'"></i>');
+
+        let idtemoignage=$(this).attr('data-idtemoignage');
+
+        let formData = {
+            'idtemoignage' : $(this).attr('data-idtemoignage'),
+        };
+
+        $.post( "./traitement/contenutemoignage.php", formData, function(data) {
+            $('#temoignagecontenu').html(
+                '<form id="formmodiftemoignage" method="POST">' +
+                '<textarea id="area" name="majtemoignage" placeholder="Décrivez les faits dont vous avez été victime..." data-idtemoignage="'+ idtemoignage+'"></textarea>' +
+                '<input class="bouton envoitemoignage" type="submit" value="Modifier le témoignage"></input>' +
+                '</form>'
+            );
+            $('#area').val(data);
+            var $jq=jQuery.noConflict();
+            var wbbOpt = {
+                buttons: "bold,italic,underline,justifyleft,justifycenter,justifyright,fontsize,quote",
+                lang: "fr"
+            }
+            $jq(function(){
+                $jq("#area").wysibb(wbbOpt);
+            })
+            $.post( "./traitement/scriptmodif.php", '', function(dataa) {
+                $('#script').html(dataa);
+            });
         });
     });
 </script>

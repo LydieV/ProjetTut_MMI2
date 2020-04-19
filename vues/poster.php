@@ -31,7 +31,7 @@
     <div class="formposter">
         <form id="formtemoignage" method="POST">
             <textarea id="poster" name="temoignage" placeholder="Décrivez les faits dont vous avez été victime..."></textarea>
-            <input class="bouton envoitemoignage" type="submit" value="Envoyer mon témoigage"></input>
+            <input class="bouton envoitemoignage" type="submit" value="Envoyer mon témoignage"></input>
         </form>
     </div>
     <a href="./temoignages" class="buttonretour2" data-pjax> Retour vers Témoignages </a>
