@@ -34,23 +34,27 @@
     </div>-->
 
     <section class="covid">
-        <h1>INFORMATION - COVID-19</h1>
+        <h1>ACTUALITÉS - COVID-19</h1>
         <p>
-            En cette période de confinement, le harcèlement est toujours présent, mais il peut être différent.
-            C’est pourquoi, durant plusieurs jours, nous allons mener notre étude afin d’analyser l’évolution du harcèlement
-            un mois après le début du confinement. Nous publierons le résultat de notre étude le vendredi 24 avril.
-            Une nouvelle rubrique s’ajoutera à notre site, concernant cette période. <br />
+            En cette période de confinement / couvre-feu, le harcèlement est toujours présent, mais il peut être différent.
+            C'est pourquoi nous avons réalisé une étude durant le premier confinement afin d'analyser son évolution.
+            Vous pouvez la retrouver dans la rubrique <a href="./etude-confinement" class="lien" data-pjax> étude confinement</a>. 
+            Dans quelques semaines, nous allons en publier une deuxième afin de comparer l'évolution presqu'un an après.<br />
             <br />
-            En attendant, nous vous invitons à nous suivre les réseaux sociaux avec notre page <a href="https://www.facebook.com/parlonsharcelement/" target="_blank" class="lien">Facebook (@parlonsharcelement)</a>
-            et notre compte <a href="https://twitter.com/ParlonsHarcelmt" target="_blank" class="lien">Twitter (@ParlonsHarcelemt)</a>, afin de suivre nos dernières actualités.<br />
+            En attendant, nous vous invitons à nous suivre les réseaux sociaux avec notre page <a href="https://www.facebook.com/parlonsharcelement/" target="_blank" class="lien">Facebook (@parlonsharcelement)</a>, 
+            notre compte <a href="https://www.instagram.com/parlons.harcelement/" target="_blank" class="lien"> Instagram (@parlons.harcelement) </a> et notre compte <a href="https://twitter.com/ParlonsHarcelmt" target="_blank" class="lien">Twitter (@ParlonsHarcelemt)</a>, afin de suivre nos dernières actualités.<br />
             <br />
             On vous souhaite beaucoup de courage durant cette période, et on espère que tout va bien pour vous.
             Nous restons mobilisés, et si vous avez besoin de quoique ce soit, n’hésitez pas à nous contacter.
+            <br />
+            Nous avons participé à l'émission de la webradio Micros-rebelles le 05 mars.
+            <br />
+            Retrouvez l'émission en cliquant <a href="https://www.micros-rebelles.fr/site/micros-rebelles-hebdo-vendredi-05-mars/" target="blank" class="lien"> ici</a>.
         </p>
     </section>
 
     <section class="but">
-        <h1>En quoi consiste notre campagne ?</h1>
+        <h1>En quoi consiste notre association ?</h1>
         <p>
            <span> Parlons harcèlement </span>  a pour but d’accompagner les victimes de harcèlement afin qu’elles ne se retrouvent pas seules.
             Découvrez sur ce site l’onglet <a href="./temoignages" class="lien" data-pjax> témoignages </a> qui permet de témoigner ou d'interagir aux témoignages d'autres victimes. <br/>
